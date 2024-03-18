@@ -1,0 +1,49 @@
+{
+  "topics": [
+    {
+      "name": "Geography",
+      "questions": [
+        {
+          "question": "What is the capital of France?",
+          "answers": ["Paris", "London", "Berlin", "Madrid"],
+          "correct": "Paris"
+        },
+        {
+          "question": "What is the capital of England?",
+          "answers": ["Paris", "London", "Berlin", "Madrid"],
+          "correct": "London"
+        },
+        {
+          "question": "What is the capital of Italy?",
+          "answers": ["Rome", "Madrid", "Athens", "Vienna"],
+          "correct": "Rome"
+        },
+        {
+          "question": "Which river flows through Cairo?",
+          "answers": ["Nile", "Danube", "Amazon", "Ganges"],
+          "correct": "Nile"
+        },
+        {
+          "question": "What mountain range separates Europe and Asia?",
+          "answers": ["Ural Mountains", "Andes", "Himalayas", "Rocky Mountains"],
+          "correct": "Ural Mountains"
+        },
+        {
+          "question": "Which African country is known as the 'Land of a Thousand Hills'?",
+          "answers": ["Rwanda", "Kenya", "Uganda", "Tanzania"],
+          "correct": "Rwanda"
+        },
+        {
+          "question": "Which ocean is the largest by area?",
+          "answers": ["Pacific Ocean", "Atlantic Ocean", "Indian Ocean", "Arctic Ocean"],
+          "correct": "Pacific Ocean"
+        },
+        {
+          "question": "Which desert is located in North Africa?",
+          "answers": ["Sahara Desert", "Gobi Desert", "Atacama Desert", "Kalahari Desert"],
+          "correct": "Sahara Desert"
+        }
+      ]
+    }
+  ]
+}
