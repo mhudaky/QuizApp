@@ -19,20 +19,14 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         topicsLayout = findViewById(R.id.topics)
-
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
-
-        // Load your topics and questions here
-        val inputStream = resources.openRawResource(R.raw.questions)
-        val jsonString = inputStream.bufferedReader().use { it.readText() }
-        viewModel.loadQuestions(jsonString)
-
-        loadTopics()
+        viewModel.loadQuestions(resources.openRawResource(R.raw.questions))
+        createTopicButtons()
+        addResetStatListener()
     }
 
-    private fun loadTopics() {
+    private fun createTopicButtons() {
         viewModel.getTopics().forEach { topic ->
             val button = Button(this)
             button.text = topic.name
@@ -43,9 +37,8 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun resetStats() {
+    private fun addResetStatListener() {
         prefsHelper = SharedPreferencesHelper(this)
-
         val resetStatsButton = findViewById<Button>(R.id.reset_stats_button)
         resetStatsButton.setOnClickListener {
             prefsHelper.resetStats()
@@ -55,8 +48,6 @@ class MainActivity : AppCompatActivity() {
     private fun startQuestionActivity(topic: Topic) {
         val intent = Intent(this, QuestionActivity::class.java)
         intent.putExtra("topic", Gson().toJson(topic))
-        intent.putExtra("score", 0)
-        intent.putExtra("streak", 0)
         startActivity(intent)
     }
 }
