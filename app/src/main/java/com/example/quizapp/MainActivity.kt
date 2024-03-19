@@ -1,90 +1,62 @@
 package com.example.quizapp
 
+import MainViewModel
+import SharedPreferencesHelper
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.LinearLayout
-import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import com.google.gson.Gson
 
 class MainActivity : AppCompatActivity() {
 
-    data class Topic(val name: String, val questions: List<Question>)
-    data class Question(val question: String, val answers: List<String>, val correct: String)
-    data class QuestionBank(val topics: List<Topic>)
-
-    private lateinit var questionField: TextView
-    private lateinit var answersField: LinearLayout
-    private lateinit var nextButton: Button
-    private lateinit var questionBank: QuestionBank
-
-    private var currentQuestionIndex = 0
+    private lateinit var topicsLayout: LinearLayout
+    private lateinit var viewModel: MainViewModel
+    private lateinit var prefsHelper: SharedPreferencesHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        questionField = findViewById(R.id.question)
-        answersField = findViewById(R.id.answers)
-        nextButton = findViewById(R.id.next)
-        nextButton.setOnClickListener {
-            loadNextQuestion()
-        }
+
+        topicsLayout = findViewById(R.id.topics)
+
+        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
 
         // Load your topics and questions here
         val inputStream = resources.openRawResource(R.raw.questions)
         val jsonString = inputStream.bufferedReader().use { it.readText() }
-        questionBank = Gson().fromJson(jsonString, QuestionBank::class.java)
+        viewModel.loadQuestions(jsonString)
 
-        loadNextQuestion()
+        loadTopics()
     }
 
-    private fun loadNextQuestion() {
-        currentQuestionIndex++
-
-        if (currentQuestionIndex >= questionBank.topics[0].questions.size) {
-            currentQuestionIndex = 0
-        }
-
-        val question = questionBank.topics[0].questions[currentQuestionIndex]
-
-        loadQuestion(question)
-    }
-
-    private fun loadQuestion(question: Question) {
-        questionField.text = question.question
-        answersField.removeAllViews()
-        question.answers.shuffled().forEach { answer ->
+    private fun loadTopics() {
+        viewModel.getTopics().forEach { topic ->
             val button = Button(this)
-            button.text = answer
+            button.text = topic.name
             button.setOnClickListener {
-                checkAnswer(question, button.text.toString())
+                startQuestionActivity(topic)
             }
-            answersField.addView(button)
+            topicsLayout.addView(button)
         }
     }
 
-    private fun checkAnswer(question: Question, selectedAnswer: String) {
-        val context = this
+    private fun resetStats() {
+        prefsHelper = SharedPreferencesHelper(this)
 
-        val toast = Toast.makeText(context, "", Toast.LENGTH_SHORT)
-        val toastView = toast.view
-
-        if (selectedAnswer == question.correct) {
-            // Correct answer
-            toastView?.setBackgroundColor(0xFF00CC00.toInt()) // Green color
-            toast.setText("✔️ Correct! The answer is $selectedAnswer.")
-        } else {
-            // Incorrect answer
-            toastView?.setBackgroundColor(0xFFFF4444.toInt()) // Red color
-            toast.setText("❌ Incorrect. Try again!")
+        val resetStatsButton = findViewById<Button>(R.id.reset_stats_button)
+        resetStatsButton.setOnClickListener {
+            prefsHelper.resetStats()
         }
+    }
 
-        // Set text color (optional)
-        val textColor = 0xFFFFFFFF.toInt() // White color
-        val textView = toastView?.findViewById<TextView>(android.R.id.message)
-        textView?.setTextColor(textColor)
-
-        toast.show()
+    private fun startQuestionActivity(topic: Topic) {
+        val intent = Intent(this, QuestionActivity::class.java)
+        intent.putExtra("topic", Gson().toJson(topic))
+        intent.putExtra("score", 0)
+        intent.putExtra("streak", 0)
+        startActivity(intent)
     }
 }

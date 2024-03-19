@@ -44,6 +44,171 @@
           "correct": "Sahara Desert"
         }
       ]
+    },
+    {
+      "name": "History",
+      "questions": [
+        {
+          "question": "Who was the first president of the United States?",
+          "answers": ["George Washington", "Thomas Jefferson", "Abraham Lincoln", "Benjamin Franklin"],
+          "correct": "George Washington"
+        },
+        {
+          "question": "In which year did the Titanic sink?",
+          "answers": ["1912", "1905", "1898", "1923"],
+          "correct": "1912"
+        },
+        {
+          "question": "What ancient civilization built the Machu Picchu complex?",
+          "answers": ["The Inca Empire", "The Aztec Empire", "The Maya Civilization", "The Roman Empire"],
+          "correct": "The Inca Empire"
+        },
+        {
+          "question": "Which war was fought between the North and South regions in the United States?",
+          "answers": ["The American Civil War", "The Revolutionary War", "World War I", "World War II"],
+          "correct": "The American Civil War"
+        },
+        {
+          "question": "Who was known as the 'Mad Monk' in Russian history?",
+          "answers": ["Rasputin", "Ivan the Terrible", "Lenin", "Peter the Great"],
+          "correct": "Rasputin"
+        },
+        {
+          "question": "What was the main cause of the French Revolution?",
+          "answers": ["The rise of Napoleon", "Economic hardship", "The Enlightenment", "Foreign invasion"],
+          "correct": "Economic hardship"
+        },
+        {
+          "question": "Which civilization is known for building the Pyramids of Giza?",
+          "answers": ["The Ancient Egyptians", "The Sumerians", "The Aztecs", "The Mayans"],
+          "correct": "The Ancient Egyptians"
+        },
+        {
+          "question": "In what year did World War II end?",
+          "answers": ["1945", "1942", "1939", "1950"],
+          "correct": "1945"
+        },
+        {
+          "question": "Who was the first woman to fly solo across the Atlantic Ocean?",
+          "answers": ["Amelia Earhart", "Harriet Quimby", "Bessie Coleman", "Valentina Tereshkova"],
+          "correct": "Amelia Earhart"
+        },
+        {
+          "question": "Which empire was ruled by Genghis Khan?",
+          "answers": ["The Mongol Empire", "The Ottoman Empire", "The Roman Empire", "The British Empire"],
+          "correct": "The Mongol Empire"
+        }
+      ]
+    },
+    {
+      "name": "Science",
+      "questions": [
+        {
+          "question": "What is the chemical symbol for water?",
+          "answers": ["H2O", "O2", "CO2", "H2"],
+          "correct": "H2O"
+        },
+        {
+          "question": "Who proposed the theory of relativity?",
+          "answers": ["Albert Einstein", "Isaac Newton", "Nikola Tesla", "Stephen Hawking"],
+          "correct": "Albert Einstein"
+        },
+        {
+          "question": "What is the hardest natural substance on Earth?",
+          "answers": ["Diamond", "Gold", "Iron", "Quartz"],
+          "correct": "Diamond"
+        },
+        {
+          "question": "Which planet is known as the Red Planet?",
+          "answers": ["Mars", "Jupiter", "Saturn", "Venus"],
+          "correct": "Mars"
+        },
+        {
+          "question": "What force keeps the planets in orbit around the sun?",
+          "answers": ["Gravity", "Magnetic force", "Centrifugal force", "Electrostatic force"],
+          "correct": "Gravity"
+        },
+        {
+          "question": "What is the study of mushrooms called?",
+          "answers": ["Mycology", "Botany", "Zoology", "Ecology"],
+          "correct": "Mycology"
+        },
+        {
+          "question": "What type of animal is a shark?",
+          "answers": ["Fish", "Mammal", "Reptile", "Amphibian"],
+          "correct": "Fish"
+        },
+        {
+          "question": "Which element has the atomic number 1?",
+          "answers": ["Hydrogen", "Oxygen", "Nitrogen", "Carbon"],
+          "correct": "Hydrogen"
+        },
+        {
+          "question": "What part of the cell contains the genetic material?",
+          "answers": ["Nucleus", "Mitochondria", "Ribosome", "Endoplasmic reticulum"],
+          "correct": "Nucleus"
+        },
+        {
+          "question": "What is the main gas found in the Earth's atmosphere?",
+          "answers": ["Nitrogen", "Oxygen", "Carbon Dioxide", "Hydrogen"],
+          "correct": "Nitrogen"
+        }
+      ]
+    },
+    {
+      "name": "Literature",
+      "questions": [
+        {
+          "question": "Who wrote 'Romeo and Juliet'?",
+          "answers": ["William Shakespeare", "Charles Dickens", "Jane Austen", "Leo Tolstoy"],
+          "correct": "William Shakespeare"
+        },
+        {
+          "question": "What is the main theme of '1984' by George Orwell?",
+          "answers": ["Love", "War", "Totalitarianism", "Adventure"],
+          "correct": "Totalitarianism"
+        },
+        {
+          "question": "Who is the author of 'Pride and Prejudice'?",
+          "answers": ["Jane Austen", "Charlotte Brontë", "Emily Brontë", "Mary Shelley"],
+          "correct": "Jane Austen"
+        },
+        {
+          "question": "In which century did the Renaissance begin?",
+          "answers": ["14th century", "15th century", "16th century", "17th century"],
+          "correct": "14th century"
+        },
+        {
+          "question": "Who wrote 'The Great Gatsby'?",
+          "answers": ["F. Scott Fitzgerald", "Ernest Hemingway", "John Steinbeck", "William Faulkner"],
+          "correct": "F. Scott Fitzgerald"
+        },
+        {
+          "question": "What novel is the character Jay Gatsby from?",
+          "answers": ["The Great Gatsby", "Moby-Dick", "To Kill a Mockingbird", "The Catcher in the Rye"],
+          "correct": "The Great Gatsby"
+        },
+        {
+          "question": "Who wrote 'To Kill a Mockingbird'?",
+          "answers": ["Harper Lee", "Truman Capote", "Mark Twain", "Tennessee Williams"],
+          "correct": "Harper Lee"
+        },
+        {
+          "question": "What is the highest award in literature?",
+          "answers": ["The Nobel Prize in Literature", "The Pulitzer Prize", "The Booker Prize", "The National Book Award"],
+          "correct": "The Nobel Prize in Literature"
+        },
+        {
+          "question": "Who is the author of 'The Hobbit'?",
+          "answers": ["J.R.R. Tolkien", "J.K. Rowling", "C.S. Lewis", "George R.R. Martin"],
+          "correct": "J.R.R. Tolkien"
+        },
+        {
+          "question": "What is the epic poem 'Beowulf' about?",
+          "answers": ["A hero's battle with a monster", "A king's quest for immortality", "A prince's journey to reclaim his throne", "A knight's quest for the Holy Grail"],
+          "correct": "A hero's battle with a monster"
+        }
+      ]
     }
   ]
 }
