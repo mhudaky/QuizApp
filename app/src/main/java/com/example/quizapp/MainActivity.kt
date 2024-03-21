@@ -8,7 +8,6 @@ import android.widget.Button
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import com.google.gson.Gson
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,17 +20,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         topicsLayout = findViewById(R.id.topics)
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
-        viewModel.loadQuestions(resources.openRawResource(R.raw.questions))
         createTopicButtons()
         addResetStatListener()
     }
 
     private fun createTopicButtons() {
-        viewModel.getTopics().forEach { topic ->
+        viewModel.getTopicNames().forEach { topicName ->
             val button = Button(this)
-            button.text = topic.name
+            button.text = topicName
             button.setOnClickListener {
-                startQuestionActivity(topic)
+                startQuestionActivity(topicName)
             }
             topicsLayout.addView(button)
         }
@@ -45,9 +43,9 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun startQuestionActivity(topic: Topic) {
+    private fun startQuestionActivity(topicName: String) {
         val intent = Intent(this, QuestionActivity::class.java)
-        intent.putExtra("topic", Gson().toJson(topic))
+        intent.putExtra("topic", viewModel.getTopicFileIdentifier(topicName))
         startActivity(intent)
     }
 }

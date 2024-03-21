@@ -1,20 +1,32 @@
 
+import android.content.res.Resources
 import androidx.lifecycle.ViewModel
-import com.example.quizapp.QuestionBank
-import com.example.quizapp.Topic
-import com.google.gson.Gson
-import java.io.InputStream
+import com.example.quizapp.R
+import com.example.quizapp.TopicIdentifier
+import java.util.Locale
 
-class MainViewModel : ViewModel() {
+class MainViewModel(private val resources: Resources) : ViewModel() {
 
-    lateinit var questionBank: QuestionBank
+    private val topics: MutableList<TopicIdentifier> = mutableListOf()
 
-    fun loadQuestions(inputStream: InputStream) {
-        val jsonString = inputStream.bufferedReader().use { it.readText() }
-        questionBank = Gson().fromJson(jsonString, QuestionBank::class.java)
+    init {
+        loadAllQuestions()
     }
 
-    fun getTopics(): List<Topic> {
-        return questionBank.topics
+    private fun loadAllQuestions() {
+        val fields = R.raw::class.java.fields
+        for (field in fields) {
+            val name = field.name
+            val fileId = resources.getIdentifier(name, "raw", resources.getResourcePackageName(R.raw::class.java.fields[0].getInt(R.raw::class.java.fields[0])))
+            topics.add(TopicIdentifier(name.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }, fileId))
+        }
+    }
+
+    fun getTopicNames(): List<String> {
+        return topics.map { it.name }
+    }
+
+    fun getTopicFileIdentifier(topicName: String): Int {
+        return topics.find { it.name == topicName }!!.fileId
     }
 }

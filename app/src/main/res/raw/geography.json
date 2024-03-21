@@ -1,0 +1,100 @@
+{
+  "name": "Geography",
+  "sections": [
+    {
+      "level": "Easy",
+      "questions": [
+        {
+          "question": "What is the capital of France?",
+          "answers": ["Paris", "London", "Berlin", "Madrid"],
+          "correct": "Paris"
+        },
+        {
+          "question": "What is the capital of England?",
+          "answers": ["Paris", "London", "Berlin", "Madrid"],
+          "correct": "London"
+        },
+        {
+          "question": "What is the capital of Italy?",
+          "answers": ["Rome", "Madrid", "Athens", "Vienna"],
+          "correct": "Rome"
+        },
+        {
+          "question": "Which river flows through Cairo?",
+          "answers": ["Nile", "Danube", "Amazon", "Ganges"],
+          "correct": "Nile"
+        },
+        {
+          "question": "What mountain range separates Europe and Asia?",
+          "answers": ["Ural Mountains", "Andes", "Himalayas", "Rocky Mountains"],
+          "correct": "Ural Mountains"
+        },
+        {
+          "question": "Which African country is known as the 'Land of a Thousand Hills'?",
+          "answers": ["Rwanda", "Kenya", "Uganda", "Tanzania"],
+          "correct": "Rwanda"
+        },
+        {
+          "question": "Which ocean is the largest by area?",
+          "answers": ["Pacific Ocean", "Atlantic Ocean", "Indian Ocean", "Arctic Ocean"],
+          "correct": "Pacific Ocean"
+        },
+        {
+          "question": "Which desert is located in North Africa?",
+          "answers": ["Sahara Desert", "Gobi Desert", "Atacama Desert", "Kalahari Desert"],
+          "correct": "Sahara Desert"
+        }
+      ]
+    },
+    {
+      "level": "Medium",
+      "questions": [
+        {
+          "question": "What is the name of the strait that separates Africa and Europe?",
+          "answers": ["Strait of Gibraltar", "Bosphorus Strait", "Strait of Hormuz", "Strait of Malacca"],
+          "correct": "Strait of Gibraltar"
+        },
+        {
+          "question": "Which country has the most islands in the world?",
+          "answers": ["Sweden", "Indonesia", "Philippines", "Canada"],
+          "correct": "Sweden"
+        },
+        {
+          "question": "What is the largest lake in Africa?",
+          "answers": ["Lake Victoria", "Lake Tanganyika", "Lake Malawi", "Lake Turkana"],
+          "correct": "Lake Victoria"
+        },
+        {
+          "question": "Which country is both in Europe and Asia?",
+          "answers": ["Russia", "Turkey", "Kazakhstan", "Georgia"],
+          "correct": "Turkey"
+        }
+      ]
+    },
+    {
+      "level": "Hard",
+      "questions": [
+        {
+          "question": "What is the capital of the Australian Capital Territory?",
+          "answers": ["Canberra", "Sydney", "Melbourne", "Perth"],
+          "correct": "Canberra"
+        },
+        {
+          "question": "Which country has a city that is the closest to the International Date Line?",
+          "answers": ["Fiji", "Russia", "New Zealand", "Tuvalu"],
+          "correct": "New Zealand"
+        },
+        {
+          "question": "Name the exclave of Oman separated from the rest of the country by the UAE.",
+          "answers": ["Musandam", "Salalah", "Sohar", "Nizwa"],
+          "correct": "Musandam"
+        },
+        {
+          "question": "What is the driest place on Earth?",
+          "answers": ["Atacama Desert", "McMurdo Dry Valleys", "Sahara Desert", "Gobi Desert"],
+          "correct": "McMurdo Dry Valleys"
+        }
+      ]
+    }
+  ]
+}
