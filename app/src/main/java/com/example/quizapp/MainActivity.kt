@@ -1,6 +1,7 @@
 package com.example.quizapp
 
 import MainViewModel
+import MainViewModelFactory
 import SharedPreferencesHelper
 import android.content.Intent
 import android.os.Bundle
@@ -19,7 +20,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         topicsLayout = findViewById(R.id.topics)
-        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+        val factory = MainViewModelFactory(resources)
+        viewModel = ViewModelProvider(this, factory).get(MainViewModel::class.java)
         createTopicButtons()
         addResetStatListener()
     }
@@ -45,7 +47,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun startQuestionActivity(topicName: String) {
         val intent = Intent(this, QuestionActivity::class.java)
-        intent.putExtra("topic", viewModel.getTopicFileIdentifier(topicName))
+        intent.putExtra("topicFileIdentifier", viewModel.getTopicFileIdentifier(topicName))
         startActivity(intent)
     }
 }

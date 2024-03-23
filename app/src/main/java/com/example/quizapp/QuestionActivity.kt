@@ -9,16 +9,17 @@ import TimerListener
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import com.google.gson.Gson
 
 class QuestionActivity : AppCompatActivity(), TimerListener {
 
+    private lateinit var topicIdentifier: TopicFileLoader
     private lateinit var viewModel: QuestionViewModel
     private lateinit var questionViewUpdater: QuestionViewUpdater
     private lateinit var timer: QuestionTimer
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        topicIdentifier = TopicFileLoader(resources)
         setContentView(R.layout.activity_question)
         viewModel = initViewModel()
         timer = QuestionTimer(this)
@@ -30,8 +31,8 @@ class QuestionActivity : AppCompatActivity(), TimerListener {
     }
 
     private fun initViewModel(): QuestionViewModel {
-        val topicJson = intent.getStringExtra("topic")
-        val topic = Gson().fromJson(topicJson, Topic::class.java)
+        val topicFileIdentifier = intent.getIntExtra("topicFileIdentifier", 0)
+        val topic = topicIdentifier.loadFile(topicFileIdentifier)
         val prefsHelper = SharedPreferencesHelper(this)
         val factory = QuestionViewModelFactory(topic, prefsHelper)
         return ViewModelProvider(this, factory)[QuestionViewModel::class.java]

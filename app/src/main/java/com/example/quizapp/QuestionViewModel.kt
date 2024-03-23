@@ -1,6 +1,7 @@
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.quizapp.Difficulty
 import com.example.quizapp.Question
 import com.example.quizapp.Topic
 
@@ -10,6 +11,7 @@ class QuestionViewModel(private val topic: Topic, private val prefsHelper: Share
     var streak = MutableLiveData<Int>()
     var question = MutableLiveData<Question>()
     private var currentQuestionIndex = 0
+    private var currentDifficulty = Difficulty.EASY
     private var timeIsUp = false
     private var firstGuess = true
 
@@ -17,12 +19,12 @@ class QuestionViewModel(private val topic: Topic, private val prefsHelper: Share
         score.value = prefsHelper.getPoints(topic.name)
         streak.value = prefsHelper.getStreak(topic.name)
         currentQuestionIndex = prefsHelper.getCurrentQuestionIndex(topic.name)
-        question.value = topic.questions[currentQuestionIndex]
+        question.value = topic.getQuestions(currentDifficulty)[currentQuestionIndex]
     }
 
     fun loadNextQuestion() {
         currentQuestionIndex = getNextQuestionIndex()
-        question.value = topic.questions[currentQuestionIndex]
+        question.value = topic.getQuestions(currentDifficulty)[currentQuestionIndex]
         timeIsUp = false
         firstGuess = true
     }
@@ -61,7 +63,7 @@ class QuestionViewModel(private val topic: Topic, private val prefsHelper: Share
 
     private fun getNextQuestionIndex(): Int {
         currentQuestionIndex++
-        if (currentQuestionIndex >= topic.questions.size) {
+        if (currentQuestionIndex >= topic.getQuestions(currentDifficulty).size) {
             currentQuestionIndex = 0
         }
         return currentQuestionIndex
