@@ -7,6 +7,7 @@ import QuestionViewUpdater
 import SharedPreferencesHelper
 import TimerListener
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 
@@ -19,7 +20,8 @@ class QuestionActivity : AppCompatActivity(), TimerListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        topicIdentifier = TopicFileLoader(resources)
+        Log.i("QuestionActivity", "QuestionActivity started")
+        topicIdentifier = TopicFileLoader(this)
         setContentView(R.layout.activity_question)
         viewModel = initViewModel()
         timer = QuestionTimer(this)
@@ -31,8 +33,10 @@ class QuestionActivity : AppCompatActivity(), TimerListener {
     }
 
     private fun initViewModel(): QuestionViewModel {
-        val topicFileIdentifier = intent.getIntExtra("topicFileIdentifier", 0)
+        val topicFileIdentifier = intent.getStringExtra("topicFileIdentifier") ?: ""
         val topic = topicIdentifier.loadFile(topicFileIdentifier)
+        Log.i("QuestionActivity", "Loaded topic: $topic")
+        Log.i("QuestionActivity", "Easy: ${topic.getQuestions(Difficulty.EASY)}")
         val prefsHelper = SharedPreferencesHelper(this)
         val factory = QuestionViewModelFactory(topic, prefsHelper)
         return ViewModelProvider(this, factory)[QuestionViewModel::class.java]

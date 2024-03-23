@@ -5,6 +5,7 @@ import MainViewModelFactory
 import SharedPreferencesHelper
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
@@ -18,6 +19,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.i("MainActivity", "MainActivity started")
         setContentView(R.layout.activity_main)
         topicsLayout = findViewById(R.id.topics)
         val factory = MainViewModelFactory(resources)

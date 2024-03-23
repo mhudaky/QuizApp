@@ -2,28 +2,26 @@ package com.example.quizapp
 
 data class TopicIdentifier(
     val name: String,
-    val fileId: Int)
+    val filePath: String
+)
+
 data class Topic(
     val name: String,
-    val sections: List<Section>
+    val easyQuestions: List<Question>,
+    val mediumQuestions: List<Question>,
+    val hardQuestions: List<Question>
 ) {
-    init {
-        val levels = sections.map { it.difficulty.name }
-        if (!levels.containsAll(Difficulty.entries.map { it.name })) {
-            throw IllegalArgumentException("JSON file does not contain all required sections (Easy, Medium, Hard)")
+    fun getQuestions(currentDifficulty: Difficulty): List<Question> {
+        return when (currentDifficulty) {
+            Difficulty.EASY -> easyQuestions
+            Difficulty.MEDIUM -> mediumQuestions
+            Difficulty.HARD -> hardQuestions
         }
-    }
-
-    fun getQuestions(difficulty: Difficulty): List<Question> {
-        return sections.find { it.difficulty == difficulty }?.questions ?: emptyList()
     }
 }
 
-data class Section(
-    val difficulty: Difficulty,
-    val questions: List<Question>
-)
 data class Question(
     val question: String,
     val answers: List<String>,
-    val correct: String)
+    val correct: String
+)

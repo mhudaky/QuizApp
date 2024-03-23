@@ -1,24 +1,25 @@
 
 import android.content.res.Resources
 import androidx.lifecycle.ViewModel
-import com.example.quizapp.R
 import com.example.quizapp.TopicIdentifier
-import java.util.Locale
 
 class MainViewModel(private val resources: Resources) : ViewModel() {
 
     private val topics: MutableList<TopicIdentifier> = mutableListOf()
 
     init {
-        loadAllQuestions()
+        loadTopics()
     }
 
-    private fun loadAllQuestions() {
-        val fields = R.raw::class.java.fields
-        for (field in fields) {
-            val name = field.name
-            val fileId = resources.getIdentifier(name, "raw", resources.getResourcePackageName(R.raw::class.java.fields[0].getInt(R.raw::class.java.fields[0])))
-            topics.add(TopicIdentifier(name.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }, fileId))
+    private fun loadTopics() {
+        val assetManager = resources.assets
+        val files = assetManager.list("questions")
+        if (files != null) {
+            for (filename in files) {
+                val name = filename.substringBeforeLast(".")
+                val filePath = "questions/$filename"
+                topics.add(TopicIdentifier(name, filePath))
+            }
         }
     }
 
@@ -26,7 +27,7 @@ class MainViewModel(private val resources: Resources) : ViewModel() {
         return topics.map { it.name }
     }
 
-    fun getTopicFileIdentifier(topicName: String): Int {
-        return topics.find { it.name == topicName }!!.fileId
+    fun getTopicFileIdentifier(topicName: String): String {
+        return topics.find { it.name == topicName }!!.filePath
     }
 }
