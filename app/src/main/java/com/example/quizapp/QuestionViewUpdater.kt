@@ -11,6 +11,8 @@ class QuestionViewUpdater(
     private val questionField: TextView = activity.findViewById(R.id.question)
     private val scoreTextView: TextView = activity.findViewById(R.id.score)
     private val streakTextView: TextView = activity.findViewById(R.id.streak)
+    private val difficultyTextView: TextView = activity.findViewById(R.id.difficulty)
+    private val indexTextView: TextView = activity.findViewById(R.id.index)
     private val buttonInitializer = ButtonInitializer(activity, viewModel, timer)
     private val answerButtons = buttonInitializer.initializeButtons()
 
@@ -23,6 +25,12 @@ class QuestionViewUpdater(
         }
         viewModel.streak.observe(activity) { streak ->
             "Streak: $streak".also { streakTextView.text = it }
+        }
+        viewModel.difficultyLiveData.observe(activity) { difficulty ->
+            "Difficulty: ${difficulty.name}".also { difficultyTextView.text = it }
+        }
+        viewModel.indexLiveData.observe(activity) { index ->
+            "Index: $index".also { indexTextView.text = it }
         }
     }
 

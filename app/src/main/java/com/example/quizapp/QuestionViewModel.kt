@@ -9,6 +9,8 @@ class QuestionViewModel(private val topic: Topic, private val prefsHelper: Share
     var score = MutableLiveData<Int>()
     var streak = MutableLiveData<Int>()
     var question = MutableLiveData<Question>()
+    var difficultyLiveData = MutableLiveData<Difficulty>()
+    var indexLiveData = MutableLiveData<Int>()
     private var currentQuestionIndex = 0
     private var currentDifficulty = Difficulty.EASY
     private var timeIsUp = false
@@ -21,13 +23,14 @@ class QuestionViewModel(private val topic: Topic, private val prefsHelper: Share
         streak.value = prefsHelper.getStreak(createTopicDifficultyDTO())
         currentQuestionIndex = prefsHelper.getCurrentQuestionIndex(createTopicDifficultyDTO())
         question.value = getNextQuestion()
+        logger.info("QuestionViewModel created: $this")
     }
 
     fun loadNextQuestion() {
-        question.value = getNextQuestion()
         if (!guessedAlready) {
             updateStreak(0)
         }
+        question.value = getNextQuestion()
         timeIsUp = false
         guessedAlready = false
     }
@@ -54,19 +57,32 @@ class QuestionViewModel(private val topic: Topic, private val prefsHelper: Share
             in 3..5 -> Difficulty.MEDIUM
             else -> Difficulty.HARD
         }
+        logger.info("Difficulty set to: ${this.currentDifficulty}")
+        difficultyLiveData.value = currentDifficulty
         currentQuestionIndex = prefsHelper.getCurrentQuestionIndex(createTopicDifficultyDTO())
     }
 
     private fun onRightGuess() {
         if(!guessedAlready && !timeIsUp) {
-            updateScore(score.value!! + 1)
+            increaseScore()
             updateStreak(streak.value!! + 1)
         }
+    }
+
+    private fun increaseScore() {
+        val increment = when (currentDifficulty) {
+            Difficulty.EASY -> 1
+            Difficulty.MEDIUM -> 2
+            Difficulty.HARD -> 4
+        }
+        updateScore(score.value!! + increment)
     }
 
     private fun onWrongGuess() {
         updateStreak(0)
     }
+
+
 
     private fun updateScore(newScore: Int) {
         score.value = newScore
@@ -84,6 +100,7 @@ class QuestionViewModel(private val topic: Topic, private val prefsHelper: Share
             currentQuestionIndex = 0
         }
         prefsHelper.saveCurrentQuestionIndex(createTopicDifficultyDTO(), currentQuestionIndex)
+        indexLiveData.value = currentQuestionIndex
         return currentQuestionIndex
     }
 
