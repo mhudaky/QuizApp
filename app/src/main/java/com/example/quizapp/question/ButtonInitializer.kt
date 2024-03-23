@@ -1,17 +1,24 @@
-package com.example.quizapp
+package com.example.quizapp.question
 
 import android.content.Intent
 import android.graphics.Color
 import android.widget.Button
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
+import com.example.quizapp.R
+import com.example.quizapp.main.MainActivity
 
 class ButtonInitializer(private val activity: AppCompatActivity, private val viewModel: QuestionViewModel, private val timer: QuestionTimer) {
 
     private val answersField: LinearLayout = activity.findViewById(R.id.answers)
 
     fun initializeButtons(): List<Button> {
-        val buttonIds = listOf(R.id.answer_button_1, R.id.answer_button_2, R.id.answer_button_3, R.id.answer_button_4)
+        val buttonIds = listOf(
+            R.id.answer_button_1,
+            R.id.answer_button_2,
+            R.id.answer_button_3,
+            R.id.answer_button_4
+        )
 
         val answerButtons = buttonIds.map { id ->
             val button = activity.findViewById<Button>(id)

@@ -1,8 +1,10 @@
-package com.example.quizapp
+package com.example.quizapp.question
 
 import android.graphics.Color
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.quizapp.R
+import com.example.quizapp.dto.Question
 
 class QuestionViewUpdater(
     private val activity: AppCompatActivity, private val viewModel: QuestionViewModel,

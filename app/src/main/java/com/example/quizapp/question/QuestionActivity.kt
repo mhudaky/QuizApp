@@ -1,8 +1,12 @@
-package com.example.quizapp
+package com.example.quizapp.question
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import com.example.quizapp.dto.Difficulty
+import com.example.quizapp.R
+import com.example.quizapp.utils.TopicFileLoader
+import com.example.quizapp.utils.SharedPreferencesHelper
 import java.util.logging.Logger.getLogger
 
 class QuestionActivity : AppCompatActivity(), TimerListener {

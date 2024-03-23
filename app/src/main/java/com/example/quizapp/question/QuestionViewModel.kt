@@ -1,7 +1,12 @@
-package com.example.quizapp
+package com.example.quizapp.question
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.quizapp.dto.Difficulty
+import com.example.quizapp.dto.Question
+import com.example.quizapp.dto.Topic
+import com.example.quizapp.dto.TopicDifficultyDTO
+import com.example.quizapp.utils.SharedPreferencesHelper
 import java.util.logging.Logger
 
 class QuestionViewModel(private val topic: Topic, private val prefsHelper: SharedPreferencesHelper) : ViewModel() {

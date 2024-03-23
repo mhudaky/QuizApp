@@ -1,24 +1,26 @@
-package com.example.quizapp
+package com.example.quizapp.main
 
 import android.content.res.Resources
 import androidx.lifecycle.ViewModel
+import com.example.quizapp.dto.TopicIdentifier
 
 class MainViewModel(private val resources: Resources) : ViewModel() {
 
     private val topics: MutableList<TopicIdentifier> = mutableListOf()
+    private var currentPath: String = "questions"
 
     init {
         loadTopics()
     }
 
     private fun loadTopics() {
+        topics.clear()
         val assetManager = resources.assets
-        val files = assetManager.list("questions")
+        val files = assetManager.list(currentPath)
         if (files != null) {
             for (filename in files) {
-                val name = filename.substringBeforeLast(".")
-                val filePath = "questions/$filename"
-                topics.add(TopicIdentifier(name, filePath))
+                val filePath = "$currentPath/$filename"
+                topics.add(TopicIdentifier(filename, filePath))
             }
         }
     }
@@ -27,7 +29,7 @@ class MainViewModel(private val resources: Resources) : ViewModel() {
         return topics.map { it.name }
     }
 
-    fun getTopicFileIdentifier(topicName: String): String {
-        return topics.find { it.name == topicName }!!.filePath
+    fun choseTopic(topicName: String): TopicIdentifier {
+        return topics.find { it.name == topicName }!!
     }
 }

@@ -1,7 +1,8 @@
-package com.example.quizapp
+package com.example.quizapp.utils
 
 import android.content.Context
 import android.content.SharedPreferences
+import com.example.quizapp.dto.TopicDifficultyDTO
 
 class SharedPreferencesHelper(context: Context) {
 

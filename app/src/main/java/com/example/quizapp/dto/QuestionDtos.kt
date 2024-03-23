@@ -1,4 +1,4 @@
-package com.example.quizapp
+package com.example.quizapp.dto
 
 data class TopicIdentifier(
     val name: String,

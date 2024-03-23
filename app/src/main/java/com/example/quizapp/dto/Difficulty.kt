@@ -1,4 +1,4 @@
-package com.example.quizapp
+package com.example.quizapp.dto
 
 enum class Difficulty(val value: String) {
     EASY("Easy"),

@@ -1,4 +1,4 @@
-package com.example.quizapp
+package com.example.quizapp.main
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,6 +6,9 @@ import android.widget.Button
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import com.example.quizapp.R
+import com.example.quizapp.question.QuestionActivity
+import com.example.quizapp.utils.SharedPreferencesHelper
 import java.util.logging.Logger.getLogger
 
 class MainActivity : AppCompatActivity() {

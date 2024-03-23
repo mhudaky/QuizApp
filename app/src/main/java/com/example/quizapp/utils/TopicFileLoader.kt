@@ -1,6 +1,7 @@
-package com.example.quizapp
+package com.example.quizapp.utils
 
 import android.content.Context
+import com.example.quizapp.dto.Topic
 import com.google.gson.Gson
 
 class TopicFileLoader(private val context: Context) {
