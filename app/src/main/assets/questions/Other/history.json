@@ -1,0 +1,89 @@
+{
+  "name": "History",
+  "easyQuestions": [
+    {
+      "question": "Who was the first President of the United States?",
+      "answers": ["George Washington", "Abraham Lincoln", "Thomas Jefferson", "John Adams"],
+      "correct": "George Washington"
+    },
+    {
+      "question": "In which year did World War II end?",
+      "answers": ["1945", "1944", "1939", "1950"],
+      "correct": "1945"
+    },
+    {
+      "question": "What was the main reason for the fall of the Roman Empire?",
+      "answers": ["Invasion by Barbarian tribes", "Economic troubles", "Overexpansion and military spending", "All of the above"],
+      "correct": "All of the above"
+    },
+    {
+      "question": "Who discovered America?",
+      "answers": ["Christopher Columbus", "Leif Erikson", "Ferdinand Magellan", "Amerigo Vespucci"],
+      "correct": "Christopher Columbus"
+    },
+    {
+      "question": "Which civilization is known for building pyramids?",
+      "answers": ["Egyptian", "Mesopotamian", "Indus Valley", "Chinese"],
+      "correct": "Egyptian"
+    },
+    {
+      "question": "What ancient city was famously destroyed by a volcano in 79 AD?",
+      "answers": ["Pompeii", "Athens", "Rome", "Troy"],
+      "correct": "Pompeii"
+    },
+    {
+      "question": "Who was the famous British prime minister during World War II?",
+      "answers": ["Winston Churchill", "Neville Chamberlain", "Margaret Thatcher", "Tony Blair"],
+      "correct": "Winston Churchill"
+    },
+    {
+      "question": "What was the period of intellectual and cultural revival that occurred in Europe from the 14th to the 17th century known as?",
+      "answers": ["The Renaissance", "The Enlightenment", "The Middle Ages", "The Industrial Revolution"],
+      "correct": "The Renaissance"
+    }
+  ],
+  "mediumQuestions": [
+    {
+      "question": "Which treaty ended the First World War?",
+      "answers": ["Treaty of Versailles", "Treaty of Tordesillas", "Treaty of Paris", "Treaty of Utrecht"],
+      "correct": "Treaty of Versailles"
+    },
+    {
+      "question": "Who was the first female Prime Minister of the United Kingdom?",
+      "answers": ["Margaret Thatcher", "Theresa May", "Indira Gandhi", "Angela Merkel"],
+      "correct": "Margaret Thatcher"
+    },
+    {
+      "question": "What empire was known as the 'Sick Man of Europe' in the 19th century?",
+      "answers": ["Ottoman Empire", "Russian Empire", "Austro-Hungarian Empire", "British Empire"],
+      "correct": "Ottoman Empire"
+    },
+    {
+      "question": "In which century did the French Revolution occur?",
+      "answers": ["17th century", "18th century", "19th century", "20th century"],
+      "correct": "18th century"
+    }
+  ],
+  "hardQuestions": [
+    {
+      "question": "Who led the Russian Revolution in 1917?",
+      "answers": ["Vladimir Lenin", "Joseph Stalin", "Leon Trotsky", "Nicholas II"],
+      "correct": "Vladimir Lenin"
+    },
+    {
+      "question": "What ancient empire was ruled by Cyrus the Great?",
+      "answers": ["Persian Empire", "Roman Empire", "Macedonian Empire", "Mongol Empire"],
+      "correct": "Persian Empire"
+    },
+    {
+      "question": "What was the main cause of the Hundred Years' War?",
+      "answers": ["Religious differences", "Economic competition", "Claims to the French throne", "Territorial disputes"],
+      "correct": "Claims to the French throne"
+    },
+    {
+      "question": "Which civilization is known for its sophisticated writing system, the quipu?",
+      "answers": ["Inca Civilization", "Maya Civilization", "Aztec Civilization", "Olmec Civilization"],
+      "correct": "Inca Civilization"
+    }
+  ]
+}

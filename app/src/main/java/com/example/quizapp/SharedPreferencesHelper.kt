@@ -8,24 +8,24 @@ class SharedPreferencesHelper(context: Context) {
     private val PREFS_NAME = "com.example.quizapp"
     private val prefs: SharedPreferences = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
 
-    fun saveStreak(dto: TopicDifficultyDTO, streak: Int) {
+    fun saveStreak(topicId: String, streak: Int) {
         val editor = prefs.edit()
-        editor.putInt("${dto.topicName}_${dto.difficulty.name}_streak", streak)
+        editor.putInt("${topicId}_streak", streak)
         editor.apply()
     }
 
-    fun getStreak(dto: TopicDifficultyDTO): Int {
-        return prefs.getInt("${dto.topicName}_${dto.difficulty.name}_streak", 0)
+    fun getStreak(topicId: String): Int {
+        return prefs.getInt("${topicId}_streak", 0)
     }
 
-    fun savePoints(dto: TopicDifficultyDTO, points: Int) {
+    fun savePoints(topicId: String, points: Int) {
         val editor = prefs.edit()
-        editor.putInt("${dto.topicName}_${dto.difficulty.name}_points", points)
+        editor.putInt("${topicId}_points", points)
         editor.apply()
     }
 
-    fun getPoints(dto: TopicDifficultyDTO): Int {
-        return prefs.getInt("${dto.topicName}_${dto.difficulty.name}_points", 0)
+    fun getPoints(topicId: String): Int {
+        return prefs.getInt("${topicId}_points", 0)
     }
 
     fun saveCurrentQuestionIndex(dto: TopicDifficultyDTO, index: Int) {

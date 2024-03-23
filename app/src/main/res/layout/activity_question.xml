@@ -7,28 +7,26 @@
         android:id="@+id/button_main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Return to Main" />
+        android:text="Return to Main"
+        android:layout_marginBottom="4dp"/>
     <TextView
         android:id="@+id/score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Score"
-        android:textSize="18sp"
-        android:layout_marginBottom="8dp" />
+        android:textSize="18sp" />
     <TextView
         android:id="@+id/streak"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Streak"
-        android:textSize="18sp"
-        android:layout_marginBottom="16dp" />
+        android:textSize="18sp" />
     <TextView
         android:id="@+id/difficulty"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Difficulty"
-        android:textSize="18sp"
-        android:layout_marginBottom="8dp" />
+        android:textSize="18sp" />
     <TextView
         android:id="@+id/index"
         android:layout_width="wrap_content"
