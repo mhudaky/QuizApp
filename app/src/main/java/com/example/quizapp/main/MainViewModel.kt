@@ -3,33 +3,48 @@ package com.example.quizapp.main
 import android.content.res.Resources
 import androidx.lifecycle.ViewModel
 import com.example.quizapp.dto.TopicIdentifier
+import java.util.logging.Logger
 
 class MainViewModel(private val resources: Resources) : ViewModel() {
 
-    private val topics: MutableList<TopicIdentifier> = mutableListOf()
+    private val topicIdentifiers: MutableList<TopicIdentifier> = mutableListOf()
     private var currentPath: String = "questions"
+    private val logger = Logger.getLogger(this::class.simpleName!!)
 
     init {
         loadTopics()
     }
 
     private fun loadTopics() {
-        topics.clear()
+        topicIdentifiers.clear()
         val assetManager = resources.assets
         val files = assetManager.list(currentPath)
         if (files != null) {
             for (filename in files) {
                 val filePath = "$currentPath/$filename"
-                topics.add(TopicIdentifier(filename, filePath))
+                val topicName = filename.replace(".json", "")
+                if (filePath.endsWith(".json")) {
+                    topicIdentifiers.add(TopicIdentifier(topicName, filePath, false))
+                } else {
+                    topicIdentifiers.add(TopicIdentifier(topicName, filePath, true))
+                }
             }
         }
     }
 
-    fun getTopicNames(): List<String> {
-        return topics.map { it.name }
+    fun getTopicIdentifiers(): List<TopicIdentifier> {
+        return topicIdentifiers
     }
 
-    fun choseTopic(topicName: String): TopicIdentifier {
-        return topics.find { it.name == topicName }!!
+    fun choseTopic(topicIdentifier: TopicIdentifier) {
+        logger.info("Chose topic: ${topicIdentifier.name}")
+        if (topicIdentifier.hasSubTopics) {
+            navigateTo(topicIdentifier.filePath)
+        }
+    }
+
+    private fun navigateTo(path: String) {
+        currentPath = path
+        loadTopics()
     }
 }

@@ -7,6 +7,7 @@ import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.quizapp.R
+import com.example.quizapp.dto.TopicIdentifier
 import com.example.quizapp.question.QuestionActivity
 import com.example.quizapp.utils.SharedPreferencesHelper
 import java.util.logging.Logger.getLogger
@@ -30,11 +31,19 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun createTopicButtons() {
-        viewModel.getTopicNames().forEach { topicName ->
+        topicsLayout.removeAllViews()
+        val topicIdentifiers = viewModel.getTopicIdentifiers()
+        logger.info("Creating topic buttons: $topicIdentifiers")
+        topicIdentifiers.forEach { topicIdentifier ->
             val button = Button(this)
-            button.text = topicName
+            button.text = topicIdentifier.name
             button.setOnClickListener {
-                startQuestionActivity(topicName)
+                viewModel.choseTopic(topicIdentifier)
+                if (topicIdentifier.hasSubTopics) {
+                    createTopicButtons()
+                } else {
+                    startQuestionActivity(topicIdentifier)
+                }
             }
             topicsLayout.addView(button)
         }
@@ -48,9 +57,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun startQuestionActivity(topicName: String) {
+    private fun startQuestionActivity(topicIdentifier: TopicIdentifier) {
         val intent = Intent(this, QuestionActivity::class.java)
-        intent.putExtra("topicFileIdentifier", viewModel.getTopicFileIdentifier(topicName))
+        intent.putExtra("topicName", topicIdentifier.name)
+        intent.putExtra("topicFilePath", topicIdentifier.filePath)
         startActivity(intent)
     }
 }

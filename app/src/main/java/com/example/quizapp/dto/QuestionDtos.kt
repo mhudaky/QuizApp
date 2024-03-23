@@ -2,7 +2,8 @@ package com.example.quizapp.dto
 
 data class TopicIdentifier(
     val name: String,
-    val filePath: String
+    val filePath: String,
+    val hasSubTopics: Boolean
 )
 
 data class Topic(

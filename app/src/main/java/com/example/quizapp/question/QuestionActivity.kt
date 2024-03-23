@@ -3,10 +3,9 @@ package com.example.quizapp.question
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import com.example.quizapp.dto.Difficulty
 import com.example.quizapp.R
-import com.example.quizapp.utils.TopicFileLoader
 import com.example.quizapp.utils.SharedPreferencesHelper
+import com.example.quizapp.utils.TopicFileLoader
 import java.util.logging.Logger.getLogger
 
 class QuestionActivity : AppCompatActivity(), TimerListener {
@@ -32,10 +31,9 @@ class QuestionActivity : AppCompatActivity(), TimerListener {
     }
 
     private fun initViewModel(): QuestionViewModel {
-        val topicFileIdentifier = intent.getStringExtra("topicFileIdentifier") ?: ""
+        val topicFileIdentifier = intent.getStringExtra("topicFilePath") ?: ""
         val topic = topicIdentifier.loadFile(topicFileIdentifier)
         logger.info( "Loaded topic: $topic")
-        logger.info( "Easy: ${topic.getQuestions(Difficulty.EASY)}")
         val prefsHelper = SharedPreferencesHelper(this)
         val factory = QuestionViewModelFactory(topic, prefsHelper)
         return ViewModelProvider(this, factory)[QuestionViewModel::class.java]
