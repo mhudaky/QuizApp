@@ -14,9 +14,9 @@ class QuestionViewModel(private val topic: Topic, private val prefsHelper: Share
     private var firstGuess = true
 
     init {
-        score.value = prefsHelper.getPoints(topic.name)
-        streak.value = prefsHelper.getStreak(topic.name)
-        currentQuestionIndex = prefsHelper.getCurrentQuestionIndex(topic.name)
+        score.value = prefsHelper.getPoints(topic.name, currentDifficulty)
+        streak.value = prefsHelper.getStreak(topic.name, currentDifficulty)
+        currentQuestionIndex = prefsHelper.getCurrentQuestionIndex(topic.name, currentDifficulty)
         question.value = getNextQuestion()
     }
 
@@ -53,12 +53,12 @@ class QuestionViewModel(private val topic: Topic, private val prefsHelper: Share
 
     private fun updateScore(newScore: Int) {
         score.value = newScore
-        prefsHelper.savePoints(topic.name, newScore)
+        prefsHelper.savePoints(topic.name, currentDifficulty, newScore)
     }
 
     private fun updateStreak(newStreak: Int) {
         streak.value = newStreak
-        prefsHelper.savePoints(topic.name, newStreak)
+        prefsHelper.savePoints(topic.name, currentDifficulty, newStreak)
     }
 
     private fun getNextQuestionIndex(): Int {
@@ -66,14 +66,14 @@ class QuestionViewModel(private val topic: Topic, private val prefsHelper: Share
         if (currentQuestionIndex >= topic.getQuestions(currentDifficulty).size) {
             currentQuestionIndex = 0
         }
-        prefsHelper.saveCurrentQuestionIndex(topic.name, currentQuestionIndex)
+        prefsHelper.saveCurrentQuestionIndex(topic.name, currentDifficulty, currentQuestionIndex)
         return currentQuestionIndex
     }
 
     fun saveState() {
-        prefsHelper.savePoints(topic.name, score.value!!)
-        prefsHelper.saveStreak(topic.name, streak.value!!)
-        prefsHelper.saveCurrentQuestionIndex(topic.name, getNextQuestionIndex())
+        prefsHelper.savePoints(topic.name, currentDifficulty, score.value!!)
+        prefsHelper.saveStreak(topic.name, currentDifficulty, streak.value!!)
+        prefsHelper.saveCurrentQuestionIndex(topic.name, currentDifficulty, getNextQuestionIndex())
     }
 
     fun onTimeUp() {
