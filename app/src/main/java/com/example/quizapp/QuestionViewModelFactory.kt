@@ -1,7 +1,7 @@
+package com.example.quizapp
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.quizapp.Topic
 
 class QuestionViewModelFactory(private val topic: Topic, private val prefsHelper: SharedPreferencesHelper) : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {

@@ -1,3 +1,5 @@
+package com.example.quizapp
+
 import android.content.res.Resources
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

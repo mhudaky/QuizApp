@@ -1,10 +1,10 @@
+package com.example.quizapp
+
 import android.content.Intent
 import android.graphics.Color
 import android.widget.Button
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
-import com.example.quizapp.MainActivity
-import com.example.quizapp.R
 
 class ButtonInitializer(private val activity: AppCompatActivity, private val viewModel: QuestionViewModel, private val timer: QuestionTimer) {
 

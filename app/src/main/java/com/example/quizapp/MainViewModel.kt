@@ -1,7 +1,7 @@
+package com.example.quizapp
 
 import android.content.res.Resources
 import androidx.lifecycle.ViewModel
-import com.example.quizapp.TopicIdentifier
 
 class MainViewModel(private val resources: Resources) : ViewModel() {
 

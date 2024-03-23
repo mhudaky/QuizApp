@@ -1,8 +1,5 @@
 package com.example.quizapp
 
-import MainViewModel
-import MainViewModelFactory
-import SharedPreferencesHelper
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log

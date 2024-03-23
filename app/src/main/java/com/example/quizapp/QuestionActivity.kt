@@ -1,11 +1,5 @@
 package com.example.quizapp
 
-import QuestionTimer
-import QuestionViewModel
-import QuestionViewModelFactory
-import QuestionViewUpdater
-import SharedPreferencesHelper
-import TimerListener
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
