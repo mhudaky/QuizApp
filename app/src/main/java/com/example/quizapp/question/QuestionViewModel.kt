@@ -16,6 +16,7 @@ class QuestionViewModel(private val topic: Topic, private val prefsHelper: Share
     var question = MutableLiveData<Question>()
     var difficultyLiveData = MutableLiveData<Difficulty>()
     var indexLiveData = MutableLiveData<Int>()
+    var reasoning = MutableLiveData<String>()
     private var currentQuestionIndex = 0
     private var currentDifficulty = Difficulty.EASY
     private var timeIsUp = false
@@ -52,6 +53,7 @@ class QuestionViewModel(private val topic: Topic, private val prefsHelper: Share
         if (!guessedAlready) {
             updateStreak(0)
         }
+        reasoning.value = ""
         setDifficulty()
         return topic.getQuestions(currentDifficulty)[getNextQuestionIndex()]
     }
@@ -72,6 +74,7 @@ class QuestionViewModel(private val topic: Topic, private val prefsHelper: Share
             increaseScore()
             updateStreak(streak.value!! + 1)
         }
+        reasoning.value = question.value?.reasoning
     }
 
     private fun increaseScore() {

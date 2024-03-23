@@ -24,5 +24,6 @@ data class Topic(
 data class Question(
     val question: String,
     val answers: List<String>,
-    val correct: String
+    val correct: String,
+    val reasoning: String
 )
