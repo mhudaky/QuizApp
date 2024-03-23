@@ -74,7 +74,7 @@ class QuestionViewModel(private val topic: Topic, private val prefsHelper: Share
             increaseScore()
             updateStreak(streak.value!! + 1)
         }
-        reasoning.value = question.value?.reasoning
+        reasoning.value = "Correct! " + question.value?.reasoning
     }
 
     private fun increaseScore() {

@@ -4,86 +4,108 @@
     {
       "question": "Who was the first President of the United States?",
       "answers": ["George Washington", "Abraham Lincoln", "Thomas Jefferson", "John Adams"],
-      "correct": "George Washington"
+      "correct": "George Washington",
+      "reasoning": "George Washington was the first President of the United States, serving from 1789 to 1797. The other options, while significant figures in American history, did not serve as the first president."
     },
     {
       "question": "In which year did World War II end?",
       "answers": ["1945", "1944", "1939", "1950"],
-      "correct": "1945"
+      "correct": "1945",
+      "reasoning": "World War II ended in 1945 with the defeat of the Axis powers. The other years listed do not mark the end of World War II."
     },
     {
       "question": "What was the main reason for the fall of the Roman Empire?",
       "answers": ["Invasion by Barbarian tribes", "Economic troubles", "Overexpansion and military spending", "All of the above"],
-      "correct": "All of the above"
+      "correct": "All of the above",
+      "reasoning": "The fall of the Roman Empire was due to a combination of factors, including invasions by Barbarian tribes, economic troubles, and overexpansion and military spending. Therefore, 'All of the above' is the correct answer."
     },
     {
       "question": "Who discovered America?",
       "answers": ["Christopher Columbus", "Leif Erikson", "Ferdinand Magellan", "Amerigo Vespucci"],
-      "correct": "Christopher Columbus"
+      "correct": "Christopher Columbus",
+      "reasoning": "Christopher Columbus is often credited with discovering America in 1492, even though other explorers like Leif Erikson reached North America earlier. Columbus' voyages, however, led to the widespread awareness and colonization of the Americas by Europeans."
     },
     {
       "question": "Which civilization is known for building pyramids?",
       "answers": ["Egyptian", "Mesopotamian", "Indus Valley", "Chinese"],
-      "correct": "Egyptian"
+      "correct": "Egyptian",
+      "reasoning": "The Egyptian civilization is renowned for building the Pyramids, especially the Great Pyramids at Giza. While other civilizations also built pyramidal structures, the Egyptian pyramids are the most famous."
     },
     {
       "question": "What ancient city was famously destroyed by a volcano in 79 AD?",
       "answers": ["Pompeii", "Athens", "Rome", "Troy"],
-      "correct": "Pompeii"
+      "correct": "Pompeii",
+      "reasoning": "Pompeii was an ancient Roman city destroyed by the eruption of Mount Vesuvius in 79 AD. The other cities mentioned were not destroyed by a volcano."
     },
     {
       "question": "Who was the famous British prime minister during World War II?",
       "answers": ["Winston Churchill", "Neville Chamberlain", "Margaret Thatcher", "Tony Blair"],
-      "correct": "Winston Churchill"
+      "correct": "Winston Churchill",
+      "reasoning": "Winston Churchill was the British Prime Minister who led Britain during World War II. His leadership and speeches became symbols of British resistance against the Axis powers."
     },
     {
       "question": "What was the period of intellectual and cultural revival that occurred in Europe from the 14th to the 17th century known as?",
       "answers": ["The Renaissance", "The Enlightenment", "The Middle Ages", "The Industrial Revolution"],
-      "correct": "The Renaissance"
+      "correct": "The Renaissance",
+      "reasoning": "The Renaissance was a period of intellectual and cultural revival in Europe from the 14th to the 17th century, marked by advancements in art, science, and a renewed interest in classical antiquity."
     }
   ],
   "mediumQuestions": [
     {
       "question": "Which treaty ended the First World War?",
       "answers": ["Treaty of Versailles", "Treaty of Tordesillas", "Treaty of Paris", "Treaty of Utrecht"],
-      "correct": "Treaty of Versailles"
+      "correct": "Treaty of Versailles",
+      "reasoning": "The Treaty of Versailles, signed in 1919, officially ended World War I between Germany and the Allied Powers. The other treaties listed were significant in other historical contexts but did not end World War I."
     },
     {
       "question": "Who was the first female Prime Minister of the United Kingdom?",
       "answers": ["Margaret Thatcher", "Theresa May", "Indira Gandhi", "Angela Merkel"],
-      "correct": "Margaret Thatcher"
+      "correct": "Margaret Thatcher",
+      "reasoning": "Margaret Thatcher was the first female Prime Minister of the United Kingdom, serving from 1979 to 1990. The other women listed have held significant political positions but were not the first female Prime,
+      "Minister of the UK."
     },
     {
       "question": "What empire was known as the 'Sick Man of Europe' in the 19th century?",
       "answers": ["Ottoman Empire", "Russian Empire", "Austro-Hungarian Empire", "British Empire"],
-      "correct": "Ottoman Empire"
+      "correct": "Ottoman Empire",
+      "reasoning": "The Ottoman Empire was referred to as the 'Sick Man of Europe' in the 19th century due to its steady decline in territorial extent, military power, and internal stability. The other empires listed did not carry this specific designation."
     },
     {
       "question": "In which century did the French Revolution occur?",
       "answers": ["17th century", "18th century", "19th century", "20th century"],
-      "correct": "18th century"
+      "correct": "18th century",
+      "reasoning": "The French Revolution, a period of radical social and political upheaval in France, took place from 1789 to 1799, placing it in the 18th century. The other centuries listed do not align with the timeline of the French Revolution."
     }
   ],
   "hardQuestions": [
     {
       "question": "Who led the Russian Revolution in 1917?",
       "answers": ["Vladimir Lenin", "Joseph Stalin", "Leon Trotsky", "Nicholas II"],
-      "correct": "Vladimir Lenin"
+      "correct": "Vladimir Lenin",
+      "reasoning": "Vladimir Lenin was the leading figure of the Russian Revolution in 1917, which led to the overthrow of the Tsarist autocracy and the rise of the Soviet Union. The other individuals played significant roles in Russian history but were not the leaders of the 1917 revolution."
     },
     {
       "question": "What ancient empire was ruled by Cyrus the Great?",
       "answers": ["Persian Empire", "Roman Empire", "Macedonian Empire", "Mongol Empire"],
-      "correct": "Persian Empire"
+      "correct": "Persian Empire",
+      "reasoning": "Cyrus the Great was the founder of the Persian Empire, which he ruled from 550 BC until his death. The other empires listed were ruled by different leaders."
     },
     {
       "question": "What was the main cause of the Hundred Years' War?",
       "answers": ["Religious differences", "Economic competition", "Claims to the French throne", "Territorial disputes"],
-      "correct": "Claims to the French throne"
+      "correct": "Claims to the French throne",
+      "reasoning": "The primary cause of the Hundred Years' War between England and France was the dispute over claims to the French throne, following the extinction of the main line of the Capetian dynasty. The other options, while relevant to the period, were not the main cause of the war."
     },
     {
       "question": "Which civilization is known for its sophisticated writing system, the quipu?",
       "answers": ["Inca Civilization", "Maya Civilization", "Aztec Civilization", "Olmec Civilization"],
-      "correct": "Inca Civilization"
+      "correct": "Inca Civilization",
+      "reasoning": "The Inca Civilization is known for its unique writing system known as the quipu, which consisted of colored threads knotted in various ways to record information. The other civilizations developed different forms of writing or record-keeping."
     }
   ]
 }
+
+
+
+
+

@@ -7,9 +7,8 @@ import com.example.quizapp.R
 import com.example.quizapp.dto.Question
 
 class QuestionViewUpdater(
-    private val activity: AppCompatActivity, private val viewModel: QuestionViewModel,
-    private val timer: QuestionTimer
-) {
+    private val activity: AppCompatActivity, viewModel: QuestionViewModel, timer: QuestionTimer) {
+
     private val questionField: TextView = activity.findViewById(R.id.question)
     private val scoreTextView: TextView = activity.findViewById(R.id.score)
     private val streakTextView: TextView = activity.findViewById(R.id.streak)
@@ -36,7 +35,7 @@ class QuestionViewUpdater(
             "Index: $index".also { indexTextView.text = it }
         }
         viewModel.reasoning.observe(activity) { reasoning ->
-            "Reasoning: $reasoning".also { reasoningTextView.text = it }
+            reasoning.also { reasoningTextView.text = it }
         }
     }
 
@@ -53,6 +52,6 @@ class QuestionViewUpdater(
 
     fun updateTimer(secondsRemaining: Long) {
         val timerTextView: TextView = activity.findViewById(R.id.timer)
-        timerTextView.text = "$secondsRemaining sec"
+        "$secondsRemaining sec".also { timerTextView.text = it }
     }
 }
