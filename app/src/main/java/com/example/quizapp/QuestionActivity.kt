@@ -39,7 +39,6 @@ class QuestionActivity : AppCompatActivity(), TimerListener {
 
     override fun onStop() {
         super.onStop()
-        viewModel.saveState()
         timer.stopTimer()
     }
 

@@ -108,12 +108,6 @@ class QuestionViewModel(private val topic: Topic, private val prefsHelper: Share
         return TopicDifficultyDTO(topic.name, currentDifficulty)
     }
 
-    fun saveState() {
-        prefsHelper.savePoints(createTopicDifficultyDTO(), score.value!!)
-        prefsHelper.saveStreak(createTopicDifficultyDTO(), streak.value!!)
-        prefsHelper.saveCurrentQuestionIndex(createTopicDifficultyDTO(), getNextQuestionIndex())
-    }
-
     fun onTimeIsUp() {
         timeIsUp = true
         updateStreak(0)
