@@ -17,12 +17,12 @@ class QuestionViewModel(private val topic: Topic, private val prefsHelper: Share
         score.value = prefsHelper.getPoints(topic.name)
         streak.value = prefsHelper.getStreak(topic.name)
         currentQuestionIndex = prefsHelper.getCurrentQuestionIndex(topic.name)
-        question.value = topic.getQuestions(currentDifficulty)[currentQuestionIndex]
+        question.value = getNextQuestion()
     }
 
     fun loadNextQuestion() {
-        currentQuestionIndex = getNextQuestionIndex()
-        question.value = topic.getQuestions(currentDifficulty)[currentQuestionIndex]
+        question.value = getNextQuestion()
+        updateStreak(0)
         timeIsUp = false
         firstGuess = true
     }
@@ -36,6 +36,8 @@ class QuestionViewModel(private val topic: Topic, private val prefsHelper: Share
         }
         return isCorrect
     }
+
+    private fun getNextQuestion() = topic.getQuestions(currentDifficulty)[getNextQuestionIndex()]
 
     private fun onRightGuess() {
         if(firstGuess && !timeIsUp) {
@@ -64,6 +66,7 @@ class QuestionViewModel(private val topic: Topic, private val prefsHelper: Share
         if (currentQuestionIndex >= topic.getQuestions(currentDifficulty).size) {
             currentQuestionIndex = 0
         }
+        prefsHelper.saveCurrentQuestionIndex(topic.name, currentQuestionIndex)
         return currentQuestionIndex
     }
 
@@ -75,6 +78,6 @@ class QuestionViewModel(private val topic: Topic, private val prefsHelper: Share
 
     fun onTimeUp() {
         timeIsUp = true
-        streak.value = 0
+        updateStreak(0)
     }
 }
