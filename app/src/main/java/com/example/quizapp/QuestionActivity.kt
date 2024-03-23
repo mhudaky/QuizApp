@@ -1,9 +1,9 @@
 package com.example.quizapp
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import java.util.logging.Logger.getLogger
 
 class QuestionActivity : AppCompatActivity(), TimerListener {
 
@@ -11,10 +11,11 @@ class QuestionActivity : AppCompatActivity(), TimerListener {
     private lateinit var viewModel: QuestionViewModel
     private lateinit var questionViewUpdater: QuestionViewUpdater
     private lateinit var timer: QuestionTimer
+    private val logger = getLogger(this::class.simpleName!!)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.i("QuestionActivity", "QuestionActivity started")
+        logger.info( "QuestionActivity started")
         topicIdentifier = TopicFileLoader(this)
         setContentView(R.layout.activity_question)
         viewModel = initViewModel()
@@ -29,8 +30,8 @@ class QuestionActivity : AppCompatActivity(), TimerListener {
     private fun initViewModel(): QuestionViewModel {
         val topicFileIdentifier = intent.getStringExtra("topicFileIdentifier") ?: ""
         val topic = topicIdentifier.loadFile(topicFileIdentifier)
-        Log.i("QuestionActivity", "Loaded topic: $topic")
-        Log.i("QuestionActivity", "Easy: ${topic.getQuestions(Difficulty.EASY)}")
+        logger.info( "Loaded topic: $topic")
+        logger.info( "Easy: ${topic.getQuestions(Difficulty.EASY)}")
         val prefsHelper = SharedPreferencesHelper(this)
         val factory = QuestionViewModelFactory(topic, prefsHelper)
         return ViewModelProvider(this, factory)[QuestionViewModel::class.java]
@@ -43,12 +44,10 @@ class QuestionActivity : AppCompatActivity(), TimerListener {
     }
 
     override fun onTick(secondsRemaining: Long) {
-        // Handle what happens when the timer ticks
         questionViewUpdater.updateTimer(secondsRemaining)
     }
 
     override fun onFinish() {
-        // Handle what happens when the timer finishes
         viewModel.onTimeIsUp()
     }
 }

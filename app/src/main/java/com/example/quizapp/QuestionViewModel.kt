@@ -2,6 +2,7 @@ package com.example.quizapp
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import java.util.logging.Logger
 
 class QuestionViewModel(private val topic: Topic, private val prefsHelper: SharedPreferencesHelper) : ViewModel() {
 
@@ -11,7 +12,9 @@ class QuestionViewModel(private val topic: Topic, private val prefsHelper: Share
     private var currentQuestionIndex = 0
     private var currentDifficulty = Difficulty.EASY
     private var timeIsUp = false
-    private var firstGuess = true
+    private var guessedAlready = false
+    private val logger = Logger.getLogger(this::class.simpleName!!)
+
 
     init {
         score.value = prefsHelper.getPoints(createTopicDifficultyDTO())
@@ -22,9 +25,11 @@ class QuestionViewModel(private val topic: Topic, private val prefsHelper: Share
 
     fun loadNextQuestion() {
         question.value = getNextQuestion()
-        updateStreak(0)
+        if (!guessedAlready) {
+            updateStreak(0)
+        }
         timeIsUp = false
-        firstGuess = true
+        guessedAlready = false
     }
 
     fun checkAnswer(selectedAnswer: String): Boolean {
@@ -34,6 +39,7 @@ class QuestionViewModel(private val topic: Topic, private val prefsHelper: Share
         } else {
             onWrongGuess()
         }
+        guessedAlready = true
         return isCorrect
     }
 
@@ -52,7 +58,7 @@ class QuestionViewModel(private val topic: Topic, private val prefsHelper: Share
     }
 
     private fun onRightGuess() {
-        if(firstGuess && !timeIsUp) {
+        if(!guessedAlready && !timeIsUp) {
             updateScore(score.value!! + 1)
             updateStreak(streak.value!! + 1)
         }
@@ -60,7 +66,6 @@ class QuestionViewModel(private val topic: Topic, private val prefsHelper: Share
 
     private fun onWrongGuess() {
         updateStreak(0)
-        firstGuess = false
     }
 
     private fun updateScore(newScore: Int) {

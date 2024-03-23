@@ -2,21 +2,22 @@ package com.example.quizapp
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import java.util.logging.Logger.getLogger
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var topicsLayout: LinearLayout
     private lateinit var viewModel: MainViewModel
     private lateinit var prefsHelper: SharedPreferencesHelper
+    private val logger = getLogger(this::class.simpleName!!)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.i("MainActivity", "MainActivity started")
+        logger.info("MainActivity started")
         setContentView(R.layout.activity_main)
         topicsLayout = findViewById(R.id.topics)
         val factory = MainViewModelFactory(resources)
