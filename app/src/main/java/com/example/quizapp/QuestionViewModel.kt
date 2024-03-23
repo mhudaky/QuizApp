@@ -14,9 +14,9 @@ class QuestionViewModel(private val topic: Topic, private val prefsHelper: Share
     private var firstGuess = true
 
     init {
-        score.value = prefsHelper.getPoints(topic.name, currentDifficulty)
-        streak.value = prefsHelper.getStreak(topic.name, currentDifficulty)
-        currentQuestionIndex = prefsHelper.getCurrentQuestionIndex(topic.name, currentDifficulty)
+        score.value = prefsHelper.getPoints(createTopicDifficultyDTO())
+        streak.value = prefsHelper.getStreak(createTopicDifficultyDTO())
+        currentQuestionIndex = prefsHelper.getCurrentQuestionIndex(createTopicDifficultyDTO())
         question.value = getNextQuestion()
     }
 
@@ -37,7 +37,19 @@ class QuestionViewModel(private val topic: Topic, private val prefsHelper: Share
         return isCorrect
     }
 
-    private fun getNextQuestion() = topic.getQuestions(currentDifficulty)[getNextQuestionIndex()]
+    private fun getNextQuestion(): Question {
+        setDifficulty()
+        return topic.getQuestions(currentDifficulty)[getNextQuestionIndex()]
+    }
+
+    private fun setDifficulty() {
+        currentDifficulty = when (streak.value) {
+            in 0..2 -> Difficulty.EASY
+            in 3..5 -> Difficulty.MEDIUM
+            else -> Difficulty.HARD
+        }
+        currentQuestionIndex = prefsHelper.getCurrentQuestionIndex(createTopicDifficultyDTO())
+    }
 
     private fun onRightGuess() {
         if(firstGuess && !timeIsUp) {
@@ -53,12 +65,12 @@ class QuestionViewModel(private val topic: Topic, private val prefsHelper: Share
 
     private fun updateScore(newScore: Int) {
         score.value = newScore
-        prefsHelper.savePoints(topic.name, currentDifficulty, newScore)
+        prefsHelper.savePoints(createTopicDifficultyDTO(), newScore)
     }
 
     private fun updateStreak(newStreak: Int) {
         streak.value = newStreak
-        prefsHelper.savePoints(topic.name, currentDifficulty, newStreak)
+        prefsHelper.savePoints(createTopicDifficultyDTO(), newStreak)
     }
 
     private fun getNextQuestionIndex(): Int {
@@ -66,17 +78,21 @@ class QuestionViewModel(private val topic: Topic, private val prefsHelper: Share
         if (currentQuestionIndex >= topic.getQuestions(currentDifficulty).size) {
             currentQuestionIndex = 0
         }
-        prefsHelper.saveCurrentQuestionIndex(topic.name, currentDifficulty, currentQuestionIndex)
+        prefsHelper.saveCurrentQuestionIndex(createTopicDifficultyDTO(), currentQuestionIndex)
         return currentQuestionIndex
     }
 
-    fun saveState() {
-        prefsHelper.savePoints(topic.name, currentDifficulty, score.value!!)
-        prefsHelper.saveStreak(topic.name, currentDifficulty, streak.value!!)
-        prefsHelper.saveCurrentQuestionIndex(topic.name, currentDifficulty, getNextQuestionIndex())
+    private fun createTopicDifficultyDTO(): TopicDifficultyDTO {
+        return TopicDifficultyDTO(topic.name, currentDifficulty)
     }
 
-    fun onTimeUp() {
+    fun saveState() {
+        prefsHelper.savePoints(createTopicDifficultyDTO(), score.value!!)
+        prefsHelper.saveStreak(createTopicDifficultyDTO(), streak.value!!)
+        prefsHelper.saveCurrentQuestionIndex(createTopicDifficultyDTO(), getNextQuestionIndex())
+    }
+
+    fun onTimeIsUp() {
         timeIsUp = true
         updateStreak(0)
     }

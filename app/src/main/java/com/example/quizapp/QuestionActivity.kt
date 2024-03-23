@@ -49,6 +49,6 @@ class QuestionActivity : AppCompatActivity(), TimerListener {
 
     override fun onFinish() {
         // Handle what happens when the timer finishes
-        viewModel.onTimeUp()
+        viewModel.onTimeIsUp()
     }
 }

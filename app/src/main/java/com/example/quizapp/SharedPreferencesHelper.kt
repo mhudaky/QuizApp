@@ -8,34 +8,34 @@ class SharedPreferencesHelper(context: Context) {
     private val PREFS_NAME = "com.example.quizapp"
     private val prefs: SharedPreferences = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
 
-    fun saveStreak(topicId: String, difficulty: Difficulty, streak: Int) {
+    fun saveStreak(dto: TopicDifficultyDTO, streak: Int) {
         val editor = prefs.edit()
-        editor.putInt("${topicId}_${difficulty.name}_streak", streak)
+        editor.putInt("${dto.topicName}_${dto.difficulty.name}_streak", streak)
         editor.apply()
     }
 
-    fun getStreak(topicId: String, difficulty: Difficulty): Int {
-        return prefs.getInt("${topicId}_${difficulty.name}_streak", 0)
+    fun getStreak(dto: TopicDifficultyDTO): Int {
+        return prefs.getInt("${dto.topicName}_${dto.difficulty.name}_streak", 0)
     }
 
-    fun savePoints(topicId: String, difficulty: Difficulty, points: Int) {
+    fun savePoints(dto: TopicDifficultyDTO, points: Int) {
         val editor = prefs.edit()
-        editor.putInt("${topicId}_${difficulty.name}_points", points)
+        editor.putInt("${dto.topicName}_${dto.difficulty.name}_points", points)
         editor.apply()
     }
 
-    fun getPoints(topicId: String, difficulty: Difficulty): Int {
-        return prefs.getInt("${topicId}_${difficulty.name}_points", 0)
+    fun getPoints(dto: TopicDifficultyDTO): Int {
+        return prefs.getInt("${dto.topicName}_${dto.difficulty.name}_points", 0)
     }
 
-    fun saveCurrentQuestionIndex(topicId: String, difficulty: Difficulty, index: Int) {
+    fun saveCurrentQuestionIndex(dto: TopicDifficultyDTO, index: Int) {
         val editor = prefs.edit()
-        editor.putInt("${topicId}_${difficulty.name}_current_question_index", index)
+        editor.putInt("${dto.topicName}_${dto.difficulty.name}_current_question_index", index)
         editor.apply()
     }
 
-    fun getCurrentQuestionIndex(topicId: String, difficulty: Difficulty): Int {
-        return prefs.getInt("${topicId}_${difficulty.name}_current_question_index", 0)
+    fun getCurrentQuestionIndex(dto: TopicDifficultyDTO): Int {
+        return prefs.getInt("${dto.topicName}_${dto.difficulty.name}_current_question_index", 0)
     }
 
     fun resetStats() {
