@@ -24,10 +24,11 @@ class MainActivity : AppCompatActivity() {
         logger.info("MainActivity started")
         setContentView(R.layout.activity_main)
         topicsLayout = findViewById(R.id.topics)
+        addResetStatListener()
+        addReturnToMainListener()
         val factory = MainViewModelFactory(resources)
         viewModel = ViewModelProvider(this, factory).get(MainViewModel::class.java)
         createTopicButtons()
-        addResetStatListener()
     }
 
     private fun createTopicButtons() {
@@ -54,6 +55,14 @@ class MainActivity : AppCompatActivity() {
         val resetStatsButton = findViewById<Button>(R.id.reset_stats_button)
         resetStatsButton.setOnClickListener {
             prefsHelper.resetStats()
+        }
+    }
+
+    private fun addReturnToMainListener() {
+        val resetStatsButton = findViewById<Button>(R.id.return_to_main_button)
+        resetStatsButton.setOnClickListener {
+            viewModel.reset()
+            createTopicButtons()
         }
     }
 

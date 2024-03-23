@@ -43,6 +43,11 @@ class MainViewModel(private val resources: Resources) : ViewModel() {
         }
     }
 
+    fun reset() {
+        currentPath = "questions"
+        loadTopics()
+    }
+
     private fun navigateTo(path: String) {
         currentPath = path
         loadTopics()
