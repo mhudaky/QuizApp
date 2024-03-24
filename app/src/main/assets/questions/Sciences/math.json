@@ -101,6 +101,30 @@
       "correct": "2",
       "reasoning": "The equation y^2 - 4y + 4 = 0 can be factored into (y - 2)^2 = 0, which implies that y = 2. The other options do not satisfy the original equation."
     }
+  ],
+  "expertQuestions": [
+    {
+      "question": "What is the name of the largest known prime number as of 2021, and why is it significant?",
+      "answers": [
+        "Mersenne Prime",
+        "Fermat Prime",
+        "Euler's Number",
+        "Catalan's Constant"
+      ],
+      "correct": "Mersenne Prime",
+      "reasoning": "As of 2021, the largest known prime number is a Mersenne Prime. Mersenne primes are of the form 2^p - 1, where p is also a prime. They are significant due to their properties and applications in number theory, cryptography, and the search for prime numbers. The identification of large prime numbers has computational and theoretical importance in these fields."
+    },
+    {
+      "question": "In topology, what property describes a space that is homotopically equivalent to a single point?",
+      "answers": [
+        "Simply connected",
+        "Contractible",
+        "Non-orientable",
+        "Manifold"
+      ],
+      "correct": "Contractible",
+      "reasoning": "A contractible space in topology is one that can be continuously shrunk to a point within that space. It is a property that indicates a space is homotopically trivial, meaning it has a trivial fundamental group. This property is used to understand the shape and structure of topological spaces in a way that is invariant under deformation."
+    }
   ]
 }
 

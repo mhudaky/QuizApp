@@ -15,8 +15,8 @@
     },
     {
       "question": "What was the main reason for the fall of the Roman Empire?",
-      "answers": ["Invasion by Barbarian tribes", "Economic troubles", "Overexpansion and military spending", "All of the above"],
-      "correct": "All of the above",
+      "answers": ["Invasion by Barbarian tribes", "Economic troubles", "Overexpansion and military spending", "All of the these"],
+      "correct": "All of the these",
       "reasoning": "The fall of the Roman Empire was due to a combination of factors, including invasions by Barbarian tribes, economic troubles, and overexpansion and military spending. Therefore, 'All of the above' is the correct answer."
     },
     {
@@ -61,8 +61,7 @@
       "question": "Who was the first female Prime Minister of the United Kingdom?",
       "answers": ["Margaret Thatcher", "Theresa May", "Indira Gandhi", "Angela Merkel"],
       "correct": "Margaret Thatcher",
-      "reasoning": "Margaret Thatcher was the first female Prime Minister of the United Kingdom, serving from 1979 to 1990. The other women listed have held significant political positions but were not the first female Prime,
-      "Minister of the UK."
+      "reasoning": "Margaret Thatcher was the first female Prime Minister of the United Kingdom, serving from 1979 to 1990. The other women listed have held significant political positions but were not the first female Prime Minister of the UK."
     },
     {
       "question": "What empire was known as the 'Sick Man of Europe' in the 19th century?",
@@ -101,6 +100,52 @@
       "answers": ["Inca Civilization", "Maya Civilization", "Aztec Civilization", "Olmec Civilization"],
       "correct": "Inca Civilization",
       "reasoning": "The Inca Civilization is known for its unique writing system known as the quipu, which consisted of colored threads knotted in various ways to record information. The other civilizations developed different forms of writing or record-keeping."
+    }
+  ],
+  "expertQuestions": [
+    {
+      "question": "What diplomatic maneuver in the late 19th century aimed to prevent one nation from gaining a colonial advantage over others, leading to an extensive and competitive colonization of Africa?",
+      "answers": [
+        "The Berlin Conference",
+        "The Treaty of Versailles",
+        "The Congress of Vienna",
+        "The Entente Cordiale"
+      ],
+      "correct": "The Berlin Conference",
+      "reasoning": "The Berlin Conference of 1884–1885 was organized to regulate European colonization and trade in Africa during the New Imperialism period, and it led to the scramble for Africa. The conference aimed to prevent conflict over territorial claims in Africa by European powers, thus avoiding giving any single nation a colonial advantage. The Treaty of Versailles ended World War I, the Congress of Vienna aimed to restore order after the Napoleonic Wars, and the Entente Cordiale was an agreement between Britain and France."
+    },
+    {
+      "question": "Identify the philosophical movement during the 18th century that emphasized reason, individualism, and skepticism, which profoundly influenced the American and French Revolutions.",
+      "answers": [
+        "The Enlightenment",
+        "Romanticism",
+        "The Renaissance",
+        "The Reformation"
+      ],
+      "correct": "The Enlightenment",
+      "reasoning": "The Enlightenment, also known as the Age of Reason, was a philosophical movement that dominated the world of ideas in Europe during the 18th century. It centered around the ideals of reason, individualism, and skepticism towards traditional doctrines. The movement influenced various aspects of society, including art, politics, and science, and played a significant role in inspiring the American and French Revolutions. Romanticism was a reaction against the Enlightenment's emphasis on reason, the Renaissance was a cultural rebirth that occurred in Europe between the 14th and 17th centuries, and the Reformation was a religious movement in the 16th century that led to the creation of Protestantism."
+    },
+    {
+      "question": "Which ancient civilization is credited with the invention of the chariot?",
+      "answers": [
+        "The Mesopotamians",
+        "The Egyptians",
+        "The Hittites",
+        "The Chinese"
+      ],
+      "correct": "The Hittites",
+      "reasoning": "The Hittites, an ancient Anatolian people who established an empire at Hattusa in north-central Anatolia around 1600 BCE, are credited with the invention of the chariot. While chariots were used by multiple ancient civilizations for warfare, transportation, and ceremonial purposes, the Hittites are notable for their significant improvements to chariot design and their effective use in warfare, which gave them a military advantage. The Mesopotamians, Egyptians, and Chinese also developed and used chariots, but the Hittites' contributions were particularly influential in the spread and tactical use of chariots in ancient warfare."
+    },
+    {
+      "question": "What was the primary economic cause of the Great Depression in the United States that had global repercussions?",
+      "answers": [
+        "The collapse of the stock market in 1929",
+        "The failure of the gold standard",
+        "Widespread agricultural failure",
+        "Overproduction and underconsumption"
+      ],
+      "correct": "The collapse of the stock market in 1929",
+      "reasoning": "The primary economic cause of the Great Depression in the United States, which subsequently had worldwide effects, was the collapse of the stock market in 1929, known as the Wall Street Crash of 1929. This event led to a drastic decline in consumer confidence and spending, resulting in severe economic downturns across various sectors. While factors such as the failure of the gold standard, agricultural failures, and the cycle of overproduction and underconsumption contributed to the severity and duration of the Depression, the stock market crash was the initial catalyst."
     }
   ]
 }

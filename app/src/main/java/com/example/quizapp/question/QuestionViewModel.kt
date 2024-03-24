@@ -8,6 +8,7 @@ import com.example.quizapp.dto.Topic
 import com.example.quizapp.dto.TopicDifficultyDTO
 import com.example.quizapp.utils.SharedPreferencesHelper
 import java.util.logging.Logger
+import kotlin.math.abs
 
 class QuestionViewModel(private val topic: Topic, private val prefsHelper: SharedPreferencesHelper) : ViewModel() {
 
@@ -78,12 +79,23 @@ class QuestionViewModel(private val topic: Topic, private val prefsHelper: Share
     }
 
     private fun increaseScore() {
-        val increment = when (currentDifficulty) {
+        var baseIncrement = when (currentDifficulty) {
             Difficulty.EASY -> 1
             Difficulty.MEDIUM -> 2
-            Difficulty.HARD -> 4
+            Difficulty.HARD -> 3
+            Difficulty.EXPERT -> 4
         }
-        updateScore(score.value!! + increment)
+        val mitigation = when (score.value) {
+            in 0..24 -> 0
+            in 25..49 -> 1
+            in 50..74 -> 2
+            in 75..99 -> 3
+            else -> 4
+        }
+        val increment = abs(baseIncrement - mitigation)
+        if(increment > 0) {
+            updateScore(score.value!! + increment)
+        }
     }
 
     private fun onWrongGuess() {

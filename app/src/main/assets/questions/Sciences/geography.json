@@ -101,6 +101,30 @@
       "correct": "McMurdo Dry Valleys",
       "reasoning": "The McMurdo Dry Valleys in Antarctica are considered the driest place on Earth, receiving almost no precipitation and being free of snow and ice. The Atacama Desert, Sahara Desert, and Gobi Desert are among the driest places on Earth, but they do receive more precipitation than the McMurdo Dry Valleys."
     }
+  ],
+  "expertQuestions": [
+    {
+      "question": "What geographic feature is defined by the hydrological divide along the mountain crests in the Americas that separates the watersheds that drain into the Pacific Ocean from those river systems that drain into the Atlantic Ocean?",
+      "answers": [
+        "The Great Dividing Range",
+        "The Andes Mountain Range",
+        "The Continental Divide",
+        "The Rocky Mountains"
+      ],
+      "correct": "The Continental Divide",
+      "reasoning": "The Continental Divide of the Americas is the principal, and largely mountainous, hydrological divide of the Americas. It separates the watersheds that drain into the Pacific Ocean from those river systems that drain into the Atlantic Ocean. Stretching from the Bering Strait to the Strait of Magellan, this divide traverses the Rocky Mountains and the Andes Mountains."
+    },
+    {
+      "question": "Identify the term used to describe the point on the Earth's surface that is farthest from its center, due to the oblate spheroid shape of the planet.",
+      "answers": [
+        "The Geographic South Pole",
+        "Mount Everest",
+        "Chimborazo",
+        "The Mariana Trench"
+      ],
+      "correct": "Chimborazo",
+      "reasoning": "Chimborazo, a dormant volcano in the Andes of central Ecuador, is the point on the Earth's surface farthest from its center. This is due to the Earth's equatorial bulge caused by its rotation, making the planet an oblate spheroid shape. Although Mount Everest is the highest point above sea level, Chimborazo's location near the equator gives it the distinction of being the farthest from the center of the Earth."
+    }
   ]
 }
 

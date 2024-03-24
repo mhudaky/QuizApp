@@ -10,13 +10,15 @@ data class Topic(
     val name: String,
     val easyQuestions: List<Question>,
     val mediumQuestions: List<Question>,
-    val hardQuestions: List<Question>
+    val hardQuestions: List<Question>,
+    val expertQuestions: List<Question>
 ) {
     fun getQuestions(currentDifficulty: Difficulty): List<Question> {
         return when (currentDifficulty) {
             Difficulty.EASY -> easyQuestions
             Difficulty.MEDIUM -> mediumQuestions
             Difficulty.HARD -> hardQuestions
+            Difficulty.EXPERT -> expertQuestions
         }
     }
 }

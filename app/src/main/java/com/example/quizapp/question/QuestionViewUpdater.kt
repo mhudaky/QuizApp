@@ -29,7 +29,7 @@ class QuestionViewUpdater(
             "Streak: $streak".also { streakTextView.text = it }
         }
         viewModel.difficultyLiveData.observe(activity) { difficulty ->
-            "Difficulty: ${difficulty.name}".also { difficultyTextView.text = it }
+            "Difficulty: ${difficulty.value}".also { difficultyTextView.text = it }
         }
         viewModel.indexLiveData.observe(activity) { index ->
             "Index: $index".also { indexTextView.text = it }
