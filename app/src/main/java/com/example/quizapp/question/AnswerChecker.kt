@@ -8,7 +8,7 @@ class AnswerChecker(private val gameStats: GameStats) {
 
     val reasoning: MutableLiveData<String> = MutableLiveData()
     private var guessedAlready = false
-    private val timer: QuestionTimer = QuestionTimer()
+    val timer: QuestionTimer = QuestionTimer()
     private val logger = Logger.getLogger(this::class.simpleName!!)
 
     init {

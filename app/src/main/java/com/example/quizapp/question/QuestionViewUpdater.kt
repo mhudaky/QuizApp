@@ -15,6 +15,7 @@ class QuestionViewUpdater(
     private val difficultyTextView: TextView = activity.findViewById(R.id.difficulty)
     private val indexTextView: TextView = activity.findViewById(R.id.index)
     private val reasoningTextView: TextView = activity.findViewById(R.id.reasoning)
+    private val timerTextView: TextView = activity.findViewById(R.id.timer)
     private val buttonInitializer = ButtonInitializer(activity, viewModel)
     private val answerButtons = buttonInitializer.initializeButtons()
 
@@ -37,6 +38,9 @@ class QuestionViewUpdater(
         viewModel.answerChecker.reasoning.observe(activity) { reasoning ->
             reasoning.also { reasoningTextView.text = it }
         }
+        viewModel.answerChecker.timer.remainingSeconds.observe(activity) { remainingSeconds ->
+            "$remainingSeconds sec".also { timerTextView.text = it }
+        }
     }
 
     fun updateQuestionView(question: Question) {
@@ -48,10 +52,5 @@ class QuestionViewUpdater(
             button.isEnabled = true
             button.setBackgroundColor(Color.GRAY)
         }
-    }
-
-    fun updateTimer(secondsRemaining: Long) {
-        val timerTextView: TextView = activity.findViewById(R.id.timer)
-        "$secondsRemaining sec".also { timerTextView.text = it }
     }
 }
