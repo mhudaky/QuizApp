@@ -22,19 +22,19 @@ class QuestionViewUpdater(
         viewModel.question.observe(activity) { question ->
             updateQuestionView(question)
         }
-        viewModel.score.observe(activity) { score ->
+        viewModel.gameStats.score.observe(activity) { score ->
             "Score: $score".also { scoreTextView.text = it }
         }
-        viewModel.streak.observe(activity) { streak ->
+        viewModel.gameStats.streak.observe(activity) { streak ->
             "Streak: $streak".also { streakTextView.text = it }
         }
-        viewModel.difficultyLiveData.observe(activity) { difficulty ->
+        viewModel.gameStats.difficultyLiveData.observe(activity) { difficulty ->
             "Difficulty: ${difficulty.value}".also { difficultyTextView.text = it }
         }
         viewModel.indexLiveData.observe(activity) { index ->
             "Index: $index".also { indexTextView.text = it }
         }
-        viewModel.reasoning.observe(activity) { reasoning ->
+        viewModel.answerChecker.reasoning.observe(activity) { reasoning ->
             reasoning.also { reasoningTextView.text = it }
         }
     }
