@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.quizapp.R
 import com.example.quizapp.main.MainActivity
 
-class ButtonInitializer(private val activity: AppCompatActivity, private val viewModel: QuestionViewModel, private val timer: QuestionTimer) {
+class ButtonInitializer(private val activity: AppCompatActivity, private val viewModel: QuestionViewModel) {
 
     private val answersField: LinearLayout = activity.findViewById(R.id.answers)
 
@@ -35,7 +35,6 @@ class ButtonInitializer(private val activity: AppCompatActivity, private val vie
         val nextButton = activity.findViewById<Button>(R.id.next)
         nextButton.setOnClickListener {
             viewModel.loadNextQuestion()
-            timer.startTimer()
         }
 
         return answerButtons
@@ -47,11 +46,9 @@ class ButtonInitializer(private val activity: AppCompatActivity, private val vie
             if (isCorrect) {
                 button.setBackgroundColor(Color.GREEN)
                 this.disableAllAnswerButtons()
-                timer.stopTimer()
             } else {
                 button.setBackgroundColor(Color.RED)
                 button.isEnabled = false
-                timer.stopTimer()
             }
         }
     }

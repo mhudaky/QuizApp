@@ -50,8 +50,4 @@ class QuestionViewModel(private val topic: Topic, private val prefsHelper: Share
     private fun createTopicDifficultyDTO(): TopicDifficultyDTO {
         return TopicDifficultyDTO(topic.name, gameStats.getDifficulty())
     }
-
-    fun onTimeIsUp() {
-        answerChecker.onTimeIsUp()
-    }
 }

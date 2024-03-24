@@ -8,12 +8,11 @@ import com.example.quizapp.utils.SharedPreferencesHelper
 import com.example.quizapp.utils.TopicFileLoader
 import java.util.logging.Logger.getLogger
 
-class QuestionActivity : AppCompatActivity(), TimerListener {
+class QuestionActivity : AppCompatActivity() {
 
     private lateinit var topicIdentifier: TopicFileLoader
     private lateinit var viewModel: QuestionViewModel
     private lateinit var questionViewUpdater: QuestionViewUpdater
-    private lateinit var timer: QuestionTimer
     private val logger = getLogger(this::class.simpleName!!)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,11 +21,9 @@ class QuestionActivity : AppCompatActivity(), TimerListener {
         topicIdentifier = TopicFileLoader(this)
         setContentView(R.layout.activity_question)
         viewModel = initViewModel()
-        timer = QuestionTimer(this)
-        questionViewUpdater = QuestionViewUpdater(this, viewModel, timer)
+        questionViewUpdater = QuestionViewUpdater(this, viewModel)
         viewModel.question.observe(this) { question ->
             questionViewUpdater.updateQuestionView(question)
-            timer.startTimer()
         }
     }
 
@@ -37,18 +34,5 @@ class QuestionActivity : AppCompatActivity(), TimerListener {
         val prefsHelper = SharedPreferencesHelper(this)
         val factory = QuestionViewModelFactory(topic, prefsHelper)
         return ViewModelProvider(this, factory)[QuestionViewModel::class.java]
-    }
-
-    override fun onStop() {
-        super.onStop()
-        timer.stopTimer()
-    }
-
-    override fun onTick(secondsRemaining: Long) {
-        questionViewUpdater.updateTimer(secondsRemaining)
-    }
-
-    override fun onFinish() {
-        viewModel.onTimeIsUp()
     }
 }

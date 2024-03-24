@@ -1,31 +1,27 @@
 package com.example.quizapp.question
 
 import android.os.CountDownTimer
+import androidx.lifecycle.MutableLiveData
 
-interface TimerListener {
-    fun onTick(secondsRemaining: Long)
-    fun onFinish()
-}
+class QuestionTimer() {
 
-class QuestionTimer(private val listener: TimerListener) {
     private var timer: CountDownTimer? = null
+    val remainingSeconds: MutableLiveData<Int> = MutableLiveData()
 
     fun startTimer() {
         timer?.cancel()
         timer = object : CountDownTimer(16000, 1000) {
             override fun onTick(millisUntilFinished: Long) {
-                listener.onTick(millisUntilFinished / 1000)
+                remainingSeconds.value = millisUntilFinished.toInt() / 1000
             }
 
             override fun onFinish() {
-                listener.onFinish()
             }
         }
         timer?.start()
     }
 
-    fun stopTimer() {
-        timer?.cancel()
-        timer = null
+    fun isTimeUp(): Boolean {
+        return remainingSeconds.value == 0
     }
 }

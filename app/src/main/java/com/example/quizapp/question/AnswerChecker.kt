@@ -4,13 +4,16 @@ import androidx.lifecycle.MutableLiveData
 import com.example.quizapp.dto.Question
 import java.util.logging.Logger
 
-class AnswerChecker(private val gameStats: GameStats,
-) {
+class AnswerChecker(private val gameStats: GameStats) {
 
     val reasoning: MutableLiveData<String> = MutableLiveData()
     private var guessedAlready = false
-    private var timeIsUp = false
+    private val timer: QuestionTimer = QuestionTimer()
     private val logger = Logger.getLogger(this::class.simpleName!!)
+
+    init {
+        timer.startTimer()
+    }
 
     fun newQuestion() {
         if (!guessedAlready) {
@@ -19,7 +22,7 @@ class AnswerChecker(private val gameStats: GameStats,
         }
         reasoning.value = ""
         guessedAlready = false
-        timeIsUp = false
+        timer.startTimer()
     }
 
     fun checkAnswer(selectedAnswer: String, question: Question): Boolean {
@@ -34,18 +37,13 @@ class AnswerChecker(private val gameStats: GameStats,
     }
 
     private fun onRightGuess(reasoning: String) {
-        if(!guessedAlready && !timeIsUp) {
+        if(!guessedAlready && !timer.isTimeUp()) {
             gameStats.increaseStats()
         }
         this.reasoning.value = "Correct! $reasoning"
     }
 
     private fun onWrongGuess() {
-        gameStats.resetStreak()
-    }
-
-    fun onTimeIsUp() {
-        timeIsUp = true
         gameStats.resetStreak()
     }
 }

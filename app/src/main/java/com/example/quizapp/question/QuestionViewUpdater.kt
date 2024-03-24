@@ -7,7 +7,7 @@ import com.example.quizapp.R
 import com.example.quizapp.dto.Question
 
 class QuestionViewUpdater(
-    private val activity: AppCompatActivity, viewModel: QuestionViewModel, timer: QuestionTimer) {
+    private val activity: AppCompatActivity, viewModel: QuestionViewModel) {
 
     private val questionField: TextView = activity.findViewById(R.id.question)
     private val scoreTextView: TextView = activity.findViewById(R.id.score)
@@ -15,7 +15,7 @@ class QuestionViewUpdater(
     private val difficultyTextView: TextView = activity.findViewById(R.id.difficulty)
     private val indexTextView: TextView = activity.findViewById(R.id.index)
     private val reasoningTextView: TextView = activity.findViewById(R.id.reasoning)
-    private val buttonInitializer = ButtonInitializer(activity, viewModel, timer)
+    private val buttonInitializer = ButtonInitializer(activity, viewModel)
     private val answerButtons = buttonInitializer.initializeButtons()
 
     init {
