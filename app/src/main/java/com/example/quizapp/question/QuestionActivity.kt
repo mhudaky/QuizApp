@@ -22,9 +22,6 @@ class QuestionActivity : AppCompatActivity() {
         setContentView(R.layout.activity_question)
         viewModel = initViewModel()
         questionViewUpdater = QuestionViewUpdater(this, viewModel)
-        viewModel.question.observe(this) { question ->
-            questionViewUpdater.updateQuestionView(question)
-        }
     }
 
     private fun initViewModel(): QuestionViewModel {

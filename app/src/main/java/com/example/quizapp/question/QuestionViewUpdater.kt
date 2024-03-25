@@ -5,6 +5,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.quizapp.R
 import com.example.quizapp.dto.Question
+import java.util.logging.Logger
 
 class QuestionViewUpdater(
     private val activity: AppCompatActivity, viewModel: QuestionViewModel) {
@@ -19,8 +20,10 @@ class QuestionViewUpdater(
     private val buttonInitializer = ButtonInitializer(activity, viewModel)
     private val answerButtons = buttonInitializer.initializeButtons()
 
+    private val logger = Logger.getLogger(this::class.simpleName!!)
+
     init {
-        viewModel.question.observe(activity) { question ->
+        viewModel.questionIterator.question.observe(activity) { question ->
             updateQuestionView(question)
         }
         viewModel.gameStats.score.observe(activity) { score ->
@@ -32,7 +35,7 @@ class QuestionViewUpdater(
         viewModel.gameStats.difficultyLiveData.observe(activity) { difficulty ->
             "Difficulty: ${difficulty.value}".also { difficultyTextView.text = it }
         }
-        viewModel.indexLiveData.observe(activity) { index ->
+        viewModel.questionIterator.indexLiveData.observe(activity) { index ->
             "Index: $index".also { indexTextView.text = it }
         }
         viewModel.answerChecker.reasoning.observe(activity) { reasoning ->
@@ -43,7 +46,8 @@ class QuestionViewUpdater(
         }
     }
 
-    fun updateQuestionView(question: Question) {
+    private fun updateQuestionView(question: Question) {
+        logger.info("Updating question view")
         questionField.text = question.question
         val shuffledAnswers = question.answers.shuffled()
         for (i in answerButtons.indices) {
