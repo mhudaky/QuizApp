@@ -22,6 +22,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".question.multichoice.QuestionActivity" android:exported="true" />
+        <activity android:name=".question.swipe.SwipeActivity" android:exported="true" />
     </application>
 
 </manifest>
