@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.quizapp.R
 import com.example.quizapp.dto.TopicIdentifier
-import com.example.quizapp.question.QuestionActivity
+import com.example.quizapp.question.multichoice.QuestionActivity
 import com.example.quizapp.utils.SharedPreferencesHelper
 import java.util.logging.Logger.getLogger
 

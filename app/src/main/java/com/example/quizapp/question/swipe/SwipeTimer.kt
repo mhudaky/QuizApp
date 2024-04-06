@@ -1,9 +1,9 @@
-package com.example.quizapp.question
+package com.example.quizapp.question.swipe
 
 import android.os.CountDownTimer
 import androidx.lifecycle.MutableLiveData
 
-class QuestionTimer() {
+class SwipeTimer() {
 
     private var timer: CountDownTimer? = null
     val remainingSeconds: MutableLiveData<Int> = MutableLiveData()

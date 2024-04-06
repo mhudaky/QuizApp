@@ -21,7 +21,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".question.QuestionActivity" android:exported="true" />
+        <activity android:name=".question.multichoice.QuestionActivity" android:exported="true" />
     </application>
 
 </manifest>

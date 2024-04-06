@@ -1,4 +1,4 @@
-package com.example.quizapp.question
+package com.example.quizapp.question.swipe
 
 import androidx.lifecycle.MutableLiveData
 import com.example.quizapp.dto.Difficulty
@@ -7,7 +7,7 @@ import com.example.quizapp.dto.Topic
 import com.example.quizapp.dto.TopicDifficultyDTO
 import com.example.quizapp.utils.SharedPreferencesHelper
 
-class QuestionIterator(private val topic: Topic, private val prefsHelper: SharedPreferencesHelper) {
+class SwipeIterator(private val topic: Topic, private val prefsHelper: SharedPreferencesHelper) {
 
 
     var question = MutableLiveData<Question>()

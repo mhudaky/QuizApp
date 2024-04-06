@@ -1,4 +1,4 @@
-package com.example.quizapp.question
+package com.example.quizapp.question.multichoice
 
 import androidx.lifecycle.ViewModel
 import com.example.quizapp.dto.Topic
