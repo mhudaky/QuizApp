@@ -1,4 +1,4 @@
-package com.example.quizapp.question.multichoice
+package com.example.quizapp.quiz.multichoice
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

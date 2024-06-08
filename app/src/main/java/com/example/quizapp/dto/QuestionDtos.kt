@@ -29,3 +29,9 @@ data class Question(
     val correct: String,
     val reasoning: String
 )
+
+data class Swipe(
+    val question: String,
+    val correct: Boolean,
+    val reasoning: String
+)

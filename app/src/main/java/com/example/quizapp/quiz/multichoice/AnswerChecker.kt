@@ -1,4 +1,4 @@
-package com.example.quizapp.question.multichoice
+package com.example.quizapp.quiz.multichoice
 
 import androidx.lifecycle.MutableLiveData
 import com.example.quizapp.dto.Question

@@ -1,4 +1,4 @@
-package com.example.quizapp.question.swipe
+package com.example.quizapp.quiz.swipe
 
 import androidx.lifecycle.MutableLiveData
 import com.example.quizapp.dto.Question

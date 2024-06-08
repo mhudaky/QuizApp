@@ -1,10 +1,7 @@
-package com.example.quizapp.question.swipe
+package com.example.quizapp.quiz.swipe
 
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import com.example.quizapp.R
-import com.example.quizapp.dto.Question
-import com.google.android.material.button.MaterialButton
 import com.google.android.material.textview.MaterialTextView
 import java.util.logging.Logger
 
@@ -19,13 +16,11 @@ class SwipeViewUpdater(
     private val indexTextView: MaterialTextView = activity.findViewById(R.id.index)
     private val reasoningTextView: MaterialTextView = activity.findViewById(R.id.reasoning)
     private val timerTextView: MaterialTextView = activity.findViewById(R.id.timer)
-    private val buttonInitializer = ButtonInitializer(activity, viewModel)
-    private val answerButtons = buttonInitializer.initializeButtons()
     private val logger = Logger.getLogger(this::class.simpleName!!)
 
     init {
         viewModel.swipeIterator.question.observe(activity) { question ->
-            updateQuestionView(question)
+            question.also { reasoningTextView.text = it.question }
         }
         viewModel.gameStats.score.observe(activity) { score ->
             "Score: $score".also { scoreTextView.text = it }
@@ -44,18 +39,6 @@ class SwipeViewUpdater(
         }
         viewModel.answerChecker.timer.remainingSeconds.observe(activity) { remainingSeconds ->
             "$remainingSeconds sec".also { timerTextView.text = it }
-        }
-    }
-
-    private fun updateQuestionView(question: Question) {
-        logger.info("Updating question view")
-        questionField.text = question.question
-        val shuffledAnswers = question.answers.shuffled()
-        for (i in answerButtons.indices) {
-            val button = answerButtons[i] as MaterialButton
-            button.text = shuffledAnswers[i]
-            button.isEnabled = true
-            button.setBackgroundColor(Color.GRAY)
         }
     }
 }

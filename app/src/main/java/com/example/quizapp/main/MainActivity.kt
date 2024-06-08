@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.quizapp.R
 import com.example.quizapp.dto.TopicIdentifier
-import com.example.quizapp.question.swipe.SwipeActivity
+import com.example.quizapp.quiz.swipe.SwipeActivity
 import com.example.quizapp.utils.SharedPreferencesHelper
 import java.util.logging.Logger.getLogger
 
@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
                 if (topicIdentifier.hasSubTopics) {
                     createTopicButtons()
                 } else {
-                    startSwipeActivity(topicIdentifier)
+                    startQuizActivity(topicIdentifier)
                 }
             }
             topicsLayout.addView(button)
@@ -66,7 +66,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun startSwipeActivity(topicIdentifier: TopicIdentifier) {
+    private fun startQuizActivity(topicIdentifier: TopicIdentifier) {
         val intent = Intent(this, SwipeActivity::class.java)
         intent.putExtra("topicName", topicIdentifier.name)
         intent.putExtra("topicFilePath", topicIdentifier.filePath)

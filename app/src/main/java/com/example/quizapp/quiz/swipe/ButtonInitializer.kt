@@ -1,4 +1,4 @@
-package com.example.quizapp.question.swipe
+package com.example.quizapp.quiz.swipe
 
 import android.content.Intent
 import android.graphics.Color

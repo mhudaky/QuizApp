@@ -1,4 +1,4 @@
-package com.example.quizapp.question.multichoice
+package com.example.quizapp.quiz.multichoice
 
 import android.content.Intent
 import android.graphics.Color

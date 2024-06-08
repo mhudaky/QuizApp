@@ -1,4 +1,4 @@
-package com.example.quizapp.question.multichoice
+package com.example.quizapp.quiz.multichoice
 
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity

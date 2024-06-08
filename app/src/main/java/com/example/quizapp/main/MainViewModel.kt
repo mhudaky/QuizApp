@@ -8,7 +8,7 @@ import java.util.logging.Logger
 class MainViewModel(private val resources: Resources) : ViewModel() {
 
     private val topicIdentifiers: MutableList<TopicIdentifier> = mutableListOf()
-    private var currentPath: String = "questions"
+    private var currentPath: String = "swipes"
     private val logger = Logger.getLogger(this::class.simpleName!!)
 
     init {

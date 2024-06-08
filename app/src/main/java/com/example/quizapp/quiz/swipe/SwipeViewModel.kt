@@ -1,16 +1,16 @@
-package com.example.quizapp.question.multichoice
+package com.example.quizapp.quiz.swipe
 
 import androidx.lifecycle.ViewModel
 import com.example.quizapp.dto.Topic
 import com.example.quizapp.utils.SharedPreferencesHelper
 import java.util.logging.Logger
 
-class QuestionViewModel(topic: Topic, prefsHelper: SharedPreferencesHelper) : ViewModel() {
+class SwipeViewModel(topic: Topic, prefsHelper: SharedPreferencesHelper) : ViewModel() {
 
     private val logger = Logger.getLogger(this::class.simpleName!!)
     val gameStats = GameStats(topic.name, prefsHelper)
     val answerChecker = AnswerChecker(gameStats)
-    val questionIterator = QuestionIterator(topic, prefsHelper)
+    val swipeIterator = SwipeIterator(topic, prefsHelper)
 
     init {
         loadNextQuestion()
@@ -18,11 +18,11 @@ class QuestionViewModel(topic: Topic, prefsHelper: SharedPreferencesHelper) : Vi
     }
 
     fun loadNextQuestion() {
-        questionIterator.loadQuestion(gameStats.getDifficulty())
+        swipeIterator.loadQuestion(gameStats.getDifficulty())
         answerChecker.newQuestion()
     }
 
     fun checkAnswer(selectedAnswer: String): Boolean {
-        return answerChecker.checkAnswer(selectedAnswer, questionIterator.getQuestion())
+        return answerChecker.checkAnswer(selectedAnswer, swipeIterator.getQuestion())
     }
 }

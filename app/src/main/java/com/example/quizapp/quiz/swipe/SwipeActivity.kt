@@ -1,4 +1,4 @@
-package com.example.quizapp.question.swipe
+package com.example.quizapp.quiz.swipe
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
