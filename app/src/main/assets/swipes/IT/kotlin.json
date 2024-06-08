@@ -1,0 +1,102 @@
+{
+  "name": "Kotlin",
+  "easySwipes": [
+    {
+      "question": "Kotlin is a programming language designed for developing Android apps among other applications.",
+      "answer": true,
+      "reasoning": "Kotlin is a modern, statically typed programming language used for developing Android apps and other types of applications."
+    },
+    {
+      "question": "JetBrains is the company that leads the development of Kotlin.",
+      "answer": true,
+      "reasoning": "JetBrains, a software development company, leads the development of Kotlin, even though Google supports it for Android."
+    },
+    {
+      "question": "In Kotlin, the keyword 'val' is used to declare a variable that cannot be reassigned.",
+      "answer": true,
+      "reasoning": "'val' declares a read-only variable, meaning it can be assigned only once."
+    },
+    {
+      "question": "The 'println()' function is used in Kotlin to print a message to the standard output with a newline at the end.",
+      "answer": true,
+      "reasoning": "'println()' is the function used for printing messages to the console in Kotlin, adding a newline after the message."
+    },
+    {
+      "question": "An immutable list can be created in Kotlin using the 'listOf()' function.",
+      "answer": true,
+      "reasoning": "The 'listOf()' function creates an immutable list in Kotlin."
+    }
+  ],
+  "mediumSwipes": [
+    {
+      "question": "Kotlin classes are inheritable by default and do not require a specific keyword to be extended.",
+      "answer": false,
+      "reasoning": "In Kotlin, the 'final' keyword is used by default on classes to indicate that they cannot be inherited. The 'open' keyword is needed to allow inheritance."
+    },
+    {
+      "question": "The safe call operator in Kotlin is '?.' and it allows you to safely call a method on a nullable variable.",
+      "answer": true,
+      "reasoning": "The safe call operator '?.', allows you to call a method on a nullable variable without the risk of a NullPointerException."
+    },
+    {
+      "question": "To declare a nullable variable in Kotlin, you must use the '&' operator after the type.",
+      "answer": false,
+      "reasoning": "In Kotlin, a variable is made nullable by appending a '?' to its type, not '&'."
+    },
+    {
+      "question": "The 'when' expression in Kotlin serves a similar purpose as the 'if' statement in Java.",
+      "answer": false,
+      "reasoning": "The 'when' expression in Kotlin replaces the 'switch' statement from Java, offering more flexibility."
+    },
+    {
+      "question": "Using the 'data' keyword in a Kotlin class definition automatically generates functions like equals(), hashCode(), and toString().",
+      "answer": true,
+      "reasoning": "The 'data' keyword denotes a data class, which automatically generates common functions based on the class's properties."
+    }
+  ],
+  "hardSwipes": [
+    {
+      "question": "Kotlin's primary benefit over Java for Android development is its built-in testing framework.",
+      "answer": false,
+      "reasoning": "One of the main advantages of Kotlin over Java for Android development is its more concise and expressive syntax, not specifically a built-in testing framework."
+    },
+    {
+      "question": "A 'data class' in Kotlin is specifically used for parsing JSON data.",
+      "answer": false,
+      "reasoning": "A 'data class' in Kotlin is used to hold data and automatically provides implementations of equals(), hashCode(), toString(), and other functions."
+    },
+    {
+      "question": "Concurrency in Kotlin can only be achieved using Coroutines.",
+      "answer": false,
+      "reasoning": "In Kotlin, concurrency can be achieved through Threads, Executors, and Coroutines."
+    },
+    {
+      "question": "The 'apply' function in Kotlin is used for initializing objects by executing a block of code on the object's context.",
+      "answer": true,
+      "reasoning": "The 'apply' function allows for the configuration of an object once it has been constructed, useful for initializing objects."
+    },
+    {
+      "question": "Extension functions in Kotlin can be declared inside a class to extend its functionality.",
+      "answer": false,
+      "reasoning": "An extension function is declared outside of a class but can be called as if it were a method of that class."
+    }
+  ],
+  "expertSwipes": [
+    {
+      "question": "Kotlin's 'reified type parameters' allow for higher-order functions to be inlined.",
+      "answer": false,
+      "reasoning": "Reified type parameters in Kotlin allow type checks and casts at runtime within generic functions, not specifically for higher-order functions."
+    },
+    {
+      "question": "Kotlin's 'sealed classes' can have subclasses defined outside of the file where the sealed class is declared.",
+      "answer": false,
+      "reasoning": "Subclasses of a sealed class must be defined in the same file as the sealed class declaration in Kotlin."
+    },
+    {
+      "question": "The 'by lazy' delegate in Kotlin is used to create a property that is initialized only when accessed for the first time.",
+      "answer": true,
+      "reasoning": "The 'by lazy' delegate in Kotlin allows for lazy initialization of properties, meaning they are only computed when accessed for the first time."
+    }
+  ]
+}
+

@@ -12,16 +12,16 @@ class SwipeActivity : AppCompatActivity() {
 
     private lateinit var topicIdentifier: TopicFileLoader
     private lateinit var viewModel: SwipeViewModel
-    private lateinit var questionViewUpdater: SwipeViewUpdater
+    private lateinit var swipeViewUpdater: SwipeViewUpdater
     private val logger = getLogger(this::class.simpleName!!)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         logger.info( "QuestionActivity started")
         topicIdentifier = TopicFileLoader(this)
-        setContentView(R.layout.activity_question)
+        setContentView(R.layout.activity_swipe)
         viewModel = initViewModel()
-        questionViewUpdater = SwipeViewUpdater(this, viewModel)
+        swipeViewUpdater = SwipeViewUpdater(this, viewModel)
     }
 
     private fun initViewModel(): SwipeViewModel {
