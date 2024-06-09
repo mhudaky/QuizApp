@@ -1,6 +1,8 @@
 package com.example.quizapp.dto
 
-data class TopicDifficultyDTO(
+import com.example.quizapp.enums.Difficulty
+
+data class TopicDto(
     val topicName: String,
     val difficulty: Difficulty
 )

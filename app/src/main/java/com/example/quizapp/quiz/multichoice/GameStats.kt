@@ -1,7 +1,7 @@
 package com.example.quizapp.quiz.multichoice
 
 import androidx.lifecycle.MutableLiveData
-import com.example.quizapp.dto.Difficulty
+import com.example.quizapp.enums.Difficulty
 import com.example.quizapp.utils.SharedPreferencesHelper
 import java.util.logging.Logger
 import kotlin.math.abs
@@ -15,7 +15,7 @@ class GameStats(private val topicName: String, private val prefsHelper: SharedPr
     private val logger = Logger.getLogger(this::class.simpleName!!)
 
     init {
-        score.value = prefsHelper.getPoints(topicName)
+        score.value = prefsHelper.getScore(topicName)
         streak.value = prefsHelper.getStreak(topicName)
         updateDifficulty()
     }
@@ -55,7 +55,7 @@ class GameStats(private val topicName: String, private val prefsHelper: SharedPr
         if (increment > 0) {
             val newScore = score.value!! + increment
             score.value = newScore
-            prefsHelper.savePoints(topicName, newScore)
+            prefsHelper.saveScore(topicName, newScore)
         }
         logger.info("Score increased: $this")
     }

@@ -1,11 +1,11 @@
 package com.example.quizapp.quiz.multichoice
 
 import androidx.lifecycle.ViewModel
-import com.example.quizapp.dto.Topic
+import com.example.quizapp.dto.MultiChoiceTopic
 import com.example.quizapp.utils.SharedPreferencesHelper
 import java.util.logging.Logger
 
-class QuestionViewModel(topic: Topic, prefsHelper: SharedPreferencesHelper) : ViewModel() {
+class QuestionViewModel(topic: MultiChoiceTopic, prefsHelper: SharedPreferencesHelper) : ViewModel() {
 
     private val logger = Logger.getLogger(this::class.simpleName!!)
     val gameStats = GameStats(topic.name, prefsHelper)

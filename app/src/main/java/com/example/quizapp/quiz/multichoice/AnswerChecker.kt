@@ -1,7 +1,7 @@
 package com.example.quizapp.quiz.multichoice
 
 import androidx.lifecycle.MutableLiveData
-import com.example.quizapp.dto.Question
+import com.example.quizapp.dto.MultiChoice
 import java.util.logging.Logger
 
 class AnswerChecker(private val gameStats: GameStats) {
@@ -25,7 +25,7 @@ class AnswerChecker(private val gameStats: GameStats) {
         timer.startTimer()
     }
 
-    fun checkAnswer(selectedAnswer: String, question: Question): Boolean {
+    fun checkAnswer(selectedAnswer: String, question: MultiChoice): Boolean {
         val isCorrect = selectedAnswer == question.correct
         if (isCorrect) {
             onRightGuess(question.reasoning)

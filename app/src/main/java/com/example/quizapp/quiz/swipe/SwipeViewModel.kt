@@ -1,11 +1,11 @@
 package com.example.quizapp.quiz.swipe
 
 import androidx.lifecycle.ViewModel
-import com.example.quizapp.dto.Topic
+import com.example.quizapp.dto.SwipeTopic
 import com.example.quizapp.utils.SharedPreferencesHelper
 import java.util.logging.Logger
 
-class SwipeViewModel(topic: Topic, prefsHelper: SharedPreferencesHelper) : ViewModel() {
+class SwipeViewModel(topic: SwipeTopic, prefsHelper: SharedPreferencesHelper) : ViewModel() {
 
     private val logger = Logger.getLogger(this::class.simpleName!!)
     val gameStats = GameStats(topic.name, prefsHelper)
@@ -13,16 +13,16 @@ class SwipeViewModel(topic: Topic, prefsHelper: SharedPreferencesHelper) : ViewM
     val swipeIterator = SwipeIterator(topic, prefsHelper)
 
     init {
-        loadNextQuestion()
-        logger.info("QuestionViewModel created: $this")
+        loadNextSwipe()
+        logger.info("SwipeViewModel created: $this")
     }
 
-    fun loadNextQuestion() {
-        swipeIterator.loadQuestion(gameStats.getDifficulty())
-        answerChecker.newQuestion()
+    fun loadNextSwipe() {
+        swipeIterator.loadSwipe(gameStats.getDifficulty())
+        answerChecker.newSwipe()
     }
 
     fun checkAnswer(selectedAnswer: String): Boolean {
-        return answerChecker.checkAnswer(selectedAnswer, swipeIterator.getQuestion())
+        return answerChecker.checkAnswer(selectedAnswer, swipeIterator.getSwipe())
     }
 }

@@ -9,7 +9,7 @@ class SwipeViewUpdater(
     activity: AppCompatActivity, viewModel: SwipeViewModel
 ) {
 
-    private val questionField: MaterialTextView = activity.findViewById(R.id.question)
+    private val swipeField: MaterialTextView = activity.findViewById(R.id.swipe)
     private val scoreTextView: MaterialTextView = activity.findViewById(R.id.score)
     private val streakTextView: MaterialTextView = activity.findViewById(R.id.streak)
     private val difficultyTextView: MaterialTextView = activity.findViewById(R.id.difficulty)
@@ -19,8 +19,8 @@ class SwipeViewUpdater(
     private val logger = Logger.getLogger(this::class.simpleName!!)
 
     init {
-        viewModel.swipeIterator.question.observe(activity) { question ->
-            question.also { reasoningTextView.text = it.question }
+        viewModel.swipeIterator.swipe.observe(activity) { swipe ->
+            swipe.also { reasoningTextView.text = it.swipe }
         }
         viewModel.gameStats.score.observe(activity) { score ->
             "Score: $score".also { scoreTextView.text = it }

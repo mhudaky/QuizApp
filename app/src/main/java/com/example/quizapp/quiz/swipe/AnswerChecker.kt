@@ -1,7 +1,7 @@
 package com.example.quizapp.quiz.swipe
 
 import androidx.lifecycle.MutableLiveData
-import com.example.quizapp.dto.Question
+import com.example.quizapp.dto.Swipe
 import java.util.logging.Logger
 
 class AnswerChecker(private val gameStats: GameStats) {
@@ -15,9 +15,9 @@ class AnswerChecker(private val gameStats: GameStats) {
         timer.startTimer()
     }
 
-    fun newQuestion() {
+    fun newSwipe() {
         if (!guessedAlready) {
-            logger.info("Moved to the next question without guessing")
+            logger.info("Moved to the next swipe without guessing")
             gameStats.resetStreak()
         }
         reasoning.value = ""
@@ -25,10 +25,11 @@ class AnswerChecker(private val gameStats: GameStats) {
         timer.startTimer()
     }
 
-    fun checkAnswer(selectedAnswer: String, question: Question): Boolean {
-        val isCorrect = selectedAnswer == question.correct
+    fun checkAnswer(selectedAnswer: String, swipe: Swipe): Boolean {
+        val isCorrect = ?
+        selectedAnswer == swipe.correct
         if (isCorrect) {
-            onRightGuess(question.reasoning)
+            onRightGuess(swipe.reasoning)
         } else {
             onWrongGuess()
         }

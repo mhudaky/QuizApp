@@ -2,44 +2,60 @@ package com.example.quizapp.utils
 
 import android.content.Context
 import android.content.SharedPreferences
-import com.example.quizapp.dto.TopicDifficultyDTO
+import com.example.quizapp.dto.TopicDto
 
-class SharedPreferencesHelper(context: Context) {
+class SharedPreferencesHelper(context: Context, private val topicType: String) {
 
     private val PREFS_NAME = "com.example.quizapp"
     private val prefs: SharedPreferences = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
 
     fun saveStreak(topicId: String, streak: Int) {
-        val editor = prefs.edit()
-        editor.putInt("${topicId}_streak", streak)
-        editor.apply()
+        saveData(getStreakKey(topicId), streak)
     }
 
     fun getStreak(topicId: String): Int {
-        return prefs.getInt("${topicId}_streak", 0)
+        return getData(getStreakKey(topicId))
     }
 
-    fun savePoints(topicId: String, points: Int) {
-        val editor = prefs.edit()
-        editor.putInt("${topicId}_points", points)
-        editor.apply()
+    fun saveScore(topicId: String, points: Int) {
+        saveData(getScoreKey(topicId), points)
     }
 
-    fun getPoints(topicId: String): Int {
-        return prefs.getInt("${topicId}_points", 0)
+    fun getScore(topicId: String): Int {
+        return getData(getScoreKey(topicId))
     }
 
-    fun saveCurrentQuestionIndex(dto: TopicDifficultyDTO, index: Int) {
-        val editor = prefs.edit()
-        editor.putInt("${dto.topicName}_${dto.difficulty.name}_current_question_index", index)
-        editor.apply()
+    fun saveCurrentIndex(dto: TopicDto, index: Int) {
+        saveData(getIndexKey(dto), index)
     }
 
-    fun getCurrentQuestionIndex(dto: TopicDifficultyDTO): Int {
-        return prefs.getInt("${dto.topicName}_${dto.difficulty.name}_current_question_index", 0)
+    fun getCurrentIndex(dto: TopicDto): Int {
+        return getData(getIndexKey(dto))
     }
 
     fun resetStats() {
         prefs.edit().clear().apply()
+    }
+
+    private fun saveData(key: String, value: Int) {
+        val editor = prefs.edit()
+        editor.putInt(key, value)
+        editor.apply()
+    }
+
+    private fun getData(key: String): Int {
+        return prefs.getInt(key, 0)
+    }
+
+    private fun getScoreKey(topicId: String): String {
+        return "${topicType}_${topicId}_score"
+    }
+
+    private fun getStreakKey(topicId: String): String {
+        return "${topicType}_${topicId}_streak"
+    }
+
+    private fun getIndexKey(dto: TopicDto): String {
+        return "${topicType}_${dto.topicName}_${dto.difficulty.name}_index"
     }
 }

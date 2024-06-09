@@ -3,7 +3,7 @@ package com.example.quizapp.quiz.multichoice
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import com.example.quizapp.R
-import com.example.quizapp.dto.Question
+import com.example.quizapp.dto.MultiChoice
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textview.MaterialTextView
 import java.util.logging.Logger
@@ -47,7 +47,7 @@ class QuestionViewUpdater(
         }
     }
 
-    private fun updateQuestionView(question: Question) {
+    private fun updateQuestionView(question: MultiChoice) {
         logger.info("Updating question view")
         questionField.text = question.question
         val shuffledAnswers = question.answers.shuffled()

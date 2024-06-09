@@ -8,10 +8,15 @@ import java.util.logging.Logger
 class MainViewModel(private val resources: Resources) : ViewModel() {
 
     private val topicIdentifiers: MutableList<TopicIdentifier> = mutableListOf()
-    private var currentPath: String = "swipes"
     private val logger = Logger.getLogger(this::class.simpleName!!)
+    private lateinit var currentPath: String
 
     init {
+        reset()
+    }
+
+    fun reset() {
+        currentPath = "quiz"
         loadTopics()
     }
 
@@ -41,11 +46,6 @@ class MainViewModel(private val resources: Resources) : ViewModel() {
         if (topicIdentifier.hasSubTopics) {
             navigateTo(topicIdentifier.filePath)
         }
-    }
-
-    fun reset() {
-        currentPath = "questions"
-        loadTopics()
     }
 
     private fun navigateTo(path: String) {

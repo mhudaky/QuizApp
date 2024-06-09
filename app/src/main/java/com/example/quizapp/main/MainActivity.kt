@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.quizapp.R
 import com.example.quizapp.dto.TopicIdentifier
+import com.example.quizapp.enums.QuestionType
+import com.example.quizapp.quiz.multichoice.QuestionActivity
 import com.example.quizapp.quiz.swipe.SwipeActivity
 import com.example.quizapp.utils.SharedPreferencesHelper
 import java.util.logging.Logger.getLogger
@@ -51,7 +53,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun addResetStatListener() {
-        prefsHelper = SharedPreferencesHelper(this)
+        prefsHelper = SharedPreferencesHelper(this, "")
         val resetStatsButton = findViewById<Button>(R.id.reset_stats_button)
         resetStatsButton.setOnClickListener {
             prefsHelper.resetStats()
@@ -67,7 +69,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun startQuizActivity(topicIdentifier: TopicIdentifier) {
-        val intent = Intent(this, SwipeActivity::class.java)
+        val intent = when (topicIdentifier.questionType) {
+            QuestionType.MULTI_CHOICE -> Intent(this, QuestionActivity::class.java)
+            QuestionType.SWIPE -> Intent(this, SwipeActivity::class.java)
+        }
         intent.putExtra("topicName", topicIdentifier.name)
         intent.putExtra("topicFilePath", topicIdentifier.filePath)
         startActivity(intent)

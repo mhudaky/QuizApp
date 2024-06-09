@@ -4,6 +4,8 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.quizapp.R
+import com.example.quizapp.dto.MultiChoiceTopic
+import com.example.quizapp.dto.Type
 import com.example.quizapp.utils.SharedPreferencesHelper
 import com.example.quizapp.utils.TopicFileLoader
 import java.util.logging.Logger.getLogger
@@ -26,9 +28,9 @@ class QuestionActivity : AppCompatActivity() {
 
     private fun initViewModel(): QuestionViewModel {
         val topicFileIdentifier = intent.getStringExtra("topicFilePath") ?: ""
-        val topic = topicIdentifier.loadFile(topicFileIdentifier)
+        val topic = topicIdentifier.loadFile(topicFileIdentifier, MultiChoiceTopic::class.java)
         logger.info( "Loaded topic: $topic")
-        val prefsHelper = SharedPreferencesHelper(this)
+        val prefsHelper = SharedPreferencesHelper(this, Type.MULTI_CHOICE.name)
         val factory = QuestionViewModelFactory(topic, prefsHelper)
         return ViewModelProvider(this, factory)[QuestionViewModel::class.java]
     }
