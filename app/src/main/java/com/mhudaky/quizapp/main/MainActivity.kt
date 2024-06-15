@@ -6,7 +6,7 @@ import android.widget.Button
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import com.example.quizapp.R
+import com.mhudaky.quizapp.R
 import com.mhudaky.quizapp.dto.TopicIdentifier
 import com.mhudaky.quizapp.enums.QuestionType
 import com.mhudaky.quizapp.quiz.multichoice.QuestionActivity
