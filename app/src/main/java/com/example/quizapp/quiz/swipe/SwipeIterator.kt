@@ -1,10 +1,10 @@
 package com.example.quizapp.quiz.swipe
 
 import androidx.lifecycle.MutableLiveData
-import com.example.quizapp.enums.Difficulty
 import com.example.quizapp.dto.Swipe
 import com.example.quizapp.dto.SwipeTopic
 import com.example.quizapp.dto.TopicDto
+import com.example.quizapp.enums.Difficulty
 import com.example.quizapp.utils.SharedPreferencesHelper
 
 class SwipeIterator(private val topic: SwipeTopic, private val prefsHelper: SharedPreferencesHelper) {

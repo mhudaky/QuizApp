@@ -2,6 +2,7 @@ package com.example.quizapp.quiz.swipe
 
 import androidx.lifecycle.ViewModel
 import com.example.quizapp.dto.SwipeTopic
+import com.example.quizapp.enums.SwipeDirection
 import com.example.quizapp.utils.SharedPreferencesHelper
 import java.util.logging.Logger
 
@@ -22,7 +23,8 @@ class SwipeViewModel(topic: SwipeTopic, prefsHelper: SharedPreferencesHelper) : 
         answerChecker.newSwipe()
     }
 
-    fun checkAnswer(selectedAnswer: String): Boolean {
-        return answerChecker.checkAnswer(selectedAnswer, swipeIterator.getSwipe())
+    fun swipe(swipeDirection: SwipeDirection) {
+        logger.info("Swiped to the  $swipeDirection")
+        answerChecker.swipe(swipeDirection, swipeIterator.getSwipe())
     }
 }

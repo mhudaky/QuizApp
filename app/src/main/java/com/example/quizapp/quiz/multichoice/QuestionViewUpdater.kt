@@ -12,7 +12,7 @@ class QuestionViewUpdater(
     activity: AppCompatActivity, viewModel: QuestionViewModel
 ) {
 
-    private val questionField: MaterialTextView = activity.findViewById(R.id.question)
+    private val questionTextView: MaterialTextView = activity.findViewById(R.id.question)
     private val scoreTextView: MaterialTextView = activity.findViewById(R.id.score)
     private val streakTextView: MaterialTextView = activity.findViewById(R.id.streak)
     private val difficultyTextView: MaterialTextView = activity.findViewById(R.id.difficulty)
@@ -49,7 +49,7 @@ class QuestionViewUpdater(
 
     private fun updateQuestionView(question: MultiChoice) {
         logger.info("Updating question view")
-        questionField.text = question.question
+        questionTextView.text = question.question
         val shuffledAnswers = question.answers.shuffled()
         for (i in answerButtons.indices) {
             val button = answerButtons[i] as MaterialButton
