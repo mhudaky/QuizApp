@@ -2,6 +2,7 @@ package com.example.quizapp.quiz.multichoice
 
 import androidx.lifecycle.MutableLiveData
 import com.example.quizapp.dto.MultiChoice
+import com.example.quizapp.utils.QuestionTimer
 import java.util.logging.Logger
 
 class AnswerChecker(private val gameStats: GameStats) {
@@ -36,10 +37,20 @@ class AnswerChecker(private val gameStats: GameStats) {
         return isCorrect
     }
 
+    fun quitQuiz() {
+        if (!guessedAlready) {
+            logger.info("Quitting without answering the question")
+            gameStats.resetStreak()
+        }
+    }
+
     private fun onRightGuess(reasoning: String) {
         if(!guessedAlready && !timer.isTimeUp()) {
             gameStats.increaseStats()
+        } else {
+            gameStats.resetStreak()
         }
+        timer.stopTimer()
         this.reasoning.value = "Correct! $reasoning"
     }
 

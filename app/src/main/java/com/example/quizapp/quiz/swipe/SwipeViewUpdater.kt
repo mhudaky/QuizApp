@@ -15,6 +15,8 @@ class SwipeViewUpdater(
     private val indexTextView: MaterialTextView = activity.findViewById(R.id.index)
     private val reasoningTextView: MaterialTextView = activity.findViewById(R.id.reasoning)
     private val timerTextView: MaterialTextView = activity.findViewById(R.id.timer)
+    private val buttonInitializer = ButtonInitializer(activity, viewModel)
+    private val swipeFunctionality = SwipeFunctionality(activity, viewModel)
 
     init {
         viewModel.swipeIterator.swipe.observe(activity) { swipe ->
@@ -38,5 +40,7 @@ class SwipeViewUpdater(
         viewModel.answerChecker.timer.remainingSeconds.observe(activity) { remainingSeconds ->
             "$remainingSeconds sec".also { timerTextView.text = it }
         }
+        buttonInitializer.initializeButtons()
+        swipeFunctionality.setUpGestureDetector()
     }
 }

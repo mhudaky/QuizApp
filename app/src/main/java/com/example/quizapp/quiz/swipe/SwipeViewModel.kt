@@ -12,6 +12,7 @@ class SwipeViewModel(topic: SwipeTopic, prefsHelper: SharedPreferencesHelper) : 
     val gameStats = GameStats(topic.name, prefsHelper)
     val answerChecker = AnswerChecker(gameStats)
     val swipeIterator = SwipeIterator(topic, prefsHelper)
+    var isSwipeEnabled = true
 
     init {
         loadNextSwipe()
@@ -21,10 +22,13 @@ class SwipeViewModel(topic: SwipeTopic, prefsHelper: SharedPreferencesHelper) : 
     fun loadNextSwipe() {
         swipeIterator.loadSwipe(gameStats.getDifficulty())
         answerChecker.newSwipe()
+        isSwipeEnabled = true
     }
 
     fun swipe(swipeDirection: SwipeDirection) {
+
         logger.info("Swiped to the  $swipeDirection")
         answerChecker.swipe(swipeDirection, swipeIterator.getSwipe())
+        isSwipeEnabled = false
     }
 }

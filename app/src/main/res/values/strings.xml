@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">QuizApp</string>
+    <string name="swipe_instruction">Swipe true statements to the right, false statements to the left!</string>
 </resources>

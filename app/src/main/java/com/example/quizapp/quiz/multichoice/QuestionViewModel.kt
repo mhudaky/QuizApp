@@ -13,7 +13,7 @@ class QuestionViewModel(topic: MultiChoiceTopic, prefsHelper: SharedPreferencesH
     val questionIterator = QuestionIterator(topic, prefsHelper)
 
     init {
-        loadNextQuestion()
+        questionIterator.loadQuestion(gameStats.getDifficulty())
         logger.info("QuestionViewModel created: $this")
     }
 

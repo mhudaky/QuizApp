@@ -28,6 +28,7 @@ class ButtonInitializer(private val activity: AppCompatActivity, private val vie
 
         val returnButton = activity.findViewById<Button>(R.id.button_main)
         returnButton.setOnClickListener {
+            viewModel.answerChecker.quitQuiz()
             val intent = Intent(activity, MainActivity::class.java)
             activity.startActivity(intent)
         }

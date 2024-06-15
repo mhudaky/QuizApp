@@ -1,4 +1,4 @@
-package com.example.quizapp.quiz.multichoice
+package com.example.quizapp.utils
 
 import android.os.CountDownTimer
 import androidx.lifecycle.MutableLiveData
@@ -8,9 +8,10 @@ class QuestionTimer() {
     private var timer: CountDownTimer? = null
     val remainingSeconds: MutableLiveData<Int> = MutableLiveData()
 
-    fun startTimer() {
+    fun startTimer(seconds: Long = 16) {
         timer?.cancel()
-        timer = object : CountDownTimer(16000, 1000) {
+        val milliseconds: Long = 1000 * seconds
+        timer = object : CountDownTimer(milliseconds, 1000) {
             override fun onTick(millisUntilFinished: Long) {
                 remainingSeconds.value = millisUntilFinished.toInt() / 1000
             }
@@ -19,6 +20,10 @@ class QuestionTimer() {
             }
         }
         timer?.start()
+    }
+
+    fun stopTimer() {
+        timer?.cancel()
     }
 
     fun isTimeUp(): Boolean {

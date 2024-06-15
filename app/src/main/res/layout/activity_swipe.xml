@@ -34,7 +34,12 @@
         android:layout_height="wrap_content"
         android:text="Index"
         android:textSize="18sp" />
-
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/instruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/swipe_instruction"
+        android:textSize="18sp" />
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view"
         android:layout_width="match_parent"
@@ -43,20 +48,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp">
-
             <TextView
                 android:id="@+id/question"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Question text"
                 android:textSize="18sp" />
-
         </LinearLayout>
     </androidx.cardview.widget.CardView>
     <com.google.android.material.button.MaterialButton
