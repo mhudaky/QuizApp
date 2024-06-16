@@ -10,11 +10,13 @@
     </style>
 
     <style name="GlobalButtonStyle" parent="Widget.AppCompat.Button">
-        <item name="android:textAppearance">@style/GlobalTextSize</item>
+        <item name="android:textSize">20sp</item>
     </style>
 
     <style name="Theme.QuizApp" parent="Base.Theme.QuizApp">
         <item name="android:textViewStyle">@style/GlobalTextSize</item>
         <item name="android:buttonStyle">@style/GlobalButtonStyle</item>
     </style>
+
+
 </resources>
