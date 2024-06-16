@@ -9,37 +9,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Return to Main"
-        android:layout_marginBottom="4dp"/>
+        android:layout_marginBottom="4dp"
+        android:textAppearance="@style/GlobalTextSize"/>
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Score"
-        android:textSize="18sp" />
+        android:text="Score" />
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/streak"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Streak"
-        android:textSize="18sp" />
+        android:text="Streak" />
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/difficulty"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Difficulty"
-        android:textSize="18sp" />
+        android:text="Difficulty" />
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/index"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Index"
-        android:textSize="18sp" />
+        android:text="Index" />
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/instruction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/swipe_instruction"
-        android:textSize="18sp" />
+        android:text="@string/swipe_instruction" />
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view"
         android:layout_width="match_parent"
@@ -72,12 +68,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Time remaining: 15"
-        android:textSize="18sp"
         android:layout_marginBottom="16dp"/>
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/reasoning"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
-        android:textSize="18sp" />
+        android:text="" />
 </LinearLayout>
