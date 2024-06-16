@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         logger.info("Creating topic buttons: $topicIdentifiers")
         topicIdentifiers.forEach { topicIdentifier ->
             val button = Button(this)
-            button.text = topicIdentifier.name
+            button.text = topicIdentifier.name.uppercase()
             button.setOnClickListener {
                 viewModel.choseTopic(topicIdentifier)
                 if (topicIdentifier.hasSubTopics) {
