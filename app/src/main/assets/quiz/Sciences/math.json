@@ -125,6 +125,88 @@
       "correct": "Contractible",
       "reasoning": "A contractible space in topology is one that can be continuously shrunk to a point within that space. It is a property that indicates a space is homotopically trivial, meaning it has a trivial fundamental group. This property is used to understand the shape and structure of topological spaces in a way that is invariant under deformation."
     }
+  ],
+  "easySwipes": [
+    {
+      "question": "The sum of the angles in a triangle always equals 180 degrees.",
+      "answer": true,
+      "reasoning": "In Euclidean geometry, the sum of the angles in any triangle is always 180 degrees, due to the properties of parallel lines intersected by a transversal."
+    },
+    {
+      "question": "The square root of 64 is 8.",
+      "answer": true,
+      "reasoning": "The square root of 64 is indeed 8, as 8 times 8 equals 64."
+    },
+    {
+      "question": "2 + 2 equals 5.",
+      "answer": false,
+      "reasoning": "2 + 2 equals 4, not 5. This is a basic arithmetic fact."
+    },
+    {
+      "question": "A right angle is 90 degrees.",
+      "answer": true,
+      "reasoning": "A right angle is defined as an angle of exactly 90 degrees."
+    },
+    {
+      "question": "The formula for the area of a circle is pi times radius squared.",
+      "answer": true,
+      "reasoning": "The formula for the area of a circle is indeed pi (π) multiplied by the square of the radius, often written as A = πr^2."
+    }
+  ],
+  "mediumSwipes": [
+    {
+      "question": "The derivative of x^2 is 2x.",
+      "answer": true,
+      "reasoning": "The derivative of x^2 with respect to x is 2x, according to the power rule in calculus."
+    },
+    {
+      "question": "The sum of the probabilities of all possible outcomes in an experiment is 2.",
+      "answer": false,
+      "reasoning": "The sum of the probabilities of all possible outcomes of an experiment must equal 1, not 2, according to the basic principle of probability."
+    },
+    {
+      "question": "The Pythagorean theorem states that in a right-angled triangle, the square of the hypotenuse is equal to the sum of the squares of the other two sides.",
+      "answer": true,
+      "reasoning": "The Pythagorean theorem correctly describes the relationship between the lengths of the sides of a right-angled triangle: c^2 = a^2 + b^2."
+    },
+    {
+      "question": "If the odds of an event happening are 1/3, then the probability of it not happening is 2/3.",
+      "answer": true,
+      "reasoning": "If the probability of an event happening is 1/3, then the probability of it not happening is indeed 1 - 1/3, which simplifies to 2/3."
+    },
+    {
+      "question": "The equation of a line in slope-intercept form is y = mx + b, where m is the y-intercept and b is the slope.",
+      "answer": false,
+      "reasoning": "In the slope-intercept form of a linear equation, y = mx + b, m represents the slope of the line, and b represents the y-intercept."
+    }
+  ],
+  "hardSwipes": [
+    {
+      "question": "The Riemann Hypothesis is a solved problem in mathematics.",
+      "answer": false,
+      "reasoning": "The Riemann Hypothesis, one of the most famous and long-standing problems in mathematics, remains unsolved."
+    },
+    {
+      "question": "Fermat's Last Theorem was proved by Andrew Wiles in 1994.",
+      "answer": true,
+      "reasoning": "Fermat's Last Theorem, which states that there are no whole number solutions to the equation x^n + y^n = z^n for n greater than 2, was indeed proved by Andrew Wiles in 1994."
+    },
+    {
+      "question": "Euler's identity is considered a profound mathematical equation: e^(iπ) + 1 = 0.",
+      "answer": true,
+      "reasoning": "Euler's identity e^(iπ) + 1 = 0 is celebrated for its beauty, as it links five fundamental mathematical constants."
+    },
+    {
+      "question": "The Navier-Stokes equations describe the motion of fluid substances and have been completely solved.",
+      "answer": false,
+      "reasoning": "The Navier-Stokes equations, fundamental in fluid dynamics, have not been completely solved, particularly for three-dimensional incompressible flows."
+    },
+    {
+      "question": "The Collatz Conjecture has been proven for all integers.",
+      "answer": false,
+      "reasoning": "The Collatz Conjecture, a famous unsolved problem in mathematics, remains unproven for all integers, despite being tested for many specific cases."
+    }
   ]
 }
+
 

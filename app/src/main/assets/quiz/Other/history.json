@@ -147,6 +147,119 @@
       "correct": "The collapse of the stock market in 1929",
       "reasoning": "The primary economic cause of the Great Depression in the United States, which subsequently had worldwide effects, was the collapse of the stock market in 1929, known as the Wall Street Crash of 1929. This event led to a drastic decline in consumer confidence and spending, resulting in severe economic downturns across various sectors. While factors such as the failure of the gold standard, agricultural failures, and the cycle of overproduction and underconsumption contributed to the severity and duration of the Depression, the stock market crash was the initial catalyst."
     }
+  ],
+  "easySwipes": [
+    {
+      "question": "The Great Wall of China was primarily built to protect against invasions from northern tribes.",
+      "answer": true,
+      "reasoning": "The Great Wall was indeed constructed to protect the Chinese states and empires against the raids and invasions of the various nomadic groups from the Eurasian Steppe."
+    },
+    {
+      "question": "Christopher Columbus discovered America in 1492.",
+      "answer": true,
+      "reasoning": "While indigenous peoples had lived in the Americas for thousands of years, Christopher Columbus's 1492 voyage is credited with opening the way for European exploration and colonization of the Americas."
+    },
+    {
+      "question": "World War I began in 1914 and ended in 1918.",
+      "answer": true,
+      "reasoning": "World War I started in July 1914 and concluded with the armistice of November 11, 1918."
+    },
+    {
+      "question": "The Roman Empire was the longest-lasting empire in history.",
+      "answer": false,
+      "reasoning": "While the Roman Empire was one of the longest-lasting empires, other empires, such as the Byzantine Empire, lasted longer in various forms."
+    },
+    {
+      "question": "The Renaissance began in the 14th century and originated in Italy.",
+      "answer": true,
+      "reasoning": "The Renaissance, a period of revival in art, literature, and learning, indeed began in the 14th century in Italy, spreading throughout Europe over the following centuries."
+    }
+  ],
+  "mediumSwipes": [
+    {
+      "question": "The Declaration of Independence was signed in 1776.",
+      "answer": true,
+      "reasoning": "The United States Declaration of Independence, which announced that the thirteen American colonies were no longer part and instead were independent states, was signed in 1776."
+    },
+    {
+      "question": "The Cold War was a direct military conflict between the United States and the Soviet Union.",
+      "answer": false,
+      "reasoning": "The Cold War was characterized by political, military, and economic tensions between the US and USSR, but it did not escalate into direct military conflict between the two superpowers."
+    },
+    {
+      "question": "The Industrial Revolution began in the 18th century and started in Britain.",
+      "answer": true,
+      "reasoning": "The Industrial Revolution, a period of major industrialization and innovation, began in the late 18th century in Britain."
+    },
+    {
+      "question": "Julius Caesar was the first Emperor of Rome.",
+      "answer": false,
+      "reasoning": "While Julius Caesar played a crucial role in the events that led to the rise of the Roman Empire, he was never emperor. The first emperor was Augustus Caesar."
+    },
+    {
+      "question": "The Magna Carta was signed in 1215, limiting the powers of the English monarch.",
+      "answer": true,
+      "reasoning": "The Magna Carta, signed in 1215, was indeed a pivotal document that began the process of limiting the powers of the English monarch."
+    }
+  ],
+  "hardSwipes": [
+    {
+      "question": "The Spanish Armada was defeated by the English in 1588.",
+      "answer": true,
+      "reasoning": "The English navy defeated the Spanish Armada in 1588, marking a significant moment in naval warfare."
+    },
+    {
+      "question": "The Battle of Waterloo marked the final defeat of Napoleon Bonaparte.",
+      "answer": true,
+      "reasoning": "The Battle of Waterloo in 1815 was indeed Napoleon Bonaparte's final battle, leading to his defeat and subsequent exile to Saint Helena."
+    },
+    {
+      "question": "The Treaty of Versailles ended World War II.",
+      "answer": false,
+      "reasoning": "The Treaty of Versailles ended World War I in 1919. World War II ended with the unconditional surrender of the Axis powers in 1945."
+    },
+    {
+      "question": "The French Revolution began in 1789 with the storming of the Bastille.",
+      "answer": true,
+      "reasoning": "The storming of the Bastille on July 14, 1789, is often cited as the beginning of the French Revolution."
+    },
+    {
+      "question": "The Suez Canal was opened in 1869, connecting the Mediterranean Sea to the Red Sea.",
+      "answer": true,
+      "reasoning": "The Suez Canal, indeed opened in 1869, connects the Mediterranean Sea to the Red Sea, providing a crucial shortcut for maritime trade."
+    }
+  ],
+  "expertSwipes": [
+    {
+      "question": "The Peace of Westphalia in 1648 initiated the concept of state sovereignty in international law.",
+      "answer": true,
+      "reasoning": "The Peace of Westphalia, which ended the Thirty Years' War in 1648, is widely regarded as the foundation of modern state sovereignty and international law, establishing the precedent that nations are sovereign over their territory."
+    },
+    {
+      "question": "The Qing Dynasty was the final imperial dynasty of China, overthrown by the Xinhai Revolution in 1911.",
+      "answer": true,
+      "reasoning": "The Qing Dynasty, which lasted from 1644 to 1912, was indeed the last imperial dynasty of China. It was overthrown by the Xinhai Revolution, leading to the establishment of the Republic of China in 1912."
+    },
+    {
+      "question": "Leonardo da Vinci completed the Mona Lisa in 1503, during the High Renaissance.",
+      "answer": true,
+      "reasoning": "Leonardo da Vinci completed the Mona Lisa, one of the most famous artworks of the High Renaissance, around 1503. The painting is celebrated for its innovative use of technique and the enigmatic expression of its subject."
+    },
+    {
+      "question": "The Habsburg monarchy was a key belligerent in the Thirty Years' War, fighting primarily on the Protestant side.",
+      "answer": false,
+      "reasoning": "The Habsburg monarchy, ruling over the Holy Roman Empire and other territories, was a principal Catholic power in the Thirty Years' War (1618-1648) and fought against the Protestant states and their allies."
+    },
+    {
+      "question": "The Rosetta Stone, crucial in deciphering Egyptian hieroglyphs, dates back to the Ptolemaic dynasty.",
+      "answer": true,
+      "reasoning": "The Rosetta Stone, indeed from the Ptolemaic dynasty in 196 BC, was instrumental in deciphering Egyptian hieroglyphs, featuring inscriptions in three scripts: hieroglyphic, demotic, and Greek."
+    },
+    {
+      "question": "The Battle of Saratoga was decisive in securing French support for the American Revolution.",
+      "answer": true,
+      "reasoning": "The American victory at the Battle of Saratoga in 1777 was pivotal, convincing France of the viability of the American cause and leading to French military support, significantly impacting the course of the American Revolution."
+    }
   ]
 }
 

@@ -109,5 +109,153 @@
       "correct": "Smoking",
       "reasoning": "Smoking is the most common cause of chronic obstructive pulmonary disease (COPD). Air pollution, genetic factors, and occupational exposure can also contribute, but smoking remains the primary risk factor."
     }
+  ],
+  "easySwipes": [
+    {
+      "question": "The human body has four chambers in the heart.",
+      "answer": true,
+      "reasoning": "The human heart consists of four chambers: two atria and two ventricles."
+    },
+    {
+      "question": "The normal body temperature is around 37°C (98.6°F).",
+      "answer": true,
+      "reasoning": "The average normal body temperature for a healthy adult is approximately 37°C (98.6°F)."
+    },
+    {
+      "question": "Antibiotics are effective against viruses.",
+      "answer": false,
+      "reasoning": "Antibiotics are designed to fight bacterial infections and are not effective against viruses."
+    },
+    {
+      "question": "Insulin is a hormone that regulates blood sugar levels.",
+      "answer": true,
+      "reasoning": "Insulin, produced by the pancreas, helps regulate blood sugar levels by facilitating the uptake of glucose into cells."
+    },
+    {
+      "question": "The largest organ in the human body is the brain.",
+      "answer": false,
+      "reasoning": "The largest organ in the human body is the skin, not the brain."
+    },
+    {
+      "question": "The human body has four chambers in the heart.",
+      "answer": true,
+      "reasoning": "The human heart consists of four chambers: two atria and two ventricles."
+    },
+    {
+      "question": "The normal body temperature is around 37°C (98.6°F).",
+      "answer": true,
+      "reasoning": "The average normal body temperature for a healthy adult is approximately 37°C (98.6°F)."
+    },
+    {
+      "question": "Antibiotics are effective against viruses.",
+      "answer": false,
+      "reasoning": "Antibiotics are designed to fight bacterial infections and are not effective against viruses."
+    },
+    {
+      "question": "Insulin is a hormone that regulates blood sugar levels.",
+      "answer": true,
+      "reasoning": "Insulin, produced by the pancreas, helps regulate blood sugar levels by facilitating the uptake of glucose into cells."
+    },
+    {
+      "question": "The largest organ in the human body is the brain.",
+      "answer": false,
+      "reasoning": "The largest organ in the human body is the skin, not the brain."
+    },
+    {
+      "question": "Vitamin C is also known as ascorbic acid.",
+      "answer": true,
+      "reasoning": "Vitamin C is also known as ascorbic acid, an essential nutrient for various bodily functions."
+    },
+    {
+      "question": "Bones are connected to other bones by ligaments.",
+      "answer": true,
+      "reasoning": "Ligaments are fibrous connective tissues that connect bones to other bones at joints."
+    }
+  ],
+  "mediumSwipes": [
+    {
+      "question": "The liver is capable of regenerating its own tissue.",
+      "answer": true,
+      "reasoning": "The liver has a remarkable ability to regenerate its own tissue after damage or partial removal."
+    },
+    {
+      "question": "Hypertension is commonly known as high blood pressure.",
+      "answer": true,
+      "reasoning": "Hypertension is the medical term for high blood pressure, a condition where the force of the blood against the artery walls is too high."
+    },
+    {
+      "question": "The femur is the longest bone in the human body.",
+      "answer": true,
+      "reasoning": "The femur, or thigh bone, is the longest and strongest bone in the human body."
+    },
+    {
+      "question": "An ECG measures brain activity.",
+      "answer": false,
+      "reasoning": "An ECG (electrocardiogram) measures the electrical activity of the heart, not the brain."
+    },
+    {
+      "question": "The primary function of red blood cells is to fight infection.",
+      "answer": false,
+      "reasoning": "The primary function of red blood cells is to transport oxygen from the lungs to the rest of the body, not to fight infection. White blood cells are responsible for fighting infections."
+    }
+  ],
+  "hardSwipes": [
+    {
+      "question": "Type 1 diabetes is an autoimmune condition.",
+      "answer": true,
+      "reasoning": "Type 1 diabetes is an autoimmune disease where the body's immune system attacks the insulin-producing beta cells in the pancreas."
+    },
+    {
+      "question": "The sinoatrial node is known as the natural pacemaker of the heart.",
+      "answer": true,
+      "reasoning": "The sinoatrial (SA) node, located in the right atrium, is responsible for initiating the electrical impulses that regulate the heart's rhythm."
+    },
+    {
+      "question": "Alzheimer's disease primarily affects the liver.",
+      "answer": false,
+      "reasoning": "Alzheimer's disease primarily affects the brain, leading to progressive memory loss and cognitive decline."
+    },
+    {
+      "question": "The optic nerve is responsible for transmitting visual information from the retina to the brain.",
+      "answer": true,
+      "reasoning": "The optic nerve transmits visual information from the retina to the brain for processing."
+    },
+    {
+      "question": "Anemia can be caused by a deficiency of vitamin B12.",
+      "answer": true,
+      "reasoning": "A deficiency in vitamin B12 can lead to pernicious anemia, a condition where the body has insufficient healthy red blood cells."
+    }
+  ],
+  "expertSwipes": [
+    {
+      "question": "The glomerulus is a network of capillaries involved in the filtration of blood in the kidneys.",
+      "answer": true,
+      "reasoning": "The glomerulus is a network of capillaries in the kidneys that plays a crucial role in the filtration of blood to form urine."
+    },
+    {
+      "question": "Cystic fibrosis is caused by mutations in the CFTR gene.",
+      "answer": true,
+      "reasoning": "Cystic fibrosis is a genetic disorder caused by mutations in the CFTR (cystic fibrosis transmembrane conductance regulator) gene, affecting the respiratory and digestive systems."
+    },
+    {
+      "question": "Sickle cell anemia is due to a deficiency in iron.",
+      "answer": false,
+      "reasoning": "Sickle cell anemia is a genetic disorder caused by a mutation in the hemoglobin gene, leading to abnormally shaped red blood cells, not an iron deficiency."
+    },
+    {
+      "question": "The HLA system is crucial for the immune system's ability to distinguish between self and non-self.",
+      "answer": true,
+      "reasoning": "The HLA (human leukocyte antigen) system plays a critical role in the immune system by helping to distinguish between the body's own cells and foreign invaders."
+    },
+    {
+      "question": "Prions are infectious proteins that can cause neurodegenerative diseases.",
+      "answer": true,
+      "reasoning": "Prions are misfolded proteins that can induce other proteins to misfold, leading to neurodegenerative diseases such as Creutzfeldt-Jakob disease and mad cow disease."
+    },
+    {
+      "question": "The loop of Henle is part of the digestive system.",
+      "answer": false,
+      "reasoning": "The loop of Henle is a structure in the nephron of the kidney that concentrates urine, not part of the digestive system."
+    }
   ]
 }
