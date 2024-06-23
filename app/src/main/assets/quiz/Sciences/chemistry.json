@@ -1,6 +1,5 @@
 {
-  "name": "",
-  "multi-choice": {
+  "multichoice": {
     "easy": [
       {
         "question": "What is the chemical symbol for water?",

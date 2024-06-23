@@ -1,6 +1,6 @@
 package com.mhudaky.quizapp.dto
 
-data class MultiChoice(
+data class MultiChoice (
     val question: String,
     val answers: List<String>,
     val correct: String,

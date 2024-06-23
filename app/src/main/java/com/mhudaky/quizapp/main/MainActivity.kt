@@ -80,7 +80,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun startQuizActivity(topicIdentifier: TopicIdentifier) {
-        val intent = when (topicIdentifier.questionType) {
+        val intent = when (questionType) {
             QuestionType.MULTI_CHOICE -> Intent(this, QuestionActivity::class.java)
             QuestionType.SWIPE -> Intent(this, SwipeActivity::class.java)
         }

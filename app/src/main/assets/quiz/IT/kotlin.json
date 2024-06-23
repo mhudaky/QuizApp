@@ -1,6 +1,5 @@
 {
-  "name": "Kotlin",
-  "multi-choice": {
+  "multichoice": {
     "easy": [
       {
         "question": "What is Kotlin?",

@@ -1,6 +1,5 @@
 {
-  "name": "Kotlin",
-  "multi-choice": {
+  "multichoice": {
     "easy": [
       {
         "question": "Who was the first President of the United States?",

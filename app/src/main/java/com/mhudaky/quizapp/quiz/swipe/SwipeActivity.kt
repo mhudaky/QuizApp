@@ -4,7 +4,6 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.mhudaky.quizapp.R
-import com.mhudaky.quizapp.dto.SwipeTopic
 import com.mhudaky.quizapp.enums.QuestionType
 import com.mhudaky.quizapp.utils.SharedPreferencesHelper
 import com.mhudaky.quizapp.utils.TopicFileLoader
@@ -28,7 +27,8 @@ class SwipeActivity : AppCompatActivity() {
 
     private fun initViewModel(): SwipeViewModel {
         val topicFileIdentifier = intent.getStringExtra("topicFilePath") ?: ""
-        val topic = topicIdentifier.loadFile(topicFileIdentifier, SwipeTopic::class.java)
+        val topic = topicIdentifier.loadSwipesTopic(topicFileIdentifier)
+        topic.name = intent.getStringExtra("topicName") ?: ""
         logger.info( "Loaded topic: $topic")
         val prefsHelper = SharedPreferencesHelper(this, QuestionType.SWIPE.name)
         val factory = SwipeViewModelFactory(topic, prefsHelper)

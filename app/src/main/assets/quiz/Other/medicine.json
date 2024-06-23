@@ -1,6 +1,5 @@
 {
-  "name": "Medicine",
-  "multi-choice": {
+  "multichoice": {
     "easy": [
       {
         "question": "What is the medical term for high blood pressure?",
