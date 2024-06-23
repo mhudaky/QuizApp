@@ -1,212 +1,336 @@
 {
-  "name": "Math",
-  "easyQuestions": [
-    {
-      "question": "What is 2 + 2?",
-      "answers": ["3", "4", "5", "6"],
-      "correct": "4",
-      "reasoning": "The sum of 2 and 2 is 4, which is a basic arithmetic operation. The other options do not correctly add up to the sum of 2 and 2."
-    },
-    {
-      "question": "What is 5 x 5?",
-      "answers": ["20", "25", "30", "35"],
-      "correct": "25",
-      "reasoning": "Multiplying 5 by itself (5 x 5) equals 25. This is a basic multiplication fact. The other options are incorrect results of 5 multiplied by 5."
-    },
-    {
-      "question": "What is 10 - 4?",
-      "answers": ["5", "6", "7", "8"],
-      "correct": "6",
-      "reasoning": "Subtracting 4 from 10 gives 6. This subtraction operation is straightforward. The other options do not correctly represent the subtraction of 4 from 10."
-    },
-    {
-      "question": "What is the square root of 16?",
-      "answers": ["2", "3", "4", "5"],
-      "correct": "4",
-      "reasoning": "The square root of 16 is 4, because 4 squared (4 x 4) equals 16. The other options are incorrect square roots of 16."
-    },
-    {
-      "question": "What is half of 100?",
-      "answers": ["50", "40", "60", "70"],
-      "correct": "50",
-      "reasoning": "Half of 100 is 50. This is a simple division operation (100 divided by 2). The other options do not represent half of 100."
-    },
-    {
-      "question": "What is 10% of 200?",
-      "answers": ["10", "20", "30", "40"],
-      "correct": "20",
-      "reasoning": "10% of 200 is calculated as 0.10 x 200 = 20. This is a basic percentage calculation. The other options do not correctly represent 10% of 200."
-    },
-    {
-      "question": "What is the sum of 3, 7, and 10?",
-      "answers": ["19", "20", "21", "22"],
-      "correct": "20",
-      "reasoning": "Adding 3, 7, and 10 together equals 20. This is a simple addition operation. The other options do not correctly add up to the sum of 3, 7, and 10."
-    },
-    {
-      "question": "How many sides does a triangle have?",
-      "answers": ["3", "4", "5", "6"],
-      "correct": "3",
-      "reasoning": "A triangle has three sides. This is a fundamental property of triangles. The other options incorrectly represent the number of sides on a triangle."
-    }
-  ],
-  "mediumQuestions": [
-    {
-      "question": "What is the area of a square with a side length of 5?",
-      "answers": ["20", "25", "30", "35"],
-      "correct": "25",
-      "reasoning": "The area of a square is calculated as the side length squared. A square with a side length of 5 has an area of 5 x 5 = 25. The other options do not correctly calculate the area of a square with a side length of 5."
-    },
-    {
-      "question": "What is the perimeter of a rectangle with length 10 and width 5?",
-      "answers": ["30", "40", "50", "60"],
-      "correct": "30",
-      "reasoning": "The perimeter of a rectangle is calculated as 2 x (length + width). For a rectangle with length 10 and width 5, the perimeter is 2 x (10 + 5) = 30. The other options do not correctly calculate the perimeter of this rectangle."
-    },
-    {
-      "question": "What is the volume of a cube with edge length 3?",
-      "answers": ["9", "18", "27", "36"],
-      "correct": "27",
-      "reasoning": "The volume of a cube is calculated as the edge length cubed. A cube with an edge length of 3 has a volume of 3 x 3 x 3 = 27. The other options do not correctly calculate the volume of a cube with an edge length of 3."
-    },
-    {
-      "question": "Solve for x: 3x + 9 = 21",
-      "answers": ["2", "3", "4", "5"],
-      "correct": "4",
-      "reasoning": "To solve for x in the equation 3x + 9 = 21, first subtract 9 from both sides to get 3x = 12, then divide both sides by 3 to get x = 4. The other options do not satisfy the original equation."
-    }
-  ],
-  "hardQuestions": [
-    {
-      "question": "If the angle of a circle sector is 90 degrees, what fraction of the circle's area is it?",
-      "answers": ["1/4", "1/3", "1/2", "1/5"],
-      "correct": "1/4",
-      "reasoning": "A circle has 360 degrees. A sector with an angle of 90 degrees is 1/4 of the circle because 90/360 = 1/4. The other options do not correctly represent the fraction of the circle's area corresponding to a 90-degree sector."
-    },
-    {
-      "question": "What is the derivative of x^2?",
-      "answers": ["x", "2x", "3x^2", "2x^2"],
-      "correct": "2x",
-      "reasoning": "The derivative of x^2 with respect to x is 2x, according to the power rule in calculus. The other options do not correctly represent the derivative of x^2."
-    },
-    {
-      "question": "What is the integral of 2x dx?",
-      "answers": ["x^2 + C", "2x^2 + C", "x^2/2 + C", "2x + C"],
-      "correct": "x^2 + C",
-      "reasoning": "The integral of 2x dx is x^2 + C, where C is the constant of integration. This follows from the reverse of the differentiation rule for powers of x. The other options do not correctly represent the integral of 2x dx."
-    },
-    {
-      "question": "Solve for y: y^2 - 4y + 4 = 0",
-      "answers": ["0", "1", "2", "3"],
-      "correct": "2",
-      "reasoning": "The equation y^2 - 4y + 4 = 0 can be factored into (y - 2)^2 = 0, which implies that y = 2. The other options do not satisfy the original equation."
-    }
-  ],
-  "expertQuestions": [
-    {
-      "question": "What is the name of the largest known prime number as of 2021, and why is it significant?",
-      "answers": [
-        "Mersenne Prime",
-        "Fermat Prime",
-        "Euler's Number",
-        "Catalan's Constant"
-      ],
-      "correct": "Mersenne Prime",
-      "reasoning": "As of 2021, the largest known prime number is a Mersenne Prime. Mersenne primes are of the form 2^p - 1, where p is also a prime. They are significant due to their properties and applications in number theory, cryptography, and the search for prime numbers. The identification of large prime numbers has computational and theoretical importance in these fields."
-    },
-    {
-      "question": "In topology, what property describes a space that is homotopically equivalent to a single point?",
-      "answers": [
-        "Simply connected",
-        "Contractible",
-        "Non-orientable",
-        "Manifold"
-      ],
-      "correct": "Contractible",
-      "reasoning": "A contractible space in topology is one that can be continuously shrunk to a point within that space. It is a property that indicates a space is homotopically trivial, meaning it has a trivial fundamental group. This property is used to understand the shape and structure of topological spaces in a way that is invariant under deformation."
-    }
-  ],
-  "easySwipes": [
-    {
-      "question": "The sum of the angles in a triangle always equals 180 degrees.",
-      "answer": true,
-      "reasoning": "In Euclidean geometry, the sum of the angles in any triangle is always 180 degrees, due to the properties of parallel lines intersected by a transversal."
-    },
-    {
-      "question": "The square root of 64 is 8.",
-      "answer": true,
-      "reasoning": "The square root of 64 is indeed 8, as 8 times 8 equals 64."
-    },
-    {
-      "question": "2 + 2 equals 5.",
-      "answer": false,
-      "reasoning": "2 + 2 equals 4, not 5. This is a basic arithmetic fact."
-    },
-    {
-      "question": "A right angle is 90 degrees.",
-      "answer": true,
-      "reasoning": "A right angle is defined as an angle of exactly 90 degrees."
-    },
-    {
-      "question": "The formula for the area of a circle is pi times radius squared.",
-      "answer": true,
-      "reasoning": "The formula for the area of a circle is indeed pi (π) multiplied by the square of the radius, often written as A = πr^2."
-    }
-  ],
-  "mediumSwipes": [
-    {
-      "question": "The derivative of x^2 is 2x.",
-      "answer": true,
-      "reasoning": "The derivative of x^2 with respect to x is 2x, according to the power rule in calculus."
-    },
-    {
-      "question": "The sum of the probabilities of all possible outcomes in an experiment is 2.",
-      "answer": false,
-      "reasoning": "The sum of the probabilities of all possible outcomes of an experiment must equal 1, not 2, according to the basic principle of probability."
-    },
-    {
-      "question": "The Pythagorean theorem states that in a right-angled triangle, the square of the hypotenuse is equal to the sum of the squares of the other two sides.",
-      "answer": true,
-      "reasoning": "The Pythagorean theorem correctly describes the relationship between the lengths of the sides of a right-angled triangle: c^2 = a^2 + b^2."
-    },
-    {
-      "question": "If the odds of an event happening are 1/3, then the probability of it not happening is 2/3.",
-      "answer": true,
-      "reasoning": "If the probability of an event happening is 1/3, then the probability of it not happening is indeed 1 - 1/3, which simplifies to 2/3."
-    },
-    {
-      "question": "The equation of a line in slope-intercept form is y = mx + b, where m is the y-intercept and b is the slope.",
-      "answer": false,
-      "reasoning": "In the slope-intercept form of a linear equation, y = mx + b, m represents the slope of the line, and b represents the y-intercept."
-    }
-  ],
-  "hardSwipes": [
-    {
-      "question": "The Riemann Hypothesis is a solved problem in mathematics.",
-      "answer": false,
-      "reasoning": "The Riemann Hypothesis, one of the most famous and long-standing problems in mathematics, remains unsolved."
-    },
-    {
-      "question": "Fermat's Last Theorem was proved by Andrew Wiles in 1994.",
-      "answer": true,
-      "reasoning": "Fermat's Last Theorem, which states that there are no whole number solutions to the equation x^n + y^n = z^n for n greater than 2, was indeed proved by Andrew Wiles in 1994."
-    },
-    {
-      "question": "Euler's identity is considered a profound mathematical equation: e^(iπ) + 1 = 0.",
-      "answer": true,
-      "reasoning": "Euler's identity e^(iπ) + 1 = 0 is celebrated for its beauty, as it links five fundamental mathematical constants."
-    },
-    {
-      "question": "The Navier-Stokes equations describe the motion of fluid substances and have been completely solved.",
-      "answer": false,
-      "reasoning": "The Navier-Stokes equations, fundamental in fluid dynamics, have not been completely solved, particularly for three-dimensional incompressible flows."
-    },
-    {
-      "question": "The Collatz Conjecture has been proven for all integers.",
-      "answer": false,
-      "reasoning": "The Collatz Conjecture, a famous unsolved problem in mathematics, remains unproven for all integers, despite being tested for many specific cases."
-    }
-  ]
+  "name": "",
+  "multi-choice": {
+    "easy": [
+      {
+        "question": "What is 2 + 2?",
+        "answers": [
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "correct": "4",
+        "reasoning": "The sum of 2 and 2 is 4, which is a basic arithmetic operation. The other options do not correctly add up to the sum of 2 and 2."
+      },
+      {
+        "question": "What is 5 x 5?",
+        "answers": [
+          "20",
+          "25",
+          "30",
+          "35"
+        ],
+        "correct": "25",
+        "reasoning": "Multiplying 5 by itself (5 x 5) equals 25. This is a basic multiplication fact. The other options are incorrect results of 5 multiplied by 5."
+      },
+      {
+        "question": "What is 10 - 4?",
+        "answers": [
+          "5",
+          "6",
+          "7",
+          "8"
+        ],
+        "correct": "6",
+        "reasoning": "Subtracting 4 from 10 gives 6. This subtraction operation is straightforward. The other options do not correctly represent the subtraction of 4 from 10."
+      },
+      {
+        "question": "What is the square root of 16?",
+        "answers": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "correct": "4",
+        "reasoning": "The square root of 16 is 4, because 4 squared (4 x 4) equals 16. The other options are incorrect square roots of 16."
+      },
+      {
+        "question": "What is half of 100?",
+        "answers": [
+          "50",
+          "40",
+          "60",
+          "70"
+        ],
+        "correct": "50",
+        "reasoning": "Half of 100 is 50. This is a simple division operation (100 divided by 2). The other options do not represent half of 100."
+      },
+      {
+        "question": "What is 10% of 200?",
+        "answers": [
+          "10",
+          "20",
+          "30",
+          "40"
+        ],
+        "correct": "20",
+        "reasoning": "10% of 200 is calculated as 0.10 x 200 = 20. This is a basic percentage calculation. The other options do not correctly represent 10% of 200."
+      },
+      {
+        "question": "What is the sum of 3, 7, and 10?",
+        "answers": [
+          "19",
+          "20",
+          "21",
+          "22"
+        ],
+        "correct": "20",
+        "reasoning": "Adding 3, 7, and 10 together equals 20. This is a simple addition operation. The other options do not correctly add up to the sum of 3, 7, and 10."
+      },
+      {
+        "question": "How many sides does a triangle have?",
+        "answers": [
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "correct": "3",
+        "reasoning": "A triangle has three sides. This is a fundamental property of triangles. The other options incorrectly represent the number of sides on a triangle."
+      }
+    ],
+    "medium": [
+      {
+        "question": "What is the area of a square with a side length of 5?",
+        "answers": [
+          "20",
+          "25",
+          "30",
+          "35"
+        ],
+        "correct": "25",
+        "reasoning": "The area of a square is calculated as the side length squared. A square with a side length of 5 has an area of 5 x 5 = 25. The other options do not correctly calculate the area of a square with a side length of 5."
+      },
+      {
+        "question": "What is the perimeter of a rectangle with length 10 and width 5?",
+        "answers": [
+          "30",
+          "40",
+          "50",
+          "60"
+        ],
+        "correct": "30",
+        "reasoning": "The perimeter of a rectangle is calculated as 2 x (length + width). For a rectangle with length 10 and width 5, the perimeter is 2 x (10 + 5) = 30. The other options do not correctly calculate the perimeter of this rectangle."
+      },
+      {
+        "question": "What is the volume of a cube with edge length 3?",
+        "answers": [
+          "9",
+          "18",
+          "27",
+          "36"
+        ],
+        "correct": "27",
+        "reasoning": "The volume of a cube is calculated as the edge length cubed. A cube with an edge length of 3 has a volume of 3 x 3 x 3 = 27. The other options do not correctly calculate the volume of a cube with an edge length of 3."
+      },
+      {
+        "question": "Solve for x: 3x + 9 = 21",
+        "answers": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "correct": "4",
+        "reasoning": "To solve for x in the equation 3x + 9 = 21, first subtract 9 from both sides to get 3x = 12, then divide both sides by 3 to get x = 4. The other options do not satisfy the original equation."
+      }
+    ],
+    "hard": [
+      {
+        "question": "If the angle of a circle sector is 90 degrees, what fraction of the circle's area is it?",
+        "answers": [
+          "1/4",
+          "1/3",
+          "1/2",
+          "1/5"
+        ],
+        "correct": "1/4",
+        "reasoning": "A circle has 360 degrees. A sector with an angle of 90 degrees is 1/4 of the circle because 90/360 = 1/4. The other options do not correctly represent the fraction of the circle's area corresponding to a 90-degree sector."
+      },
+      {
+        "question": "What is the derivative of x^2?",
+        "answers": [
+          "x",
+          "2x",
+          "3x^2",
+          "2x^2"
+        ],
+        "correct": "2x",
+        "reasoning": "The derivative of x^2 with respect to x is 2x, according to the power rule in calculus. The other options do not correctly represent the derivative of x^2."
+      },
+      {
+        "question": "What is the integral of 2x dx?",
+        "answers": [
+          "x^2 + C",
+          "2x^2 + C",
+          "x^2/2 + C",
+          "2x + C"
+        ],
+        "correct": "x^2 + C",
+        "reasoning": "The integral of 2x dx is x^2 + C, where C is the constant of integration. This follows from the reverse of the differentiation rule for powers of x. The other options do not correctly represent the integral of 2x dx."
+      },
+      {
+        "question": "Solve for y: y^2 - 4y + 4 = 0",
+        "answers": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ],
+        "correct": "2",
+        "reasoning": "The equation y^2 - 4y + 4 = 0 can be factored into (y - 2)^2 = 0, which implies that y = 2. The other options do not satisfy the original equation."
+      }
+    ],
+    "expert": [
+      {
+        "question": "What is the name of the largest known prime number as of 2021, and why is it significant?",
+        "answers": [
+          "Mersenne Prime",
+          "Fermat Prime",
+          "Euler's Number",
+          "Catalan's Constant"
+        ],
+        "correct": "Mersenne Prime",
+        "reasoning": "As of 2021, the largest known prime number is a Mersenne Prime. Mersenne primes are of the form 2^p - 1, where p is also a prime. They are significant due to their properties and applications in number theory, cryptography, and the search for prime numbers. The identification of large prime numbers has computational and theoretical importance in these fields."
+      },
+      {
+        "question": "In topology, what property describes a space that is homotopically equivalent to a single point?",
+        "answers": [
+          "Simply connected",
+          "Contractible",
+          "Non-orientable",
+          "Manifold"
+        ],
+        "correct": "Contractible",
+        "reasoning": "A contractible space in topology is one that can be continuously shrunk to a point within that space. It is a property that indicates a space is homotopically trivial, meaning it has a trivial fundamental group. This property is used to understand the shape and structure of topological spaces in a way that is invariant under deformation."
+      }
+    ]
+  },
+  "swipes": {
+    "easy": [
+      {
+        "question": "The sum of the angles in a triangle always equals 180 degrees.",
+        "answer": true,
+        "reasoning": "In Euclidean geometry, the sum of the angles in any triangle is always 180 degrees, due to the properties of parallel lines intersected by a transversal."
+      },
+      {
+        "question": "The square root of 64 is 8.",
+        "answer": true,
+        "reasoning": "The square root of 64 is indeed 8, as 8 times 8 equals 64."
+      },
+      {
+        "question": "2 + 2 equals 5.",
+        "answer": false,
+        "reasoning": "2 + 2 equals 4, not 5. This is a basic arithmetic fact."
+      },
+      {
+        "question": "A right angle is 90 degrees.",
+        "answer": true,
+        "reasoning": "A right angle is defined as an angle of exactly 90 degrees."
+      },
+      {
+        "question": "The formula for the area of a circle is pi times radius squared.",
+        "answer": true,
+        "reasoning": "The formula for the area of a circle is indeed pi (π) multiplied by the square of the radius, often written as A = πr^2."
+      },
+      {
+        "question": "The square root of 100 is 10.",
+        "answer": true,
+        "reasoning": "The square root of 100 is 10, as 10 times 10 equals 100."
+      },
+      {
+        "question": "The sum of 5 and 7 is 13.",
+        "answer": false,
+        "reasoning": "The sum of 5 and 7 is 12, not 13. This is a basic addition operation."
+      },
+      {
+        "question": "A hexagon has 6 sides.",
+        "answer": true,
+        "reasoning": "A hexagon is a polygon with 6 sides, as the prefix 'hexa-' indicates."
+      }
+    ],
+    "medium": [
+      {
+        "question": "The derivative of x^2 is 2x.",
+        "answer": true,
+        "reasoning": "The derivative of x^2 with respect to x is 2x, according to the power rule in calculus."
+      },
+      {
+        "question": "The sum of the probabilities of all possible outcomes in an experiment is 2.",
+        "answer": false,
+        "reasoning": "The sum of the probabilities of all possible outcomes of an experiment must equal 1, not 2, according to the basic principle of probability."
+      },
+      {
+        "question": "The Pythagorean theorem states that in a right-angled triangle, the square of the hypotenuse is equal to the sum of the squares of the other two sides.",
+        "answer": true,
+        "reasoning": "The Pythagorean theorem correctly describes the relationship between the lengths of the sides of a right-angled triangle: c^2 = a^2 + b^2."
+      },
+      {
+        "question": "If the odds of an event happening are 1/3, then the probability of it not happening is 2/3.",
+        "answer": true,
+        "reasoning": "If the probability of an event happening is 1/3, then the probability of it not happening is indeed 1 - 1/3, which simplifies to 2/3."
+      },
+      {
+        "question": "The equation of a line in slope-intercept form is y = mx + b, where m is the y-intercept and b is the slope.",
+        "answer": false,
+        "reasoning": "In the slope-intercept form of a linear equation, y = mx + b, m represents the slope of the line, and b represents the y-intercept."
+      }
+    ],
+    "hard": [
+      {
+        "question": "The Riemann Hypothesis is a solved problem in mathematics.",
+        "answer": false,
+        "reasoning": "The Riemann Hypothesis, one of the most famous and long-standing problems in mathematics, remains unsolved."
+      },
+      {
+        "question": "Fermat's Last Theorem was proved by Andrew Wiles in 1994.",
+        "answer": true,
+        "reasoning": "Fermat's Last Theorem, which states that there are no whole number solutions to the equation x^n + y^n = z^n for n greater than 2, was indeed proved by Andrew Wiles in 1994."
+      },
+      {
+        "question": "Euler's identity is considered a profound mathematical equation: e^(iπ) + 1 = 0.",
+        "answer": true,
+        "reasoning": "Euler's identity e^(iπ) + 1 = 0 is celebrated for its beauty, as it links five fundamental mathematical constants."
+      },
+      {
+        "question": "The Navier-Stokes equations describe the motion of fluid substances and have been completely solved.",
+        "answer": false,
+        "reasoning": "The Navier-Stokes equations, fundamental in fluid dynamics, have not been completely solved, particularly for three-dimensional incompressible flows."
+      },
+      {
+        "question": "The Collatz Conjecture has been proven for all integers.",
+        "answer": false,
+        "reasoning": "The Collatz Conjecture, a famous unsolved problem in mathematics, remains unproven for all integers, despite being tested for many specific cases."
+      }
+    ],
+    "expert": [
+      {
+        "question": "The P vs. NP problem is a question in computer science that asks whether every problem whose solution can be verified quickly can also be solved quickly.",
+        "answer": true,
+        "reasoning": "The P vs. NP problem is a major unsolved question in computer science and mathematics, concerning the complexity of algorithms and the relationship between polynomial time and non-deterministic polynomial time."
+      },
+      {
+        "question": "The Goldbach Conjecture states that every even integer greater than 2 can be expressed as the sum of two prime numbers.",
+        "answer": true,
+        "reasoning": "The Goldbach Conjecture, proposed by Christian Goldbach in 1742, remains unproven but has been tested extensively for many cases."
+      },
+      {
+        "question": "The Twin Prime Conjecture posits that there are infinitely many pairs of prime numbers that differ by 2.",
+        "answer": true,
+        "reasoning": "The Twin Prime Conjecture, a famous unsolved problem in number theory, suggests that there are infinitely many twin prime pairs such as (3, 5), (11, 13), and (17, 19)."
+      },
+      {
+        "question": "The Riemann Hypothesis is a conjecture about the distribution of prime numbers.",
+        "answer": true,
+        "reasoning": "The Riemann Hypothesis, proposed by Bernhard Riemann in 1859, is a conjecture about the distribution of prime numbers and the zeros of the Riemann zeta function."
+      },
+      {
+        "question": "The Birch and Swinnerton-Dyer Conjecture is a question in number theory that relates the number of rational points on an elliptic curve to the behavior of its L-function.",
+        "answer": true,
+        "reasoning": "The Birch and Swinnerton-Dyer Conjecture is a major unsolved problem in number theory, with implications for the structure of rational points on elliptic curves."
+      }
+    ]
+  }
 }
-
-

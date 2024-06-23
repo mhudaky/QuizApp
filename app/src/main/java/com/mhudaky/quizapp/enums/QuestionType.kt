@@ -1,6 +1,6 @@
 package com.mhudaky.quizapp.enums
 
-enum class QuestionType {
-    SWIPE,
-    MULTI_CHOICE
+enum class QuestionType(val description: String) {
+    SWIPE("Swipe"),
+    MULTI_CHOICE("Multichoice question")
 }

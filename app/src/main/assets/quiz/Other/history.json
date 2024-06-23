@@ -1,269 +1,348 @@
 {
-  "name": "History",
-  "easyQuestions": [
-    {
-      "question": "Who was the first President of the United States?",
-      "answers": ["George Washington", "Abraham Lincoln", "Thomas Jefferson", "John Adams"],
-      "correct": "George Washington",
-      "reasoning": "George Washington was the first President of the United States, serving from 1789 to 1797. The other options, while significant figures in American history, did not serve as the first president."
-    },
-    {
-      "question": "In which year did World War II end?",
-      "answers": ["1945", "1944", "1939", "1950"],
-      "correct": "1945",
-      "reasoning": "World War II ended in 1945 with the defeat of the Axis powers. The other years listed do not mark the end of World War II."
-    },
-    {
-      "question": "What was the main reason for the fall of the Roman Empire?",
-      "answers": ["Invasion by Barbarian tribes", "Economic troubles", "Overexpansion and military spending", "All of the these"],
-      "correct": "All of the these",
-      "reasoning": "The fall of the Roman Empire was due to a combination of factors, including invasions by Barbarian tribes, economic troubles, and overexpansion and military spending. Therefore, 'All of the above' is the correct answer."
-    },
-    {
-      "question": "Who discovered America?",
-      "answers": ["Christopher Columbus", "Leif Erikson", "Ferdinand Magellan", "Amerigo Vespucci"],
-      "correct": "Christopher Columbus",
-      "reasoning": "Christopher Columbus is often credited with discovering America in 1492, even though other explorers like Leif Erikson reached North America earlier. Columbus' voyages, however, led to the widespread awareness and colonization of the Americas by Europeans."
-    },
-    {
-      "question": "Which civilization is known for building pyramids?",
-      "answers": ["Egyptian", "Mesopotamian", "Indus Valley", "Chinese"],
-      "correct": "Egyptian",
-      "reasoning": "The Egyptian civilization is renowned for building the Pyramids, especially the Great Pyramids at Giza. While other civilizations also built pyramidal structures, the Egyptian pyramids are the most famous."
-    },
-    {
-      "question": "What ancient city was famously destroyed by a volcano in 79 AD?",
-      "answers": ["Pompeii", "Athens", "Rome", "Troy"],
-      "correct": "Pompeii",
-      "reasoning": "Pompeii was an ancient Roman city destroyed by the eruption of Mount Vesuvius in 79 AD. The other cities mentioned were not destroyed by a volcano."
-    },
-    {
-      "question": "Who was the famous British prime minister during World War II?",
-      "answers": ["Winston Churchill", "Neville Chamberlain", "Margaret Thatcher", "Tony Blair"],
-      "correct": "Winston Churchill",
-      "reasoning": "Winston Churchill was the British Prime Minister who led Britain during World War II. His leadership and speeches became symbols of British resistance against the Axis powers."
-    },
-    {
-      "question": "What was the period of intellectual and cultural revival that occurred in Europe from the 14th to the 17th century known as?",
-      "answers": ["The Renaissance", "The Enlightenment", "The Middle Ages", "The Industrial Revolution"],
-      "correct": "The Renaissance",
-      "reasoning": "The Renaissance was a period of intellectual and cultural revival in Europe from the 14th to the 17th century, marked by advancements in art, science, and a renewed interest in classical antiquity."
-    }
-  ],
-  "mediumQuestions": [
-    {
-      "question": "Which treaty ended the First World War?",
-      "answers": ["Treaty of Versailles", "Treaty of Tordesillas", "Treaty of Paris", "Treaty of Utrecht"],
-      "correct": "Treaty of Versailles",
-      "reasoning": "The Treaty of Versailles, signed in 1919, officially ended World War I between Germany and the Allied Powers. The other treaties listed were significant in other historical contexts but did not end World War I."
-    },
-    {
-      "question": "Who was the first female Prime Minister of the United Kingdom?",
-      "answers": ["Margaret Thatcher", "Theresa May", "Indira Gandhi", "Angela Merkel"],
-      "correct": "Margaret Thatcher",
-      "reasoning": "Margaret Thatcher was the first female Prime Minister of the United Kingdom, serving from 1979 to 1990. The other women listed have held significant political positions but were not the first female Prime Minister of the UK."
-    },
-    {
-      "question": "What empire was known as the 'Sick Man of Europe' in the 19th century?",
-      "answers": ["Ottoman Empire", "Russian Empire", "Austro-Hungarian Empire", "British Empire"],
-      "correct": "Ottoman Empire",
-      "reasoning": "The Ottoman Empire was referred to as the 'Sick Man of Europe' in the 19th century due to its steady decline in territorial extent, military power, and internal stability. The other empires listed did not carry this specific designation."
-    },
-    {
-      "question": "In which century did the French Revolution occur?",
-      "answers": ["17th century", "18th century", "19th century", "20th century"],
-      "correct": "18th century",
-      "reasoning": "The French Revolution, a period of radical social and political upheaval in France, took place from 1789 to 1799, placing it in the 18th century. The other centuries listed do not align with the timeline of the French Revolution."
-    }
-  ],
-  "hardQuestions": [
-    {
-      "question": "Who led the Russian Revolution in 1917?",
-      "answers": ["Vladimir Lenin", "Joseph Stalin", "Leon Trotsky", "Nicholas II"],
-      "correct": "Vladimir Lenin",
-      "reasoning": "Vladimir Lenin was the leading figure of the Russian Revolution in 1917, which led to the overthrow of the Tsarist autocracy and the rise of the Soviet Union. The other individuals played significant roles in Russian history but were not the leaders of the 1917 revolution."
-    },
-    {
-      "question": "What ancient empire was ruled by Cyrus the Great?",
-      "answers": ["Persian Empire", "Roman Empire", "Macedonian Empire", "Mongol Empire"],
-      "correct": "Persian Empire",
-      "reasoning": "Cyrus the Great was the founder of the Persian Empire, which he ruled from 550 BC until his death. The other empires listed were ruled by different leaders."
-    },
-    {
-      "question": "What was the main cause of the Hundred Years' War?",
-      "answers": ["Religious differences", "Economic competition", "Claims to the French throne", "Territorial disputes"],
-      "correct": "Claims to the French throne",
-      "reasoning": "The primary cause of the Hundred Years' War between England and France was the dispute over claims to the French throne, following the extinction of the main line of the Capetian dynasty. The other options, while relevant to the period, were not the main cause of the war."
-    },
-    {
-      "question": "Which civilization is known for its sophisticated writing system, the quipu?",
-      "answers": ["Inca Civilization", "Maya Civilization", "Aztec Civilization", "Olmec Civilization"],
-      "correct": "Inca Civilization",
-      "reasoning": "The Inca Civilization is known for its unique writing system known as the quipu, which consisted of colored threads knotted in various ways to record information. The other civilizations developed different forms of writing or record-keeping."
-    }
-  ],
-  "expertQuestions": [
-    {
-      "question": "What diplomatic maneuver in the late 19th century aimed to prevent one nation from gaining a colonial advantage over others, leading to an extensive and competitive colonization of Africa?",
-      "answers": [
-        "The Berlin Conference",
-        "The Treaty of Versailles",
-        "The Congress of Vienna",
-        "The Entente Cordiale"
-      ],
-      "correct": "The Berlin Conference",
-      "reasoning": "The Berlin Conference of 1884–1885 was organized to regulate European colonization and trade in Africa during the New Imperialism period, and it led to the scramble for Africa. The conference aimed to prevent conflict over territorial claims in Africa by European powers, thus avoiding giving any single nation a colonial advantage. The Treaty of Versailles ended World War I, the Congress of Vienna aimed to restore order after the Napoleonic Wars, and the Entente Cordiale was an agreement between Britain and France."
-    },
-    {
-      "question": "Identify the philosophical movement during the 18th century that emphasized reason, individualism, and skepticism, which profoundly influenced the American and French Revolutions.",
-      "answers": [
-        "The Enlightenment",
-        "Romanticism",
-        "The Renaissance",
-        "The Reformation"
-      ],
-      "correct": "The Enlightenment",
-      "reasoning": "The Enlightenment, also known as the Age of Reason, was a philosophical movement that dominated the world of ideas in Europe during the 18th century. It centered around the ideals of reason, individualism, and skepticism towards traditional doctrines. The movement influenced various aspects of society, including art, politics, and science, and played a significant role in inspiring the American and French Revolutions. Romanticism was a reaction against the Enlightenment's emphasis on reason, the Renaissance was a cultural rebirth that occurred in Europe between the 14th and 17th centuries, and the Reformation was a religious movement in the 16th century that led to the creation of Protestantism."
-    },
-    {
-      "question": "Which ancient civilization is credited with the invention of the chariot?",
-      "answers": [
-        "The Mesopotamians",
-        "The Egyptians",
-        "The Hittites",
-        "The Chinese"
-      ],
-      "correct": "The Hittites",
-      "reasoning": "The Hittites, an ancient Anatolian people who established an empire at Hattusa in north-central Anatolia around 1600 BCE, are credited with the invention of the chariot. While chariots were used by multiple ancient civilizations for warfare, transportation, and ceremonial purposes, the Hittites are notable for their significant improvements to chariot design and their effective use in warfare, which gave them a military advantage. The Mesopotamians, Egyptians, and Chinese also developed and used chariots, but the Hittites' contributions were particularly influential in the spread and tactical use of chariots in ancient warfare."
-    },
-    {
-      "question": "What was the primary economic cause of the Great Depression in the United States that had global repercussions?",
-      "answers": [
-        "The collapse of the stock market in 1929",
-        "The failure of the gold standard",
-        "Widespread agricultural failure",
-        "Overproduction and underconsumption"
-      ],
-      "correct": "The collapse of the stock market in 1929",
-      "reasoning": "The primary economic cause of the Great Depression in the United States, which subsequently had worldwide effects, was the collapse of the stock market in 1929, known as the Wall Street Crash of 1929. This event led to a drastic decline in consumer confidence and spending, resulting in severe economic downturns across various sectors. While factors such as the failure of the gold standard, agricultural failures, and the cycle of overproduction and underconsumption contributed to the severity and duration of the Depression, the stock market crash was the initial catalyst."
-    }
-  ],
-  "easySwipes": [
-    {
-      "question": "The Great Wall of China was primarily built to protect against invasions from northern tribes.",
-      "answer": true,
-      "reasoning": "The Great Wall was indeed constructed to protect the Chinese states and empires against the raids and invasions of the various nomadic groups from the Eurasian Steppe."
-    },
-    {
-      "question": "Christopher Columbus discovered America in 1492.",
-      "answer": true,
-      "reasoning": "While indigenous peoples had lived in the Americas for thousands of years, Christopher Columbus's 1492 voyage is credited with opening the way for European exploration and colonization of the Americas."
-    },
-    {
-      "question": "World War I began in 1914 and ended in 1918.",
-      "answer": true,
-      "reasoning": "World War I started in July 1914 and concluded with the armistice of November 11, 1918."
-    },
-    {
-      "question": "The Roman Empire was the longest-lasting empire in history.",
-      "answer": false,
-      "reasoning": "While the Roman Empire was one of the longest-lasting empires, other empires, such as the Byzantine Empire, lasted longer in various forms."
-    },
-    {
-      "question": "The Renaissance began in the 14th century and originated in Italy.",
-      "answer": true,
-      "reasoning": "The Renaissance, a period of revival in art, literature, and learning, indeed began in the 14th century in Italy, spreading throughout Europe over the following centuries."
-    }
-  ],
-  "mediumSwipes": [
-    {
-      "question": "The Declaration of Independence was signed in 1776.",
-      "answer": true,
-      "reasoning": "The United States Declaration of Independence, which announced that the thirteen American colonies were no longer part and instead were independent states, was signed in 1776."
-    },
-    {
-      "question": "The Cold War was a direct military conflict between the United States and the Soviet Union.",
-      "answer": false,
-      "reasoning": "The Cold War was characterized by political, military, and economic tensions between the US and USSR, but it did not escalate into direct military conflict between the two superpowers."
-    },
-    {
-      "question": "The Industrial Revolution began in the 18th century and started in Britain.",
-      "answer": true,
-      "reasoning": "The Industrial Revolution, a period of major industrialization and innovation, began in the late 18th century in Britain."
-    },
-    {
-      "question": "Julius Caesar was the first Emperor of Rome.",
-      "answer": false,
-      "reasoning": "While Julius Caesar played a crucial role in the events that led to the rise of the Roman Empire, he was never emperor. The first emperor was Augustus Caesar."
-    },
-    {
-      "question": "The Magna Carta was signed in 1215, limiting the powers of the English monarch.",
-      "answer": true,
-      "reasoning": "The Magna Carta, signed in 1215, was indeed a pivotal document that began the process of limiting the powers of the English monarch."
-    }
-  ],
-  "hardSwipes": [
-    {
-      "question": "The Spanish Armada was defeated by the English in 1588.",
-      "answer": true,
-      "reasoning": "The English navy defeated the Spanish Armada in 1588, marking a significant moment in naval warfare."
-    },
-    {
-      "question": "The Battle of Waterloo marked the final defeat of Napoleon Bonaparte.",
-      "answer": true,
-      "reasoning": "The Battle of Waterloo in 1815 was indeed Napoleon Bonaparte's final battle, leading to his defeat and subsequent exile to Saint Helena."
-    },
-    {
-      "question": "The Treaty of Versailles ended World War II.",
-      "answer": false,
-      "reasoning": "The Treaty of Versailles ended World War I in 1919. World War II ended with the unconditional surrender of the Axis powers in 1945."
-    },
-    {
-      "question": "The French Revolution began in 1789 with the storming of the Bastille.",
-      "answer": true,
-      "reasoning": "The storming of the Bastille on July 14, 1789, is often cited as the beginning of the French Revolution."
-    },
-    {
-      "question": "The Suez Canal was opened in 1869, connecting the Mediterranean Sea to the Red Sea.",
-      "answer": true,
-      "reasoning": "The Suez Canal, indeed opened in 1869, connects the Mediterranean Sea to the Red Sea, providing a crucial shortcut for maritime trade."
-    }
-  ],
-  "expertSwipes": [
-    {
-      "question": "The Peace of Westphalia in 1648 initiated the concept of state sovereignty in international law.",
-      "answer": true,
-      "reasoning": "The Peace of Westphalia, which ended the Thirty Years' War in 1648, is widely regarded as the foundation of modern state sovereignty and international law, establishing the precedent that nations are sovereign over their territory."
-    },
-    {
-      "question": "The Qing Dynasty was the final imperial dynasty of China, overthrown by the Xinhai Revolution in 1911.",
-      "answer": true,
-      "reasoning": "The Qing Dynasty, which lasted from 1644 to 1912, was indeed the last imperial dynasty of China. It was overthrown by the Xinhai Revolution, leading to the establishment of the Republic of China in 1912."
-    },
-    {
-      "question": "Leonardo da Vinci completed the Mona Lisa in 1503, during the High Renaissance.",
-      "answer": true,
-      "reasoning": "Leonardo da Vinci completed the Mona Lisa, one of the most famous artworks of the High Renaissance, around 1503. The painting is celebrated for its innovative use of technique and the enigmatic expression of its subject."
-    },
-    {
-      "question": "The Habsburg monarchy was a key belligerent in the Thirty Years' War, fighting primarily on the Protestant side.",
-      "answer": false,
-      "reasoning": "The Habsburg monarchy, ruling over the Holy Roman Empire and other territories, was a principal Catholic power in the Thirty Years' War (1618-1648) and fought against the Protestant states and their allies."
-    },
-    {
-      "question": "The Rosetta Stone, crucial in deciphering Egyptian hieroglyphs, dates back to the Ptolemaic dynasty.",
-      "answer": true,
-      "reasoning": "The Rosetta Stone, indeed from the Ptolemaic dynasty in 196 BC, was instrumental in deciphering Egyptian hieroglyphs, featuring inscriptions in three scripts: hieroglyphic, demotic, and Greek."
-    },
-    {
-      "question": "The Battle of Saratoga was decisive in securing French support for the American Revolution.",
-      "answer": true,
-      "reasoning": "The American victory at the Battle of Saratoga in 1777 was pivotal, convincing France of the viability of the American cause and leading to French military support, significantly impacting the course of the American Revolution."
-    }
-  ]
+  "name": "Kotlin",
+  "multi-choice": {
+    "easy": [
+      {
+        "question": "Who was the first President of the United States?",
+        "answers": [
+          "George Washington",
+          "Abraham Lincoln",
+          "Thomas Jefferson",
+          "John Adams"
+        ],
+        "correct": "George Washington",
+        "reasoning": "George Washington was the first President of the United States, serving from 1789 to 1797. The other options, while significant figures in American history, did not serve as the first president."
+      },
+      {
+        "question": "In which year did World War II end?",
+        "answers": [
+          "1945",
+          "1944",
+          "1939",
+          "1950"
+        ],
+        "correct": "1945",
+        "reasoning": "World War II ended in 1945 with the defeat of the Axis powers. The other years listed do not mark the end of World War II."
+      },
+      {
+        "question": "What was the main reason for the fall of the Roman Empire?",
+        "answers": [
+          "Invasion by Barbarian tribes",
+          "Economic troubles",
+          "Overexpansion and military spending",
+          "All of the these"
+        ],
+        "correct": "All of the these",
+        "reasoning": "The fall of the Roman Empire was due to a combination of factors, including invasions by Barbarian tribes, economic troubles, and overexpansion and military spending. Therefore, 'All of the above' is the correct answer."
+      },
+      {
+        "question": "Who discovered America?",
+        "answers": [
+          "Christopher Columbus",
+          "Leif Erikson",
+          "Ferdinand Magellan",
+          "Amerigo Vespucci"
+        ],
+        "correct": "Christopher Columbus",
+        "reasoning": "Christopher Columbus is often credited with discovering America in 1492, even though other explorers like Leif Erikson reached North America earlier. Columbus' voyages, however, led to the widespread awareness and colonization of the Americas by Europeans."
+      },
+      {
+        "question": "Which civilization is known for building pyramids?",
+        "answers": [
+          "Egyptian",
+          "Mesopotamian",
+          "Indus Valley",
+          "Chinese"
+        ],
+        "correct": "Egyptian",
+        "reasoning": "The Egyptian civilization is renowned for building the Pyramids, especially the Great Pyramids at Giza. While other civilizations also built pyramidal structures, the Egyptian pyramids are the most famous."
+      },
+      {
+        "question": "What ancient city was famously destroyed by a volcano in 79 AD?",
+        "answers": [
+          "Pompeii",
+          "Athens",
+          "Rome",
+          "Troy"
+        ],
+        "correct": "Pompeii",
+        "reasoning": "Pompeii was an ancient Roman city destroyed by the eruption of Mount Vesuvius in 79 AD. The other cities mentioned were not destroyed by a volcano."
+      },
+      {
+        "question": "Who was the famous British prime minister during World War II?",
+        "answers": [
+          "Winston Churchill",
+          "Neville Chamberlain",
+          "Margaret Thatcher",
+          "Tony Blair"
+        ],
+        "correct": "Winston Churchill",
+        "reasoning": "Winston Churchill was the British Prime Minister who led Britain during World War II. His leadership and speeches became symbols of British resistance against the Axis powers."
+      },
+      {
+        "question": "What was the period of intellectual and cultural revival that occurred in Europe from the 14th to the 17th century known as?",
+        "answers": [
+          "The Renaissance",
+          "The Enlightenment",
+          "The Middle Ages",
+          "The Industrial Revolution"
+        ],
+        "correct": "The Renaissance",
+        "reasoning": "The Renaissance was a period of intellectual and cultural revival in Europe from the 14th to the 17th century, marked by advancements in art, science, and a renewed interest in classical antiquity."
+      }
+    ],
+    "medium": [
+      {
+        "question": "Which treaty ended the First World War?",
+        "answers": [
+          "Treaty of Versailles",
+          "Treaty of Tordesillas",
+          "Treaty of Paris",
+          "Treaty of Utrecht"
+        ],
+        "correct": "Treaty of Versailles",
+        "reasoning": "The Treaty of Versailles, signed in 1919, officially ended World War I between Germany and the Allied Powers. The other treaties listed were significant in other historical contexts but did not end World War I."
+      },
+      {
+        "question": "Who was the first female Prime Minister of the United Kingdom?",
+        "answers": [
+          "Margaret Thatcher",
+          "Theresa May",
+          "Indira Gandhi",
+          "Angela Merkel"
+        ],
+        "correct": "Margaret Thatcher",
+        "reasoning": "Margaret Thatcher was the first female Prime Minister of the United Kingdom, serving from 1979 to 1990. The other women listed have held significant political positions but were not the first female Prime Minister of the UK."
+      },
+      {
+        "question": "What empire was known as the 'Sick Man of Europe' in the 19th century?",
+        "answers": [
+          "Ottoman Empire",
+          "Russian Empire",
+          "Austro-Hungarian Empire",
+          "British Empire"
+        ],
+        "correct": "Ottoman Empire",
+        "reasoning": "The Ottoman Empire was referred to as the 'Sick Man of Europe' in the 19th century due to its steady decline in territorial extent, military power, and internal stability. The other empires listed did not carry this specific designation."
+      },
+      {
+        "question": "In which century did the French Revolution occur?",
+        "answers": [
+          "17th century",
+          "18th century",
+          "19th century",
+          "20th century"
+        ],
+        "correct": "18th century",
+        "reasoning": "The French Revolution, a period of radical social and political upheaval in France, took place from 1789 to 1799, placing it in the 18th century. The other centuries listed do not align with the timeline of the French Revolution."
+      }
+    ],
+    "hard": [
+      {
+        "question": "Who led the Russian Revolution in 1917?",
+        "answers": [
+          "Vladimir Lenin",
+          "Joseph Stalin",
+          "Leon Trotsky",
+          "Nicholas II"
+        ],
+        "correct": "Vladimir Lenin",
+        "reasoning": "Vladimir Lenin was the leading figure of the Russian Revolution in 1917, which led to the overthrow of the Tsarist autocracy and the rise of the Soviet Union. The other individuals played significant roles in Russian history but were not the leaders of the 1917 revolution."
+      },
+      {
+        "question": "What ancient empire was ruled by Cyrus the Great?",
+        "answers": [
+          "Persian Empire",
+          "Roman Empire",
+          "Macedonian Empire",
+          "Mongol Empire"
+        ],
+        "correct": "Persian Empire",
+        "reasoning": "Cyrus the Great was the founder of the Persian Empire, which he ruled from 550 BC until his death. The other empires listed were ruled by different leaders."
+      },
+      {
+        "question": "What was the main cause of the Hundred Years' War?",
+        "answers": [
+          "Religious differences",
+          "Economic competition",
+          "Claims to the French throne",
+          "Territorial disputes"
+        ],
+        "correct": "Claims to the French throne",
+        "reasoning": "The primary cause of the Hundred Years' War between England and France was the dispute over claims to the French throne, following the extinction of the main line of the Capetian dynasty. The other options, while relevant to the period, were not the main cause of the war."
+      },
+      {
+        "question": "Which civilization is known for its sophisticated writing system, the quipu?",
+        "answers": [
+          "Inca Civilization",
+          "Maya Civilization",
+          "Aztec Civilization",
+          "Olmec Civilization"
+        ],
+        "correct": "Inca Civilization",
+        "reasoning": "The Inca Civilization is known for its unique writing system known as the quipu, which consisted of colored threads knotted in various ways to record information. The other civilizations developed different forms of writing or record-keeping."
+      }
+    ],
+    "expert": [
+      {
+        "question": "What diplomatic maneuver in the late 19th century aimed to prevent one nation from gaining a colonial advantage over others, leading to an extensive and competitive colonization of Africa?",
+        "answers": [
+          "The Berlin Conference",
+          "The Treaty of Versailles",
+          "The Congress of Vienna",
+          "The Entente Cordiale"
+        ],
+        "correct": "The Berlin Conference",
+        "reasoning": "The Berlin Conference of 1884–1885 was organized to regulate European colonization and trade in Africa during the New Imperialism period, and it led to the scramble for Africa. The conference aimed to prevent conflict over territorial claims in Africa by European powers, thus avoiding giving any single nation a colonial advantage. The Treaty of Versailles ended World War I, the Congress of Vienna aimed to restore order after the Napoleonic Wars, and the Entente Cordiale was an agreement between Britain and France."
+      },
+      {
+        "question": "Identify the philosophical movement during the 18th century that emphasized reason, individualism, and skepticism, which profoundly influenced the American and French Revolutions.",
+        "answers": [
+          "The Enlightenment",
+          "Romanticism",
+          "The Renaissance",
+          "The Reformation"
+        ],
+        "correct": "The Enlightenment",
+        "reasoning": "The Enlightenment, also known as the Age of Reason, was a philosophical movement that dominated the world of ideas in Europe during the 18th century. It centered around the ideals of reason, individualism, and skepticism towards traditional doctrines. The movement influenced various aspects of society, including art, politics, and science, and played a significant role in inspiring the American and French Revolutions. Romanticism was a reaction against the Enlightenment's emphasis on reason, the Renaissance was a cultural rebirth that occurred in Europe between the 14th and 17th centuries, and the Reformation was a religious movement in the 16th century that led to the creation of Protestantism."
+      },
+      {
+        "question": "Which ancient civilization is credited with the invention of the chariot?",
+        "answers": [
+          "The Mesopotamians",
+          "The Egyptians",
+          "The Hittites",
+          "The Chinese"
+        ],
+        "correct": "The Hittites",
+        "reasoning": "The Hittites, an ancient Anatolian people who established an empire at Hattusa in north-central Anatolia around 1600 BCE, are credited with the invention of the chariot. While chariots were used by multiple ancient civilizations for warfare, transportation, and ceremonial purposes, the Hittites are notable for their significant improvements to chariot design and their effective use in warfare, which gave them a military advantage. The Mesopotamians, Egyptians, and Chinese also developed and used chariots, but the Hittites' contributions were particularly influential in the spread and tactical use of chariots in ancient warfare."
+      },
+      {
+        "question": "What was the primary economic cause of the Great Depression in the United States that had global repercussions?",
+        "answers": [
+          "The collapse of the stock market in 1929",
+          "The failure of the gold standard",
+          "Widespread agricultural failure",
+          "Overproduction and underconsumption"
+        ],
+        "correct": "The collapse of the stock market in 1929",
+        "reasoning": "The primary economic cause of the Great Depression in the United States, which subsequently had worldwide effects, was the collapse of the stock market in 1929, known as the Wall Street Crash of 1929. This event led to a drastic decline in consumer confidence and spending, resulting in severe economic downturns across various sectors. While factors such as the failure of the gold standard, agricultural failures, and the cycle of overproduction and underconsumption contributed to the severity and duration of the Depression, the stock market crash was the initial catalyst."
+      }
+    ]
+  },
+  "swipes": {
+    "easy": [
+      {
+        "question": "The Great Wall of China was primarily built to protect against invasions from northern tribes.",
+        "answer": true,
+        "reasoning": "The Great Wall was indeed constructed to protect the Chinese states and empires against the raids and invasions of the various nomadic groups from the Eurasian Steppe."
+      },
+      {
+        "question": "Christopher Columbus discovered America in 1492.",
+        "answer": true,
+        "reasoning": "While indigenous peoples had lived in the Americas for thousands of years, Christopher Columbus's 1492 voyage is credited with opening the way for European exploration and colonization of the Americas."
+      },
+      {
+        "question": "World War I began in 1914 and ended in 1918.",
+        "answer": true,
+        "reasoning": "World War I started in July 1914 and concluded with the armistice of November 11, 1918."
+      },
+      {
+        "question": "The Roman Empire was the longest-lasting empire in history.",
+        "answer": false,
+        "reasoning": "While the Roman Empire was one of the longest-lasting empires, other empires, such as the Byzantine Empire, lasted longer in various forms."
+      },
+      {
+        "question": "The Renaissance began in the 14th century and originated in Italy.",
+        "answer": true,
+        "reasoning": "The Renaissance, a period of revival in art, literature, and learning, indeed began in the 14th century in Italy, spreading throughout Europe over the following centuries."
+      }
+    ],
+    "medium": [
+      {
+        "question": "The Declaration of Independence was signed in 1776.",
+        "answer": true,
+        "reasoning": "The United States Declaration of Independence, which announced that the thirteen American colonies were no longer part and instead were independent states, was signed in 1776."
+      },
+      {
+        "question": "The Cold War was a direct military conflict between the United States and the Soviet Union.",
+        "answer": false,
+        "reasoning": "The Cold War was characterized by political, military, and economic tensions between the US and USSR, but it did not escalate into direct military conflict between the two superpowers."
+      },
+      {
+        "question": "The Industrial Revolution began in the 18th century and started in Britain.",
+        "answer": true,
+        "reasoning": "The Industrial Revolution, a period of major industrialization and innovation, began in the late 18th century in Britain."
+      },
+      {
+        "question": "Julius Caesar was the first Emperor of Rome.",
+        "answer": false,
+        "reasoning": "While Julius Caesar played a crucial role in the events that led to the rise of the Roman Empire, he was never emperor. The first emperor was Augustus Caesar."
+      },
+      {
+        "question": "The Magna Carta was signed in 1215, limiting the powers of the English monarch.",
+        "answer": true,
+        "reasoning": "The Magna Carta, signed in 1215, was indeed a pivotal document that began the process of limiting the powers of the English monarch."
+      }
+    ],
+    "hard": [
+      {
+        "question": "The Spanish Armada was defeated by the English in 1588.",
+        "answer": true,
+        "reasoning": "The English navy defeated the Spanish Armada in 1588, marking a significant moment in naval warfare."
+      },
+      {
+        "question": "The Battle of Waterloo marked the final defeat of Napoleon Bonaparte.",
+        "answer": true,
+        "reasoning": "The Battle of Waterloo in 1815 was indeed Napoleon Bonaparte's final battle, leading to his defeat and subsequent exile to Saint Helena."
+      },
+      {
+        "question": "The Treaty of Versailles ended World War II.",
+        "answer": false,
+        "reasoning": "The Treaty of Versailles ended World War I in 1919. World War II ended with the unconditional surrender of the Axis powers in 1945."
+      },
+      {
+        "question": "The French Revolution began in 1789 with the storming of the Bastille.",
+        "answer": true,
+        "reasoning": "The storming of the Bastille on July 14, 1789, is often cited as the beginning of the French Revolution."
+      },
+      {
+        "question": "The Suez Canal was opened in 1869, connecting the Mediterranean Sea to the Red Sea.",
+        "answer": true,
+        "reasoning": "The Suez Canal, indeed opened in 1869, connects the Mediterranean Sea to the Red Sea, providing a crucial shortcut for maritime trade."
+      }
+    ],
+    "expert": [
+      {
+        "question": "The Peace of Westphalia in 1648 initiated the concept of state sovereignty in international law.",
+        "answer": true,
+        "reasoning": "The Peace of Westphalia, which ended the Thirty Years' War in 1648, is widely regarded as the foundation of modern state sovereignty and international law, establishing the precedent that nations are sovereign over their territory."
+      },
+      {
+        "question": "The Qing Dynasty was the final imperial dynasty of China, overthrown by the Xinhai Revolution in 1911.",
+        "answer": true,
+        "reasoning": "The Qing Dynasty, which lasted from 1644 to 1912, was indeed the last imperial dynasty of China. It was overthrown by the Xinhai Revolution, leading to the establishment of the Republic of China in 1912."
+      },
+      {
+        "question": "Leonardo da Vinci completed the Mona Lisa in 1503, during the High Renaissance.",
+        "answer": true,
+        "reasoning": "Leonardo da Vinci completed the Mona Lisa, one of the most famous artworks of the High Renaissance, around 1503. The painting is celebrated for its innovative use of technique and the enigmatic expression of its subject."
+      },
+      {
+        "question": "The Habsburg monarchy was a key belligerent in the Thirty Years' War, fighting primarily on the Protestant side.",
+        "answer": false,
+        "reasoning": "The Habsburg monarchy, ruling over the Holy Roman Empire and other territories, was a principal Catholic power in the Thirty Years' War (1618-1648) and fought against the Protestant states and their allies."
+      },
+      {
+        "question": "The Rosetta Stone, crucial in deciphering Egyptian hieroglyphs, dates back to the Ptolemaic dynasty.",
+        "answer": true,
+        "reasoning": "The Rosetta Stone, indeed from the Ptolemaic dynasty in 196 BC, was instrumental in deciphering Egyptian hieroglyphs, featuring inscriptions in three scripts: hieroglyphic, demotic, and Greek."
+      },
+      {
+        "question": "The Battle of Saratoga was decisive in securing French support for the American Revolution.",
+        "answer": true,
+        "reasoning": "The American victory at the Battle of Saratoga in 1777 was pivotal, convincing France of the viability of the American cause and leading to French military support, significantly impacting the course of the American Revolution."
+      }
+    ]
+  }
 }
-
-
-
-
-

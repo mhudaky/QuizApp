@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var viewModel: MainViewModel
     private lateinit var prefsHelper: SharedPreferencesHelper
     private val logger = getLogger(this::class.simpleName!!)
+    private var questionType: QuestionType = QuestionType.MULTI_CHOICE
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +32,16 @@ class MainActivity : AppCompatActivity() {
         val factory = MainViewModelFactory(resources)
         viewModel = ViewModelProvider(this, factory).get(MainViewModel::class.java)
         createTopicButtons()
+        addSwitchQuestionTypeListener()
+    }
+
+    private fun addSwitchQuestionTypeListener() {
+        val switchQuestionTypeButton = findViewById<Button>(R.id.switch_question_type_button)
+        switchQuestionTypeButton.text = questionType.description
+        switchQuestionTypeButton.setOnClickListener {
+            questionType = if (questionType == QuestionType.MULTI_CHOICE) QuestionType.SWIPE else QuestionType.MULTI_CHOICE
+            switchQuestionTypeButton.text = questionType.description
+        }
     }
 
     private fun createTopicButtons() {

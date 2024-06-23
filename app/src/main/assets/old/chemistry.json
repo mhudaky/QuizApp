@@ -1,0 +1,250 @@
+{
+  "name": "Chemistry",
+  "easyQuestions": [
+    {
+      "question": "What is the chemical symbol for water?",
+      "answers": ["H2O", "O2", "CO2", "NaCl"],
+      "correct": "H2O",
+      "reasoning": "Water is chemically represented by H2O, indicating it is made up of two hydrogen atoms and one oxygen atom. O2 is the chemical symbol for oxygen, CO2 for carbon dioxide, and NaCl for sodium chloride (table salt)."
+    },
+    {
+      "question": "What is the atomic number of hydrogen?",
+      "answers": ["1", "2", "3", "4"],
+      "correct": "1",
+      "reasoning": "Hydrogen has an atomic number of 1, making it the first element on the periodic table. The atomic number represents the number of protons in an atom's nucleus."
+    },
+    {
+      "question": "What element is represented by the symbol 'O'?",
+      "answers": ["Oxygen", "Osmium", "Gold", "Silver"],
+      "correct": "Oxygen",
+      "reasoning": "The symbol 'O' represents oxygen on the periodic table. Osmium is represented by 'Os', gold by 'Au', and silver by 'Ag'."
+    },
+    {
+      "question": "What is the main gas found in the air we breathe?",
+      "answers": ["Nitrogen", "Oxygen", "Carbon Dioxide", "Hydrogen"],
+      "correct": "Nitrogen",
+      "reasoning": "The air we breathe is composed of approximately 78% nitrogen, making it the most abundant gas in the Earth's atmosphere. Oxygen makes up about 21%, and carbon dioxide and hydrogen are present in much smaller amounts."
+    },
+    {
+      "question": "What is the pH level of pure water?",
+      "answers": ["7", "0", "14", "3"],
+      "correct": "7",
+      "reasoning": "Pure water has a neutral pH level of 7. A pH less than 7 is acidic, and a pH greater than 7 is basic or alkaline."
+    }
+  ],
+  "mediumQuestions": [
+    {
+      "question": "What is the common name for the compound with the chemical formula NaCl?",
+      "answers": ["Table salt", "Baking soda", "Vinegar", "Ammonia"],
+      "correct": "Table salt",
+      "reasoning": "NaCl is the chemical formula for sodium chloride, commonly known as table salt. Baking soda is sodium bicarbonate (NaHCO3), vinegar contains acetic acid (CH3COOH), and ammonia is NH3."
+    },
+    {
+      "question": "Which element is known for its use in pencils?",
+      "answers": ["Graphite", "Charcoal", "Lead", "Ink"],
+      "correct": "Graphite",
+      "reasoning": "Pencils contain graphite, a form of carbon, which is used to produce the writing material. Charcoal and lead are not used in modern pencils, and ink is used in pens."
+    },
+    {
+      "question": "Which gas is produced when acids react with metals?",
+      "answers": ["Hydrogen", "Oxygen", "Nitrogen", "Carbon Dioxide"],
+      "correct": "Hydrogen",
+      "reasoning": "When acids react with metals, they typically produce hydrogen gas. This reaction is common in acids like hydrochloric acid (HCl) reacting with metals such as zinc or magnesium."
+    },
+    {
+      "question": "What type of bond is formed when two atoms share electrons?",
+      "answers": ["Covalent bond", "Ionic bond", "Metallic bond", "Hydrogen bond"],
+      "correct": "Covalent bond",
+      "reasoning": "A covalent bond is formed when two atoms share electrons. Ionic bonds involve the transfer of electrons, metallic bonds occur between metal atoms, and hydrogen bonds are weak interactions involving hydrogen atoms."
+    }
+  ],
+  "hardQuestions": [
+    {
+      "question": "What is the molecular formula for glucose?",
+      "answers": ["C6H12O6", "C12H22O11", "CH4", "C2H6O"],
+      "correct": "C6H12O6",
+      "reasoning": "Glucose has the molecular formula C6H12O6. It is a simple sugar and an important energy source in living organisms. C12H22O11 is the formula for sucrose (table sugar), CH4 is methane, and C2H6O is ethanol."
+    },
+    {
+      "question": "What is the main component of natural gas?",
+      "answers": ["Methane", "Propane", "Butane", "Ethane"],
+      "correct": "Methane",
+      "reasoning": "The main component of natural gas is methane (CH4), which is a simple hydrocarbon. Propane (C3H8), butane (C4H10), and ethane (C2H6) are also hydrocarbons found in natural gas but in smaller quantities."
+    },
+    {
+      "question": "Which law states that the volume of a gas is directly proportional to its temperature, given constant pressure?",
+      "answers": ["Charles's Law", "Boyle's Law", "Avogadro's Law", "Dalton's Law"],
+      "correct": "Charles's Law",
+      "reasoning": "Charles's Law states that the volume of a gas is directly proportional to its temperature when pressure is held constant. Boyle's Law describes the relationship between pressure and volume, Avogadro's Law involves the relationship between volume and the number of moles, and Dalton's Law pertains to the partial pressures of gases in a mixture."
+    },
+    {
+      "question": "What is the term for a reaction that absorbs heat from its surroundings?",
+      "answers": ["Endothermic", "Exothermic", "Isothermal", "Adiabatic"],
+      "correct": "Endothermic",
+      "reasoning": "An endothermic reaction absorbs heat from its surroundings, resulting in a decrease in temperature. Exothermic reactions release heat, isothermal processes occur at a constant temperature, and adiabatic processes involve no heat exchange."
+    }
+  ],
+  "expertQuestions": [
+    {
+      "question": "What is the hybridization of the carbon atoms in ethylene (C2H4)?",
+      "answers": ["sp2", "sp3", "sp", "dsp2"],
+      "correct": "sp2",
+      "reasoning": "In ethylene (C2H4), the carbon atoms are sp2 hybridized, resulting in a planar structure with a double bond between the carbon atoms. The sp3 hybridization occurs in tetrahedral structures, sp in linear structures, and dsp2 in certain square planar structures."
+    },
+    {
+      "question": "What type of isomerism is exhibited by compounds with the same molecular formula but different connectivity of their atoms?",
+      "answers": ["Structural isomerism", "Geometric isomerism", "Optical isomerism", "Conformational isomerism"],
+      "correct": "Structural isomerism",
+      "reasoning": "Structural isomerism occurs when compounds have the same molecular formula but different connectivity of their atoms. Geometric isomerism involves different spatial arrangements around a double bond, optical isomerism involves non-superimposable mirror images, and conformational isomerism involves different rotational forms of the same molecule."
+    }
+  ],
+  "easySwipes": [
+    {
+      "question": "Water is composed of hydrogen and oxygen.",
+      "answer": true,
+      "reasoning": "Water (H₂O) is a molecule made up of two hydrogen atoms and one oxygen atom."
+    },
+    {
+      "question": "Table salt is chemically known as sodium chloride.",
+      "answer": true,
+      "reasoning": "Table salt is indeed sodium chloride, with the chemical formula NaCl."
+    },
+    {
+      "question": "Helium is the heaviest noble gas.",
+      "answer": false,
+      "reasoning": "Helium (He) is the lightest noble gas. Xenon (Xe) is one of the heaviest noble gases."
+    },
+    {
+      "question": "The chemical symbol for gold is Au.",
+      "answer": true,
+      "reasoning": "Gold has the chemical symbol Au, which is derived from its Latin name 'Aurum'."
+    },
+    {
+      "question": "Oxygen is necessary for combustion.",
+      "answer": true,
+      "reasoning": "Combustion is a chemical reaction that typically involves oxygen and a fuel, producing heat and light."
+    },
+    {
+      "question": "Water is composed of hydrogen and oxygen.",
+      "answer": true,
+      "reasoning": "Water (H₂O) is a molecule made up of two hydrogen atoms and one oxygen atom."
+    },
+    {
+      "question": "Table salt is chemically known as sodium chloride.",
+      "answer": true,
+      "reasoning": "Table salt is indeed sodium chloride, with the chemical formula NaCl."
+    },
+    {
+      "question": "Helium is the heaviest noble gas.",
+      "answer": false,
+      "reasoning": "Helium (He) is the lightest noble gas. Xenon (Xe) is one of the heaviest noble gases."
+    },
+    {
+      "question": "The chemical symbol for gold is Au.",
+      "answer": true,
+      "reasoning": "Gold has the chemical symbol Au, which is derived from its Latin name 'Aurum'."
+    },
+    {
+      "question": "Oxygen is necessary for combustion.",
+      "answer": true,
+      "reasoning": "Combustion is a chemical reaction that typically involves oxygen and a fuel, producing heat and light."
+    },
+    {
+      "question": "Carbon dioxide consists of one carbon atom and two oxygen atoms.",
+      "answer": true,
+      "reasoning": "The chemical formula for carbon dioxide is CO₂, which means it consists of one carbon atom and two oxygen atoms."
+    },
+    {
+      "question": "The atomic number of an element is determined by the number of neutrons.",
+      "answer": false,
+      "reasoning": "The atomic number of an element is determined by the number of protons in its nucleus, not the number of neutrons."
+    }
+  ],
+  "mediumSwipes": [
+    {
+      "question": "The pH scale ranges from 0 to 14.",
+      "answer": true,
+      "reasoning": "The pH scale measures the acidity or alkalinity of a solution, ranging from 0 (very acidic) to 14 (very basic), with 7 being neutral."
+    },
+    {
+      "question": "The molecular formula of methane is CH₃.",
+      "answer": false,
+      "reasoning": "The molecular formula for methane is CH₄, consisting of one carbon atom and four hydrogen atoms."
+    },
+    {
+      "question": "A catalyst speeds up a chemical reaction without being consumed.",
+      "answer": true,
+      "reasoning": "A catalyst increases the rate of a chemical reaction while remaining unchanged at the end of the reaction."
+    },
+    {
+      "question": "Rusting is a chemical reaction that involves iron and oxygen.",
+      "answer": true,
+      "reasoning": "Rusting is an oxidation reaction where iron reacts with oxygen in the presence of water or moisture to form iron oxide."
+    },
+    {
+      "question": "In a neutral atom, the number of protons equals the number of neutrons.",
+      "answer": false,
+      "reasoning": "In a neutral atom, the number of protons equals the number of electrons, not neutrons."
+    }
+  ],
+  "hardSwipes": [
+    {
+      "question": "Avogadro's number is 6.022 x 10²³.",
+      "answer": true,
+      "reasoning": "Avogadro's number, 6.022 x 10²³, represents the number of atoms, molecules, or particles in one mole of a substance."
+    },
+    {
+      "question": "The periodic table is arranged by increasing atomic mass.",
+      "answer": false,
+      "reasoning": "The periodic table is arranged by increasing atomic number, not atomic mass."
+    },
+    {
+      "question": "The element with the highest electronegativity is fluorine.",
+      "answer": true,
+      "reasoning": "Fluorine has the highest electronegativity of all elements, making it very effective at attracting electrons."
+    },
+    {
+      "question": "Covalent bonds involve the sharing of electron pairs between atoms.",
+      "answer": true,
+      "reasoning": "Covalent bonds are formed when atoms share pairs of electrons to achieve a full outer shell."
+    },
+    {
+      "question": "The electron configuration of sodium is 1s² 2s² 2p⁶ 3s².",
+      "answer": false,
+      "reasoning": "The correct electron configuration for sodium (Na) is 1s² 2s² 2p⁶ 3s¹."
+    }
+  ],
+  "expertSwipes": [
+    {
+      "question": "The principle of Le Chatelier states that a system at equilibrium will adjust to counteract any applied change.",
+      "answer": true,
+      "reasoning": "Le Chatelier's principle predicts that a system at equilibrium will respond to disturbances (such as changes in concentration, temperature, or pressure) by partially counteracting the effect of the disturbance."
+    },
+    {
+      "question": "Entropy is a measure of the system's energy that is available to do work.",
+      "answer": false,
+      "reasoning": "Entropy is a measure of the disorder or randomness in a system, not the energy available to do work. The energy available to do work is called Gibbs free energy."
+    },
+    {
+      "question": "The Born-Haber cycle is used to calculate lattice energy.",
+      "answer": true,
+      "reasoning": "The Born-Haber cycle is a thermochemical cycle used to analyze the steps in the formation of an ionic compound and calculate the lattice energy."
+    },
+    {
+      "question": "Isotopes of an element have the same number of protons but different numbers of neutrons.",
+      "answer": true,
+      "reasoning": "Isotopes are variants of an element that have the same number of protons (and are thus the same element) but different numbers of neutrons, giving them different atomic masses."
+    },
+    {
+      "question": "In electrochemistry, the anode is where reduction occurs.",
+      "answer": false,
+      "reasoning": "In electrochemistry, the anode is where oxidation occurs. Reduction takes place at the cathode."
+    },
+    {
+      "question": "In a galvanic cell, the Gibbs free energy change (ΔG) is positive.",
+      "answer": false,
+      "reasoning": "In a galvanic cell, the Gibbs free energy change (ΔG) is negative, indicating that the reaction is spontaneous."
+    }
+  ]
+}
+

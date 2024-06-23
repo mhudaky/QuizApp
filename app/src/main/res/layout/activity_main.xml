@@ -12,6 +12,13 @@
         android:orientation="vertical" />
 
     <Button
+        android:id="@+id/switch_question_type_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Multichoice question or Swipe"
+        android:textAppearance="@style/GlobalTextSize"/>
+
+    <Button
         android:id="@+id/reset_stats_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
