@@ -8,7 +8,7 @@ import java.util.logging.Logger
 class AnswerChecker(private val gameStats: GameStats) {
 
     val reasoning: MutableLiveData<String> = MutableLiveData()
-    val timer: QuestionTimer = QuestionTimer()
+    val timer: QuestionTimer = QuestionTimer(31)
     private var guessedAlready = false
     private val logger = Logger.getLogger(this::class.simpleName!!)
 

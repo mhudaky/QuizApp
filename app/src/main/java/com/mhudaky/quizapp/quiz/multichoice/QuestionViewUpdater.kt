@@ -1,11 +1,12 @@
 package com.mhudaky.quizapp.quiz.multichoice
 
 import android.graphics.Color
+import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
-import com.mhudaky.quizapp.R
-import com.mhudaky.quizapp.dto.MultiChoice
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textview.MaterialTextView
+import com.mhudaky.quizapp.R
+import com.mhudaky.quizapp.dto.MultiChoice
 import java.util.logging.Logger
 
 class QuestionViewUpdater(
@@ -44,6 +45,13 @@ class QuestionViewUpdater(
         }
         viewModel.answerChecker.timer.remainingSeconds.observe(activity) { remainingSeconds ->
             "$remainingSeconds sec".also { timerTextView.text = it }
+            if (remainingSeconds < 6) {
+                timerTextView.setTextColor(Color.RED)
+                timerTextView.setTypeface(null, Typeface.BOLD)
+            } else {
+                timerTextView.setTextColor(Color.BLACK)
+                timerTextView.setTypeface(null, Typeface.NORMAL)
+            }
         }
     }
 

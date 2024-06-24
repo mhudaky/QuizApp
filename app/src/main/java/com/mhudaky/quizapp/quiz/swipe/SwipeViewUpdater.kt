@@ -1,8 +1,10 @@
 package com.mhudaky.quizapp.quiz.swipe
 
+import android.graphics.Color
+import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
-import com.mhudaky.quizapp.R
 import com.google.android.material.textview.MaterialTextView
+import com.mhudaky.quizapp.R
 
 class SwipeViewUpdater(
     activity: AppCompatActivity, viewModel: SwipeViewModel
@@ -39,6 +41,13 @@ class SwipeViewUpdater(
         }
         viewModel.answerChecker.timer.remainingSeconds.observe(activity) { remainingSeconds ->
             "$remainingSeconds sec".also { timerTextView.text = it }
+            if (remainingSeconds < 6) {
+                timerTextView.setTextColor(Color.RED)
+                timerTextView.setTypeface(null, Typeface.BOLD)
+            } else {
+                timerTextView.setTextColor(Color.BLACK)
+                timerTextView.setTypeface(null, Typeface.NORMAL)
+            }
         }
         buttonInitializer.initializeButtons()
         swipeFunctionality.setUpGestureDetector()
