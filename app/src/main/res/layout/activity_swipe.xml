@@ -54,7 +54,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Question text"
-                android:textSize="18sp" />
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
     <com.google.android.material.button.MaterialButton

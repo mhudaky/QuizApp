@@ -3,6 +3,7 @@ package com.mhudaky.quizapp.quiz.multichoice
 import android.graphics.Color
 import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textview.MaterialTextView
 import com.mhudaky.quizapp.R
@@ -14,6 +15,7 @@ class QuestionViewUpdater(
 ) {
 
     private val questionTextView: MaterialTextView = activity.findViewById(R.id.question)
+    private val questionCardView: CardView = activity.findViewById(R.id.card_view)
     private val scoreTextView: MaterialTextView = activity.findViewById(R.id.score)
     private val streakTextView: MaterialTextView = activity.findViewById(R.id.streak)
     private val difficultyTextView: MaterialTextView = activity.findViewById(R.id.difficulty)
@@ -26,7 +28,7 @@ class QuestionViewUpdater(
 
     init {
         viewModel.questionIterator.question.observe(activity) { question ->
-            updateQuestionView(question)
+            updateQuestionView(question, viewModel.gameStats.difficultyLiveData.value!!.displayColor)
         }
         viewModel.gameStats.score.observe(activity) { score ->
             "Score: $score".also { scoreTextView.text = it }
@@ -55,9 +57,18 @@ class QuestionViewUpdater(
         }
     }
 
-    private fun updateQuestionView(question: MultiChoice) {
+    private fun updateQuestionView(question: MultiChoice, displayColor: Int) {
         logger.info("Updating question view")
+        updateQuestion(question, displayColor)
+        updateAnswerButtons(question)
+    }
+
+    private fun updateQuestion(question: MultiChoice, displayColor: Int) {
         questionTextView.text = question.question
+        questionCardView.setBackgroundColor(displayColor)
+    }
+
+    private fun updateAnswerButtons(question: MultiChoice) {
         val shuffledAnswers = question.answers.shuffled()
         for (i in answerButtons.indices) {
             val button = answerButtons[i] as MaterialButton

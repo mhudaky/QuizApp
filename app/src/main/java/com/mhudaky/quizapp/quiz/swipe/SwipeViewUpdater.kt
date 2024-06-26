@@ -3,14 +3,17 @@ package com.mhudaky.quizapp.quiz.swipe
 import android.graphics.Color
 import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 import com.google.android.material.textview.MaterialTextView
 import com.mhudaky.quizapp.R
+import com.mhudaky.quizapp.dto.Swipe
 
 class SwipeViewUpdater(
     activity: AppCompatActivity, viewModel: SwipeViewModel
 ) {
 
     private val statementTextView: MaterialTextView = activity.findViewById(R.id.question)
+    private val questionCardView: CardView = activity.findViewById(R.id.card_view)
     private val scoreTextView: MaterialTextView = activity.findViewById(R.id.score)
     private val streakTextView: MaterialTextView = activity.findViewById(R.id.streak)
     private val difficultyTextView: MaterialTextView = activity.findViewById(R.id.difficulty)
@@ -22,7 +25,7 @@ class SwipeViewUpdater(
 
     init {
         viewModel.swipeIterator.swipe.observe(activity) { swipe ->
-            swipe.also { statementTextView.text = it.question }
+            updateQuestion(swipe, viewModel.gameStats.difficultyLiveData.value!!.displayColor)
         }
         viewModel.gameStats.score.observe(activity) { score ->
             "Score: $score".also { scoreTextView.text = it }
@@ -51,5 +54,10 @@ class SwipeViewUpdater(
         }
         buttonInitializer.initializeButtons()
         swipeFunctionality.setUpGestureDetector()
+    }
+
+    private fun updateQuestion(swipe: Swipe, displayColor: Int) {
+        statementTextView.text = swipe.question
+        questionCardView.setBackgroundColor(displayColor)
     }
 }
