@@ -59,13 +59,6 @@
                 android:textSize="24sp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/next"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Next Question"
-        android:textColor="@android:color/white"
-        android:textAppearance="@style/GlobalTextSize"/>
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/timer"
         android:layout_width="wrap_content"

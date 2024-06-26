@@ -15,9 +15,5 @@ class ButtonInitializer(private val activity: AppCompatActivity, private val vie
             val intent = Intent(activity, MainActivity::class.java)
             activity.startActivity(intent)
         }
-        val nextButton = activity.findViewById<Button>(R.id.next)
-        nextButton.setOnClickListener {
-            viewModel.loadNextSwipe()
-        }
     }
 }
