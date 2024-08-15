@@ -1,0 +1,331 @@
+{
+  "multichoice": {
+    "easy": [
+      {
+        "question": "What should you do first if you discover a fire in your workplace?",
+        "answers": [
+          "Call the fire department",
+          "Try to put out the fire yourself",
+          "Raise the alarm and evacuate",
+          "Gather your belongings"
+        ],
+        "correct": "Raise the alarm and evacuate",
+        "reasoning": "The first step upon discovering a fire is to raise the alarm and evacuate the area to ensure everyone's safety. Only attempt to put out the fire if it is safe and you are trained to do so."
+      },
+      {
+        "question": "What type of fire extinguisher should be used for electrical fires?",
+        "answers": [
+          "Water",
+          "Foam",
+          "CO2",
+          "Dry powder"
+        ],
+        "correct": "CO2",
+        "reasoning": "CO2 fire extinguishers are suitable for electrical fires as they do not leave residue and can effectively cut off the oxygen supply to the fire."
+      },
+      {
+        "question": "What is the primary purpose of a fire alarm system?",
+        "answers": [
+          "To extinguish fires",
+          "To alert occupants of a fire",
+          "To monitor temperature",
+          "To provide ventilation"
+        ],
+        "correct": "To alert occupants of a fire",
+        "reasoning": "The primary purpose of a fire alarm system is to alert occupants of a building to a fire, allowing them to evacuate safely."
+      },
+      {
+        "question": "What is the most common cause of workplace fires?",
+        "answers": [
+          "Electrical faults",
+          "Smoking",
+          "Arson",
+          "Flammable liquids"
+        ],
+        "correct": "Electrical faults",
+        "reasoning": "Electrical faults are a common cause of workplace fires, often due to faulty wiring, overloaded circuits, or malfunctioning equipment."
+      },
+      {
+        "question": "What should you avoid doing when evacuating a building during a fire?",
+        "answers": [
+          "Using the elevator",
+          "Using the stairs",
+          "Following exit signs",
+          "Assisting others"
+        ],
+        "correct": "Using the elevator",
+        "reasoning": "During a fire, elevators should not be used as they can become inoperable or dangerous. Always use the stairs to evacuate safely."
+      }
+    ],
+    "medium": [
+      {
+        "question": "Which class of fire involves flammable metals like magnesium or titanium?",
+        "answers": [
+          "Class A",
+          "Class B",
+          "Class C",
+          "Class D"
+        ],
+        "correct": "Class D",
+        "reasoning": "Class D fires involve flammable metals such as magnesium, titanium, and sodium. These fires require specific extinguishing agents like dry powder."
+      },
+      {
+        "question": "What is the term for the practice of maintaining clear pathways and exits in a workplace to ensure safe evacuation?",
+        "answers": [
+          "Fireproofing",
+          "Housekeeping",
+          "Firewatch",
+          "Access control"
+        ],
+        "correct": "Housekeeping",
+        "reasoning": "Good housekeeping practices ensure that pathways and exits are kept clear of obstructions, which is critical for safe evacuation during emergencies."
+      },
+      {
+        "question": "What type of personal protective equipment (PPE) is typically required when handling hazardous chemicals to prevent fire risks?",
+        "answers": [
+          "Hard hat",
+          "Safety glasses",
+          "Fire-resistant clothing",
+          "Ear protection"
+        ],
+        "correct": "Fire-resistant clothing",
+        "reasoning": "When handling hazardous chemicals, wearing fire-resistant clothing can protect against fire risks caused by chemical reactions or spills."
+      },
+      {
+        "question": "Which of the following is a common sign of an electrical fire hazard in the workplace?",
+        "answers": [
+          "Flickering lights",
+          "Low water pressure",
+          "Squeaky doors",
+          "Drafty windows"
+        ],
+        "correct": "Flickering lights",
+        "reasoning": "Flickering lights can indicate an electrical problem such as loose wiring or overloaded circuits, which can be a fire hazard."
+      },
+      {
+        "question": "What is the role of a fire warden in a workplace?",
+        "answers": [
+          "To inspect fire extinguishers",
+          "To ensure everyone evacuates safely during a fire",
+          "To conduct fire drills",
+          "To repair fire alarms"
+        ],
+        "correct": "To ensure everyone evacuates safely during a fire",
+        "reasoning": "A fire warden is responsible for ensuring that all employees evacuate safely during a fire emergency, guiding them to designated assembly points."
+      }
+    ],
+    "hard": [
+      {
+        "question": "What is the primary purpose of a Material Safety Data Sheet (MSDS) in the workplace?",
+        "answers": [
+          "To provide first aid instructions",
+          "To list emergency contact numbers",
+          "To detail the properties and handling of chemicals",
+          "To describe evacuation routes"
+        ],
+        "correct": "To detail the properties and handling of chemicals",
+        "reasoning": "A Material Safety Data Sheet (MSDS) provides detailed information about the properties, handling, storage, and emergency measures related to chemicals used in the workplace."
+      },
+      {
+        "question": "Which type of fire extinguisher is most appropriate for a fire involving cooking oils and fats?",
+        "answers": [
+          "Water",
+          "Foam",
+          "CO2",
+          "Wet chemical"
+        ],
+        "correct": "Wet chemical",
+        "reasoning": "Wet chemical fire extinguishers are specifically designed to tackle fires involving cooking oils and fats (Class F fires) by cooling and forming a barrier between the fuel and oxygen."
+      },
+      {
+        "question": "What is a flash point in the context of fire safety?",
+        "answers": [
+          "The temperature at which a liquid vaporizes",
+          "The temperature at which a material ignites",
+          "The highest temperature a fire can reach",
+          "The temperature at which a liquid produces enough vapor to ignite"
+        ],
+        "correct": "The temperature at which a liquid produces enough vapor to ignite",
+        "reasoning": "The flash point is the lowest temperature at which a liquid can produce enough vapor to ignite in the presence of an ignition source."
+      },
+      {
+        "question": "Which system is used to maintain air pressure and remove smoke from stairwells during a fire?",
+        "answers": [
+          "Sprinkler system",
+          "Smoke control system",
+          "Fire alarm system",
+          "Emergency lighting system"
+        ],
+        "correct": "Smoke control system",
+        "reasoning": "A smoke control system is designed to maintain air pressure and remove smoke from stairwells and other escape routes, ensuring they remain passable during a fire."
+      },
+      {
+        "question": "What is the main advantage of a fire sprinkler system over a fire extinguisher?",
+        "answers": [
+          "Can be activated manually",
+          "Covers a larger area automatically",
+          "Uses water as a suppressant",
+          "Requires regular maintenance"
+        ],
+        "correct": "Covers a larger area automatically",
+        "reasoning": "Fire sprinkler systems are designed to automatically cover larger areas when activated, providing continuous suppression of the fire without the need for manual intervention."
+      }
+    ],
+    "expert": [
+      {
+        "question": "What is the maximum allowable distance to travel to a fire extinguisher in a commercial building, according to NFPA standards?",
+        "answers": [
+          "25 feet",
+          "50 feet",
+          "75 feet",
+          "100 feet"
+        ],
+        "correct": "75 feet",
+        "reasoning": "According to NFPA (National Fire Protection Association) standards, the maximum allowable travel distance to a fire extinguisher in a commercial building is 75 feet."
+      },
+      {
+        "question": "In a confined space, what is the minimum oxygen concentration required for safe entry?",
+        "answers": [
+          "19.5%",
+          "21%",
+          "23.5%",
+          "18%"
+        ],
+        "correct": "19.5%",
+        "reasoning": "OSHA (Occupational Safety and Health Administration) standards state that the minimum oxygen concentration required for safe entry into a confined space is 19.5%."
+      },
+      {
+        "question": "Which NFPA standard specifically addresses the requirements for life safety from fire in buildings and structures?",
+        "answers": [
+          "NFPA 1",
+          "NFPA 70",
+          "NFPA 101",
+          "NFPA 5000"
+        ],
+        "correct": "NFPA 101",
+        "reasoning": "NFPA 101, also known as the Life Safety Code, addresses the requirements for life safety from fire in buildings and structures, covering construction, protection, and occupancy features."
+      },
+      {
+        "question": "What is the recommended maximum decibel level for fire alarm sounders in a workplace to ensure it is heard by all occupants?",
+        "answers": [
+          "85 dB",
+          "90 dB",
+          "95 dB",
+          "100 dB"
+        ],
+        "correct": "85 dB",
+        "reasoning": "The recommended maximum decibel level for fire alarm sounders in a workplace is 85 dB to ensure that the alarm is heard by all occupants without causing hearing damage."
+      }
+    ]
+  },
+  "swipes": {
+    "easy": [
+      {
+        "question": "A fire extinguisher can be used on any type of fire.",
+        "answer": false,
+        "reasoning": "Different types of fire extinguishers are designed for different classes of fire. Using the wrong type of extinguisher can be ineffective or dangerous."
+      },
+      {
+        "question": "Smoke detectors should be tested monthly.",
+        "answer": true,
+        "reasoning": "Regular testing of smoke detectors, ideally every month, ensures they are functioning correctly and can provide an early warning in case of fire."
+      },
+      {
+        "question": "Fire drills are only necessary in high-rise buildings.",
+        "answer": false,
+        "reasoning": "Fire drills are essential in all types of buildings to ensure that everyone knows the evacuation procedures and routes."
+      },
+      {
+        "question": "In case of a fire, you should always use the elevator to evacuate.",
+        "answer": false,
+        "reasoning": "Elevators should not be used during a fire as they may become inoperative. Use the stairs to evacuate safely."
+      },
+      {
+        "question": "Flammable materials should be stored away from heat sources.",
+        "answer": true,
+        "reasoning": "Flammable materials should always be kept away from heat sources to prevent accidental ignition and fire hazards."
+      }
+    ],
+    "medium": [
+      {
+        "question": "Fire doors should be kept open to allow easy access.",
+        "answer": false,
+        "reasoning": "Fire doors are designed to prevent the spread of fire and smoke. They should remain closed or automatically close in the event of a fire."
+      },
+      {
+        "question": "The fire triangle consists of oxygen, heat, and fuel.",
+        "answer": true,
+        "reasoning": "The fire triangle represents the three elements needed for a fire to ignite: oxygen, heat, and fuel."
+      },
+      {
+        "question": "You should attempt to fight a fire regardless of its size.",
+        "answer": false,
+        "reasoning": "You should only attempt to fight a fire if it is small and manageable, and you are trained to do so. Otherwise, evacuate and alert the fire department."
+      },
+      {
+        "question": "All employees should be familiar with the location of fire exits.",
+        "answer": true,
+        "reasoning": "Knowing the location of fire exits is crucial for all employees to ensure a quick and safe evacuation in case of an emergency."
+      },
+      {
+        "question": "Fire extinguishers need to be inspected annually.",
+        "answer": true,
+        "reasoning": "Fire extinguishers should be inspected annually to ensure they are in proper working condition and ready for use in an emergency."
+      }
+    ],
+    "hard": [
+      {
+        "question": "A Class B fire involves electrical equipment.",
+        "answer": false,
+        "reasoning": "Class B fires involve flammable liquids such as gasoline, oil, and paint. Electrical fires are classified as Class C."
+      },
+      {
+        "question": "The PASS method stands for Pull, Aim, Squeeze, and Sweep.",
+        "answer": true,
+        "reasoning": "The PASS method is a standard procedure for using a fire extinguisher: Pull the pin, Aim the nozzle, Squeeze the handle, and Sweep side to side."
+      },
+      {
+        "question": "A fire watch is required during and after hot work operations.",
+        "answer": true,
+        "reasoning": "A fire watch is necessary during and after hot work operations (like welding) to monitor for potential ignition sources and ensure fire safety."
+      },
+      {
+        "question": "Fire suppression systems are only necessary in industrial settings.",
+        "answer": false,
+        "reasoning": "Fire suppression systems are important in various settings, including commercial and residential buildings, to control or extinguish fires automatically."
+      },
+      {
+        "question": "The fire load of a building affects its fire safety plan.",
+        "answer": true,
+        "reasoning": "The fire load, which is the amount of combustible materials in a building, significantly impacts the development of a fire safety plan and emergency response strategies."
+      }
+    ],
+    "expert": [
+      {
+        "question": "The NFPA 101 Life Safety Code addresses requirements for safe evacuation during a fire.",
+        "answer": true,
+        "reasoning": "The NFPA 101 Life Safety Code outlines the requirements for building design and operation to ensure safe evacuation during a fire."
+      },
+      {
+        "question": "A fire watch must be maintained for at least 60 minutes after hot work operations.",
+        "answer": true,
+        "reasoning": "According to safety regulations, a fire watch should be maintained for at least 60 minutes after the completion of hot work operations to monitor for any signs of fire."
+      },
+      {
+        "question": "A deluge system is used for fire suppression in areas with high-risk flammable materials.",
+        "answer": true,
+        "reasoning": "A deluge system is a type of fire suppression system that releases a large amount of water through open nozzles to quickly control fires in high-risk areas."
+      },
+      {
+        "question": "The maximum travel distance to a fire extinguisher in a commercial building is 50 feet.",
+        "answer": false,
+        "reasoning": "According to NFPA standards, the maximum travel distance to a fire extinguisher in a commercial building is 75 feet."
+      },
+      {
+        "question": "Fire resistance ratings are used to determine how long a building element can withstand fire exposure.",
+        "answer": true,
+        "reasoning": "Fire resistance ratings indicate the duration that a building element, such as a wall or floor, can withstand fire exposure while maintaining its structural integrity."
+      }
+    ]
+  }
+}
