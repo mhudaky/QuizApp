@@ -22,13 +22,11 @@ class SwipeViewModel(topic: SwipeTopic, prefsHelper: SharedPreferencesHelper) : 
     fun swipe(swipeDirection: SwipeDirection) {
         logger.info("Swiped to the  $swipeDirection")
         answerChecker.swipe(swipeDirection, swipeIterator.getSwipe())
-        isSwipeEnabled = false
         loadNextSwipe()
     }
 
     private fun loadNextSwipe() {
         swipeIterator.loadSwipe(gameStats.getDifficulty())
         answerChecker.newSwipe()
-        isSwipeEnabled = true
     }
 }
