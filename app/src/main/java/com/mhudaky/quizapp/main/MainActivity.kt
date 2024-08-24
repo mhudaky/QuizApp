@@ -69,16 +69,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun calculateColor(node: TopicNode): Int {
-        val score = calculateScore(node)
+        val score = node.topicIdentifier.score
         return getColorFromInt(score)
-    }
-
-    private fun calculateScore(node: TopicNode): Int {
-        if (node.topicIdentifier.hasSubTopics) {
-            val subTopicScores = node.children.map { calculateScore(it) }
-            return subTopicScores.average().toInt()
-        }
-        return prefsHelper.getScoreForTopic(node.topicIdentifier.name)
     }
 
     private fun setButtonColor(button: Button, color: Int) {
