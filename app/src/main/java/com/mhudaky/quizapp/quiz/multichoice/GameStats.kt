@@ -4,7 +4,6 @@ import androidx.lifecycle.MutableLiveData
 import com.mhudaky.quizapp.enums.Difficulty
 import com.mhudaky.quizapp.utils.SharedPreferencesHelper
 import java.util.logging.Logger
-import kotlin.math.abs
 
 class GameStats(private val topicName: String, private val prefsHelper: SharedPreferencesHelper) {
 
@@ -51,7 +50,7 @@ class GameStats(private val topicName: String, private val prefsHelper: SharedPr
             in 75..99 -> 3
             else -> 4
         }
-        val increment = abs(baseIncrement - mitigation)
+        val increment = baseIncrement - mitigation
         if (increment > 0) {
             val newScore = score.value!! + increment
             score.value = newScore
