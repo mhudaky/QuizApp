@@ -30,7 +30,7 @@ class QuestionActivity : AppCompatActivity() {
         val topic = topicIdentifier.loadMultiChoiceTopic(topicFileIdentifier)
         topic.name = intent.getStringExtra("topicName") ?: ""
         logger.info( "Loaded topic: $topic")
-        val prefsHelper = SharedPreferencesHelper(this, QuestionType.MULTI_CHOICE.name)
+        val prefsHelper = SharedPreferencesHelper(this, QuestionType.MULTI_CHOICE)
         val factory = QuestionViewModelFactory(topic, prefsHelper)
         return ViewModelProvider(this, factory)[QuestionViewModel::class.java]
     }

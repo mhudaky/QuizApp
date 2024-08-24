@@ -1,6 +1,7 @@
 package com.mhudaky.quizapp.main
 
 import android.content.Intent
+import android.content.res.ColorStateList
 import android.os.Bundle
 import android.widget.Button
 import android.widget.LinearLayout
@@ -11,14 +12,16 @@ import com.mhudaky.quizapp.dto.TopicIdentifier
 import com.mhudaky.quizapp.enums.QuestionType
 import com.mhudaky.quizapp.quiz.multichoice.QuestionActivity
 import com.mhudaky.quizapp.quiz.swipe.SwipeActivity
-import com.mhudaky.quizapp.utils.SharedPreferencesHelper
+import com.mhudaky.quizapp.utils.ColorUtil.Companion.getColorFromInt
+import com.mhudaky.quizapp.utils.ColorUtil.Companion.lightGrey
+import com.mhudaky.quizapp.utils.SharedPreferencesHelperForMain
 import java.util.logging.Logger.getLogger
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var topicsLayout: LinearLayout
     private lateinit var viewModel: MainViewModel
-    private lateinit var prefsHelper: SharedPreferencesHelper
+    private lateinit var prefsHelper: SharedPreferencesHelperForMain
     private val logger = getLogger(this::class.simpleName!!)
     private var questionType: QuestionType = QuestionType.MULTI_CHOICE
 
@@ -51,6 +54,7 @@ class MainActivity : AppCompatActivity() {
         topicIdentifiers.forEach { topicIdentifier ->
             val button = Button(this)
             button.text = topicIdentifier.name.uppercase()
+            setBackgroundColorOnButton(button, topicIdentifier)
             button.setOnClickListener {
                 viewModel.choseTopic(topicIdentifier)
                 if (topicIdentifier.hasSubTopics) {
@@ -63,8 +67,25 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun setBackgroundColorOnButton(button: Button, topicIdentifier: TopicIdentifier) {
+        val color = calculateColor(topicIdentifier)
+        setButtonColor(button, color)
+    }
+
+    private fun calculateColor(topicIdentifier: TopicIdentifier): Int {
+        if (topicIdentifier.hasSubTopics) {
+            return lightGrey
+        }
+        val score = prefsHelper.getScoreForTopic(topicIdentifier.name)
+        return getColorFromInt(score)
+    }
+
+    private fun setButtonColor(button: Button, color: Int) {
+        button.setBackgroundTintList(ColorStateList.valueOf(color))
+    }
+
     private fun addResetStatListener() {
-        prefsHelper = SharedPreferencesHelper(this, "")
+        prefsHelper = SharedPreferencesHelperForMain(this)
         val resetStatsButton = findViewById<Button>(R.id.reset_stats_button)
         resetStatsButton.setOnClickListener {
             prefsHelper.resetStats()

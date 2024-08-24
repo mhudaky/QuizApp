@@ -3,11 +3,13 @@ package com.mhudaky.quizapp.utils
 import android.content.Context
 import android.content.SharedPreferences
 import com.mhudaky.quizapp.dto.TopicDto
+import com.mhudaky.quizapp.enums.QuestionType
 
-class SharedPreferencesHelper(context: Context, private val topicType: String) {
+class SharedPreferencesHelper(context: Context, questionType: QuestionType) {
 
     private val PREFS_NAME = "com.mhudaky.quizapp"
     private val prefs: SharedPreferences = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+    private val questionTypeName = questionType.name
 
     fun saveStreak(topicId: String, streak: Int) {
         saveData(getStreakKey(topicId), streak)
@@ -33,10 +35,6 @@ class SharedPreferencesHelper(context: Context, private val topicType: String) {
         return getData(getIndexKey(dto))
     }
 
-    fun resetStats() {
-        prefs.edit().clear().apply()
-    }
-
     private fun saveData(key: String, value: Int) {
         val editor = prefs.edit()
         editor.putInt(key, value)
@@ -48,14 +46,14 @@ class SharedPreferencesHelper(context: Context, private val topicType: String) {
     }
 
     private fun getScoreKey(topicId: String): String {
-        return "${topicType}_${topicId}_score"
+        return "${questionTypeName}_${topicId}_score"
     }
 
     private fun getStreakKey(topicId: String): String {
-        return "${topicType}_${topicId}_streak"
+        return "${questionTypeName}_${topicId}_streak"
     }
 
     private fun getIndexKey(dto: TopicDto): String {
-        return "${topicType}_${dto.topicName}_${dto.difficulty.name}_index"
+        return "${questionTypeName}_${dto.topicName}_${dto.difficulty.name}_index"
     }
 }

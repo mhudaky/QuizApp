@@ -30,7 +30,7 @@ class SwipeActivity : AppCompatActivity() {
         val topic = topicIdentifier.loadSwipesTopic(topicFileIdentifier)
         topic.name = intent.getStringExtra("topicName") ?: ""
         logger.info( "Loaded topic: $topic")
-        val prefsHelper = SharedPreferencesHelper(this, QuestionType.SWIPE.name)
+        val prefsHelper = SharedPreferencesHelper(this, QuestionType.SWIPE)
         val factory = SwipeViewModelFactory(topic, prefsHelper)
         return ViewModelProvider(this, factory)[SwipeViewModel::class.java]
     }
