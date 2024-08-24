@@ -4,12 +4,10 @@ import android.content.res.Resources
 import androidx.lifecycle.ViewModel
 import com.mhudaky.quizapp.dto.Topic
 import com.mhudaky.quizapp.dto.TopicNode
-import java.util.logging.Logger
 
-class MainViewModel(private val resources: Resources) : ViewModel() {
+class TopicTreeLoader(private val resources: Resources) : ViewModel() {
 
     private val root: TopicNode = TopicNode(Topic("root", "quiz", true))
-    private val logger = Logger.getLogger(this::class.simpleName!!)
 
     init {
         loadTopics(root)
@@ -34,22 +32,5 @@ class MainViewModel(private val resources: Resources) : ViewModel() {
 
     fun getRoot(): TopicNode {
         return root
-    }
-
-    fun getTopicNode(path: String): TopicNode? {
-        return findNode(root, path)
-    }
-
-    private fun findNode(node: TopicNode, path: String): TopicNode? {
-        if (node.topicIdentifier.filePath == path) {
-            return node
-        }
-        for (child in node.children) {
-            val result = findNode(child, path)
-            if (result != null) {
-                return result
-            }
-        }
-        return null
     }
 }

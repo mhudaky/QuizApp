@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModelProvider
 import com.mhudaky.quizapp.R
 import com.mhudaky.quizapp.dto.Topic
 import com.mhudaky.quizapp.dto.TopicNode
@@ -20,7 +19,7 @@ import java.util.logging.Logger.getLogger
 class MainActivity : AppCompatActivity() {
 
     private lateinit var topicsLayout: LinearLayout
-    private lateinit var viewModel: MainViewModel
+    private lateinit var topicTreeLoader: TopicTreeLoader
     private lateinit var prefsHelper: SharedPreferencesHelperForMain
     private val logger = getLogger(this::class.simpleName!!)
     private var questionType: QuestionType = QuestionType.MULTI_CHOICE
@@ -28,13 +27,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         logger.info("MainActivity started")
+        topicTreeLoader = TopicTreeLoader(resources)
         setContentView(R.layout.activity_main)
         topicsLayout = findViewById(R.id.topics)
         addResetStatListener()
         addReturnToMainListener()
-        val factory = MainViewModelFactory(resources)
-        viewModel = ViewModelProvider(this, factory).get(MainViewModel::class.java)
-        createButtonsForNode(viewModel.getRoot())
+        createButtonsForNode(topicTreeLoader.getRoot())
         addSwitchQuestionTypeListener()
     }
 
@@ -97,7 +95,7 @@ class MainActivity : AppCompatActivity() {
     private fun addReturnToMainListener() {
         val resetStatsButton = findViewById<Button>(R.id.return_to_main_button)
         resetStatsButton.setOnClickListener {
-            createButtonsForNode(viewModel.getRoot())
+            createButtonsForNode(topicTreeLoader.getRoot())
         }
     }
 
