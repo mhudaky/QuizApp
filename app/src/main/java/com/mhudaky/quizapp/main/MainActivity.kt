@@ -1,7 +1,6 @@
 package com.mhudaky.quizapp.main
 
 import android.content.Intent
-import android.content.res.ColorStateList
 import android.os.Bundle
 import android.widget.Button
 import android.widget.LinearLayout
@@ -12,7 +11,6 @@ import com.mhudaky.quizapp.dto.TopicNode
 import com.mhudaky.quizapp.enums.QuestionType
 import com.mhudaky.quizapp.quiz.multichoice.QuestionActivity
 import com.mhudaky.quizapp.quiz.swipe.SwipeActivity
-import com.mhudaky.quizapp.utils.ColorUtil.Companion.getColorFromInt
 import com.mhudaky.quizapp.utils.SharedPreferencesHelperForMain
 import java.util.logging.Logger.getLogger
 
@@ -23,6 +21,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var topicTreeLoader: TopicTreeLoader
     private val logger = getLogger(this::class.simpleName!!)
     private var questionType: QuestionType = QuestionType.MULTI_CHOICE
+    private val buttonCreator = ButtonCreator(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,32 +48,15 @@ class MainActivity : AppCompatActivity() {
     private fun createButtonsForNode(node: TopicNode?) {
         topicsLayout.removeAllViews()
         node?.children?.forEach { childNode ->
-            val button = Button(this)
-            button.text = childNode.topicIdentifier.name.uppercase()
-            setBackgroundColorOnButton(button, childNode)
-            button.setOnClickListener {
-                if (childNode.topicIdentifier.hasSubTopics) {
-                    createButtonsForNode(childNode)
+            val button = buttonCreator.createButton(childNode) { clickedNode ->
+                if (clickedNode.topicIdentifier.hasSubTopics) {
+                    createButtonsForNode(clickedNode)
                 } else {
-                    startQuizActivity(childNode.topicIdentifier)
+                    startQuizActivity(clickedNode.topicIdentifier)
                 }
             }
             topicsLayout.addView(button)
         }
-    }
-
-    private fun setBackgroundColorOnButton(button: Button, node: TopicNode) {
-        val color = calculateColor(node)
-        setButtonColor(button, color)
-    }
-
-    private fun calculateColor(node: TopicNode): Int {
-        val score = node.topicIdentifier.score
-        return getColorFromInt(score)
-    }
-
-    private fun setButtonColor(button: Button, color: Int) {
-        button.setBackgroundTintList(ColorStateList.valueOf(color))
     }
 
     private fun addResetStatListener() {
