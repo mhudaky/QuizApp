@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
         node?.children?.forEach { childNode ->
             val button = Button(this)
             button.text = childNode.topicIdentifier.name.uppercase()
-            setBackgroundColorOnButton(button, childNode.topicIdentifier)
+            setBackgroundColorOnButton(button, childNode)
             button.setOnClickListener {
                 if (childNode.topicIdentifier.hasSubTopics) {
                     createButtonsForNode(childNode)
@@ -64,28 +64,22 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun setBackgroundColorOnButton(button: Button, topicIdentifier: Topic) {
-        val color = calculateColor(topicIdentifier)
+    private fun setBackgroundColorOnButton(button: Button, node: TopicNode) {
+        val color = calculateColor(node)
         setButtonColor(button, color)
     }
 
-    private fun calculateColor(topicIdentifier: Topic): Int {
-        val score = calculateScore(topicIdentifier)
+    private fun calculateColor(node: TopicNode): Int {
+        val score = calculateScore(node)
         return getColorFromInt(score)
     }
 
-    private fun calculateScore(topicIdentifier: Topic): Int {
-        if (topicIdentifier.hasSubTopics) {
-            val subTopicNodes = viewModel.getTopicNode(topicIdentifier.filePath)?.children
-            val subTopicIdentifiers = subTopicNodes?.map { it.topicIdentifier }
-            val subTopicScores = subTopicIdentifiers?.map { calculateScore(it) }
-            if (subTopicScores != null) {
-                return subTopicScores.average().toInt()
-            } else {
-                return 0
-            }
+    private fun calculateScore(node: TopicNode): Int {
+        if (node.topicIdentifier.hasSubTopics) {
+            val subTopicScores = node.children.map { calculateScore(it) }
+            return subTopicScores.average().toInt()
         }
-        return prefsHelper.getScoreForTopic(topicIdentifier.name)
+        return prefsHelper.getScoreForTopic(node.topicIdentifier.name)
     }
 
     private fun setButtonColor(button: Button, color: Int) {
