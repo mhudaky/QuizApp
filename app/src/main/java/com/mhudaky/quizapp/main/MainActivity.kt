@@ -8,12 +8,12 @@ import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.mhudaky.quizapp.R
-import com.mhudaky.quizapp.dto.TopicIdentifier
+import com.mhudaky.quizapp.dto.Topic
+import com.mhudaky.quizapp.dto.TopicNode
 import com.mhudaky.quizapp.enums.QuestionType
 import com.mhudaky.quizapp.quiz.multichoice.QuestionActivity
 import com.mhudaky.quizapp.quiz.swipe.SwipeActivity
 import com.mhudaky.quizapp.utils.ColorUtil.Companion.getColorFromInt
-import com.mhudaky.quizapp.utils.ColorUtil.Companion.lightGrey
 import com.mhudaky.quizapp.utils.SharedPreferencesHelperForMain
 import java.util.logging.Logger.getLogger
 
@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
         addReturnToMainListener()
         val factory = MainViewModelFactory(resources)
         viewModel = ViewModelProvider(this, factory).get(MainViewModel::class.java)
-        createTopicButtons()
+        createButtonsForNode(viewModel.getRoot())
         addSwitchQuestionTypeListener()
     }
 
@@ -47,37 +47,45 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun createTopicButtons() {
+    private fun createButtonsForNode(node: TopicNode?) {
         topicsLayout.removeAllViews()
-        val topicIdentifiers = viewModel.getTopicIdentifiers()
-        logger.info("Creating topic buttons: $topicIdentifiers")
-        topicIdentifiers.forEach { topicIdentifier ->
+        node?.children?.forEach { childNode ->
             val button = Button(this)
-            button.text = topicIdentifier.name.uppercase()
-            setBackgroundColorOnButton(button, topicIdentifier)
+            button.text = childNode.topicIdentifier.name.uppercase()
+            setBackgroundColorOnButton(button, childNode.topicIdentifier)
             button.setOnClickListener {
-                viewModel.choseTopic(topicIdentifier)
-                if (topicIdentifier.hasSubTopics) {
-                    createTopicButtons()
+                if (childNode.topicIdentifier.hasSubTopics) {
+                    createButtonsForNode(childNode)
                 } else {
-                    startQuizActivity(topicIdentifier)
+                    startQuizActivity(childNode.topicIdentifier)
                 }
             }
             topicsLayout.addView(button)
         }
     }
 
-    private fun setBackgroundColorOnButton(button: Button, topicIdentifier: TopicIdentifier) {
+    private fun setBackgroundColorOnButton(button: Button, topicIdentifier: Topic) {
         val color = calculateColor(topicIdentifier)
         setButtonColor(button, color)
     }
 
-    private fun calculateColor(topicIdentifier: TopicIdentifier): Int {
-        if (topicIdentifier.hasSubTopics) {
-            return lightGrey
-        }
-        val score = prefsHelper.getScoreForTopic(topicIdentifier.name)
+    private fun calculateColor(topicIdentifier: Topic): Int {
+        val score = calculateScore(topicIdentifier)
         return getColorFromInt(score)
+    }
+
+    private fun calculateScore(topicIdentifier: Topic): Int {
+        if (topicIdentifier.hasSubTopics) {
+            val subTopicNodes = viewModel.getTopicNode(topicIdentifier.filePath)?.children
+            val subTopicIdentifiers = subTopicNodes?.map { it.topicIdentifier }
+            val subTopicScores = subTopicIdentifiers?.map { calculateScore(it) }
+            if (subTopicScores != null) {
+                return subTopicScores.average().toInt()
+            } else {
+                return 0
+            }
+        }
+        return prefsHelper.getScoreForTopic(topicIdentifier.name)
     }
 
     private fun setButtonColor(button: Button, color: Int) {
@@ -95,12 +103,11 @@ class MainActivity : AppCompatActivity() {
     private fun addReturnToMainListener() {
         val resetStatsButton = findViewById<Button>(R.id.return_to_main_button)
         resetStatsButton.setOnClickListener {
-            viewModel.reset()
-            createTopicButtons()
+            createButtonsForNode(viewModel.getRoot())
         }
     }
 
-    private fun startQuizActivity(topicIdentifier: TopicIdentifier) {
+    private fun startQuizActivity(topicIdentifier: Topic) {
         val intent = when (questionType) {
             QuestionType.MULTI_CHOICE -> Intent(this, QuestionActivity::class.java)
             QuestionType.SWIPE -> Intent(this, SwipeActivity::class.java)

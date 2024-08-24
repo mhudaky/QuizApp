@@ -8,7 +8,7 @@ data class SwipeTopic(
     val medium: List<Swipe>,
     val hard: List<Swipe>,
     val expert: List<Swipe>
-) : Topic {
+) : TopicType {
     fun getSwipes(currentDifficulty: Difficulty): List<Swipe> {
         return when (currentDifficulty) {
             Difficulty.EASY -> easy

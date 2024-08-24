@@ -2,54 +2,54 @@ package com.mhudaky.quizapp.main
 
 import android.content.res.Resources
 import androidx.lifecycle.ViewModel
-import com.mhudaky.quizapp.dto.TopicIdentifier
+import com.mhudaky.quizapp.dto.Topic
+import com.mhudaky.quizapp.dto.TopicNode
 import java.util.logging.Logger
 
 class MainViewModel(private val resources: Resources) : ViewModel() {
 
-    private val topicIdentifiers: MutableList<TopicIdentifier> = mutableListOf()
+    private val root: TopicNode = TopicNode(Topic("root", "quiz", true))
     private val logger = Logger.getLogger(this::class.simpleName!!)
-    private lateinit var currentPath: String
 
     init {
-        reset()
+        loadTopics(root)
     }
 
-    fun reset() {
-        currentPath = "quiz"
-        loadTopics()
-    }
-
-    private fun loadTopics() {
-        topicIdentifiers.clear()
+    private fun loadTopics(node: TopicNode) {
         val assetManager = resources.assets
-        val files = assetManager.list(currentPath)
+        val files = assetManager.list(node.topicIdentifier.filePath)
         if (files != null) {
             for (filename in files) {
-                val filePath = "$currentPath/$filename"
+                val filePath = "${node.topicIdentifier.filePath}/$filename"
                 val topicName = filename.replace(".json", "")
-                if (filePath.endsWith(".json")) {
-                    topicIdentifiers.add(TopicIdentifier(topicName, filePath, false))
-                } else {
-                    topicIdentifiers.add(TopicIdentifier(topicName, filePath, true))
+                val hasSubTopics = !filePath.endsWith(".json")
+                val childNode = TopicNode(Topic(topicName, filePath, hasSubTopics))
+                node.children.add(childNode)
+                if (hasSubTopics) {
+                    loadTopics(childNode)
                 }
             }
         }
     }
 
-    fun getTopicIdentifiers(): List<TopicIdentifier> {
-        return topicIdentifiers
+    fun getRoot(): TopicNode {
+        return root
     }
 
-    fun choseTopic(topicIdentifier: TopicIdentifier) {
-        logger.info("Chose topic: ${topicIdentifier.name}")
-        if (topicIdentifier.hasSubTopics) {
-            navigateTo(topicIdentifier.filePath)
+    fun getTopicNode(path: String): TopicNode? {
+        return findNode(root, path)
+    }
+
+    private fun findNode(node: TopicNode, path: String): TopicNode? {
+        if (node.topicIdentifier.filePath == path) {
+            return node
         }
-    }
-
-    private fun navigateTo(path: String) {
-        currentPath = path
-        loadTopics()
+        for (child in node.children) {
+            val result = findNode(child, path)
+            if (result != null) {
+                return result
+            }
+        }
+        return null
     }
 }

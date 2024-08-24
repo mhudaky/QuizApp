@@ -1,3 +1,7 @@
 package com.mhudaky.quizapp.dto
 
-interface Topic
+data class Topic(
+    val name: String,
+    val filePath: String,
+    val hasSubTopics: Boolean
+)

@@ -8,7 +8,7 @@ data class MultiChoiceTopic(
     val medium: List<MultiChoice>,
     val hard: List<MultiChoice>,
     val expert: List<MultiChoice>
-) : Topic {
+) : TopicType {
     fun getQuestions(currentDifficulty: Difficulty): List<MultiChoice> {
         return when (currentDifficulty) {
             Difficulty.EASY -> easy
