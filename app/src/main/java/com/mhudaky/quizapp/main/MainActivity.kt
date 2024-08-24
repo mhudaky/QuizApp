@@ -19,15 +19,16 @@ import java.util.logging.Logger.getLogger
 class MainActivity : AppCompatActivity() {
 
     private lateinit var topicsLayout: LinearLayout
-    private lateinit var topicTreeLoader: TopicTreeLoader
     private lateinit var prefsHelper: SharedPreferencesHelperForMain
+    private lateinit var topicTreeLoader: TopicTreeLoader
     private val logger = getLogger(this::class.simpleName!!)
     private var questionType: QuestionType = QuestionType.MULTI_CHOICE
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         logger.info("MainActivity started")
-        topicTreeLoader = TopicTreeLoader(resources)
+        prefsHelper = SharedPreferencesHelperForMain(this)
+        topicTreeLoader = TopicTreeLoader(resources, prefsHelper)
         setContentView(R.layout.activity_main)
         topicsLayout = findViewById(R.id.topics)
         addResetStatListener()
@@ -85,7 +86,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun addResetStatListener() {
-        prefsHelper = SharedPreferencesHelperForMain(this)
         val resetStatsButton = findViewById<Button>(R.id.reset_stats_button)
         resetStatsButton.setOnClickListener {
             prefsHelper.resetStats()
